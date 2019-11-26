@@ -149,6 +149,33 @@ Zombie_Arena/Arena.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.s
 .PHONY : Zombie_Arena/Arena.cpp.s
 
+Zombie_Arena/TextureHolder.obj: Zombie_Arena/TextureHolder.cpp.obj
+
+.PHONY : Zombie_Arena/TextureHolder.obj
+
+# target to build an object file
+Zombie_Arena/TextureHolder.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj
+.PHONY : Zombie_Arena/TextureHolder.cpp.obj
+
+Zombie_Arena/TextureHolder.i: Zombie_Arena/TextureHolder.cpp.i
+
+.PHONY : Zombie_Arena/TextureHolder.i
+
+# target to preprocess a source file
+Zombie_Arena/TextureHolder.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.i
+.PHONY : Zombie_Arena/TextureHolder.cpp.i
+
+Zombie_Arena/TextureHolder.s: Zombie_Arena/TextureHolder.cpp.s
+
+.PHONY : Zombie_Arena/TextureHolder.s
+
+# target to generate assembly for a file
+Zombie_Arena/TextureHolder.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.s
+.PHONY : Zombie_Arena/TextureHolder.cpp.s
+
 Zombie_Arena/ZombieArena.obj: Zombie_Arena/ZombieArena.cpp.obj
 
 .PHONY : Zombie_Arena/ZombieArena.obj
@@ -215,6 +242,9 @@ help:
 	@echo ... Zombie_Arena/Arena.obj
 	@echo ... Zombie_Arena/Arena.i
 	@echo ... Zombie_Arena/Arena.s
+	@echo ... Zombie_Arena/TextureHolder.obj
+	@echo ... Zombie_Arena/TextureHolder.i
+	@echo ... Zombie_Arena/TextureHolder.s
 	@echo ... Zombie_Arena/ZombieArena.obj
 	@echo ... Zombie_Arena/ZombieArena.i
 	@echo ... Zombie_Arena/ZombieArena.s
