@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ZombieArena"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\Dev\;CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\;CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\;CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\;CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\SFML\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ZombieArena">
+				<Option output="C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/ZombieArena.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources/code"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources/graphics"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources/sound"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena"/>
+					<Add directory="C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 ZombieArena"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ZombieArena/fast">
+				<Option output="C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/ZombieArena.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources/code"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources/graphics"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Resources/sound"/>
+					<Add directory="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena"/>
+					<Add directory="C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 ZombieArena/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/main.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/../../../../Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/../../../../Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/../../../../Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/../../../../Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML/SFMLSharedTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/../../../../Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/../../../../Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\Dev\SFML-2.5.1_for_MinGW-7.3.0\lib\cmake\SFML\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
