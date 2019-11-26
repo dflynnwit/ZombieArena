@@ -31,11 +31,23 @@ int main(int argc, const char * argv[]) {
     resolution.x = VideoMode::getDesktopMode().width;
     resolution.y = VideoMode::getDesktopMode().height;
 
+    /*
+     * Windowed
+     */
     //Create SFML window
     RenderWindow window(VideoMode(resolution.x/2, resolution.y/2), "Zombie Arena", Style::Default);
 
     //Create main view
     View mainView(sf::FloatRect(0, 0, resolution.x/2, resolution.y/2));
+
+    /*
+     * Fullscreen
+     */
+//    //Create SFML window
+//    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
+//
+//    //Create main view
+//    View mainView(sf::FloatRect(0, 0, resolution.x, resolution.y));
 
     //Create texture holder singleton
     TextureHolder textureHolder;
@@ -210,8 +222,9 @@ int main(int argc, const char * argv[]) {
             //Get mouse pointer position
             mouseScreenPosition = Mouse::getPosition(window);
 
-            //Convert mouse position to world coords of main view
-            mouseWorldPosition = window.mapPixelToCoords(Mouse::getPosition(), mainView);
+            //Convert mouse position to world coords of main view (relative to window for windowed mode)
+            mouseWorldPosition = window.mapPixelToCoords(Mouse::getPosition(window), mainView);
+
 
             //Update player position
             player.update(dtAsSeconds, Mouse::getPosition());
@@ -250,9 +263,9 @@ int main(int argc, const char * argv[]) {
              //Draw player
              window.draw(player.getSprite());
 
-//             //Draw zombies
-//             for(int i = 0; i < numZombies; i++)
-//                 window.draw(zombies[i].getSprite());
+             //Draw zombies
+             for(int i = 0; i < numZombies; i++)
+                 window.draw(zombies[i].getSprite());
 
              //Draw bullets
              for(int i = 0; i < 100; i++){

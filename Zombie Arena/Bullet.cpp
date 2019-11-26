@@ -29,8 +29,6 @@ void Bullet::shoot(float startX, float startY,
     if(gradient < 0)
         gradient *= -1;
 
-    std::cout << gradient << std::endl;
-
     float ratioXY = m_BulletSpeed/(1+gradient);
 
     //Set horizontal and vertical speeds
