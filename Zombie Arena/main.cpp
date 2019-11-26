@@ -78,13 +78,14 @@ int main(int argc, const char * argv[]) {
             //Handle quitting by closing window
             if(event.type == Event::Closed)
                 window.close();
-
-            //Handle player input
-            if(state == State::PLAYING){
-                updatePlayerDirectionalControls(player);
-            }
-
         }
+
+        //Handle player input
+        if(state == State::PLAYING){
+            updatePlayerDirectionalControls(player);
+        }
+
+
     }
 
     return 0;
