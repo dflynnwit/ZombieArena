@@ -25,8 +25,8 @@ Player::Player()
 
 void Player::spawn(IntRect arena, Vector2f resolution, int tileSize) {
     // Place the player in the middle of the arena
-    m_Position.x = arena.width / 2f;
-    m_Position.y = arena.height / 2f;
+    m_Position.x = arena.width / 2;
+    m_Position.y = arena.height / 2;
     // Copy the details of the arena to the player's m_Arena
     m_Arena.left = arena.left;
     m_Arena.width = arena.width;
@@ -109,77 +109,11 @@ void Player::setMoveUp(bool up) {
     m_UpPressed = up;
 }
 
-/*
-void Player::moveLeft()
-{
-    m_LeftPressed = true;
-}
-
-void Player::moveRight()
-{
-    m_RightPressed = true;
-}
-
-void Player::moveUp()
-{
-    m_UpPressed = true;
-}
-
-void Player::moveDown()
-{
-    m_DownPressed = true;
-}
-
-void Player::stopLeft()
-{
-    m_LeftPressed = false;
-}
-
-void Player::stopRight()
-{
-    m_RightPressed = false;
-}
-
-void Player::stopUp()
-{
-    m_UpPressed = false;
-}
-
-void Player::stopDown()
-{
-    m_DownPressed = false;
-}
-*/
-
 void Player::update(float elapsedTime, Vector2i mousePosition)
 {
-    /*
-    if (m_UpPressed)
-    {
-        m_Position.y -= m_Speed * elapsedTime;
-    }
-
-    if (m_DownPressed)
-    {
-        m_Position.y += m_Speed * elapsedTime;
-    }
-
-    if (m_RightPressed)
-    {
-        m_Position.x += m_Speed * elapsedTime;
-    }
-
-    if (m_LeftPressed)
-    {
-        m_Position.x -= m_Speed * elapsedTime;
-    }
-
-     */
-
     //Since true is 1 and false is 0 we can calculate displacement by subtracting opposite values multiplied by the booleans
-
     m_Position.x += (m_Speed * m_RightPressed - m_Speed * m_LeftPressed) * elapsedTime;
-    m_Position.y += (m_Speed * m_UpPressed - m_Speed * m_DownPressed) * elapsedTime;
+    m_Position.y += (m_Speed * m_DownPressed - m_Speed * m_UpPressed) * elapsedTime;
 
     //TODO: Check for collisions before updating position instead
 
