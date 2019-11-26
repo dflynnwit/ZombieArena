@@ -92,6 +92,12 @@ int main(int argc, const char * argv[]) {
     //Tracks time of last shot
     Time lastShot;
 
+    //Hide cursor in game and display crosshair
+    window.setMouseCursorVisible(false);
+    Sprite crosshairSprite;
+    crosshairSprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/crosshair.png"));
+    crosshairSprite.setOrigin(25, 25);
+
     //Main game loop
     while(window.isOpen()){
         /*************************************
@@ -246,6 +252,9 @@ int main(int argc, const char * argv[]) {
                 if(bullets[i].isInFlight())
                     bullets[i].update(dtAsSeconds);
             }
+
+            //Update crosshair
+            crosshairSprite.setPosition(mouseWorldPosition.x, mouseWorldPosition.y);
         }
 
         /*************************************
@@ -272,6 +281,9 @@ int main(int argc, const char * argv[]) {
                  if(bullets[i].isInFlight())
                      window.draw(bullets[i].getShape());
              }
+
+             //Draw crosshair
+             window.draw(crosshairSprite);
          }
 
          window.display();
