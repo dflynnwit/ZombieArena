@@ -9,6 +9,7 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>       /* atan2 */
 
+
 using namespace sf;
 
 class Player
@@ -20,12 +21,12 @@ private:
     // Where is the player
     Vector2f m_Position;
 
-//    // Of course we will need a sprite
-//    Sprite m_Sprite;
+    // Of course we will need a sprite
+    Sprite m_Sprite;
 
-//    // And a texture
-//    // !!Watch this space!!
-//    Texture m_Texture;
+    // And a texture
+    // !!Watch this space!!
+    Texture m_Texture;
 
     // What is the screen resolution
     Vector2f m_Resolution;
@@ -46,19 +47,19 @@ private:
     int m_Health;
     // What is the maximum health the player can have
     int m_MaxHealth;
-//
-//    // When was the player last hit
-//    Time m_LastHit;
+
+    // When was the player last hit
+    Time m_LastHit;
 
     // Speed in pixels per second
     float m_Speed;
 
 public:
-    
+
     Player();
-    
+
     void spawn(IntRect arena, Vector2f resolution, int tileSize);
-    
+
     // Call this at the end of every game
     void resetPlayerStats();
 
@@ -113,7 +114,7 @@ public:
     // Increase the maximum amount of health the player can have
     void increaseHealthLevel(int amount);
 
-    
+
 };
 
 #endif /* player_hpp */

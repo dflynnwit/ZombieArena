@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj"
   "ZombieArena.exe"
   "ZombieArena.exe.manifest"
-  "ZombieArena.lib"
   "ZombieArena.pdb"
+  "libZombieArena.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

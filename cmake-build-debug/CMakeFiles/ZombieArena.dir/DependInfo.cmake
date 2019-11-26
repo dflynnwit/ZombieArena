@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/main.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/main.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
@@ -15,7 +15,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Resources/code"
   "../Resources/graphics"
   "../Resources/sound"
-  "../Zombie Arena"
   "C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include"
   )
 
