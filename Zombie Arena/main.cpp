@@ -10,6 +10,8 @@
 #include <SFML/Graphics.hpp>
 #include "player.hpp"
 
+void updatePlayerDirectionalControls(Player &p);
+
 using namespace sf;
 
 int main(int argc, const char * argv[]) {
@@ -69,28 +71,28 @@ int main(int argc, const char * argv[]) {
                         state = State::LEVELING_UP;
                 }
 
+                //Handle quitting by esc
                 if(event.key.code == Keyboard::Escape)
                     window.close();
             }
+            //Handle quitting by closing window
+            if(event.type == Event::Closed)
+                window.close();
 
+            //Handle player input
             if(state == State::PLAYING){
-                /*
-                 * Handle player controls
-                 *
-                 * https://www.sfml-dev.org/documentation/1.6/classsf_1_1Input.php
-                 *
-                 * bool 	IsKeyDown (Key::Code KeyCode) const
-                 * Get the state of a key.
-                 *
-                 * bool 	IsMouseButtonDown (Mouse::Button Button) const
-                 * Get the state of a mouse button.
-                 */
+                updatePlayerDirectionalControls(player);
             }
 
-
         }
-
     }
 
     return 0;
+}
+
+void updatePlayerDirectionalControls(Player &p){
+    p.setMoveDown(Keyboard::isKeyPressed(Keyboard::Down));
+    p.setMoveLeft(Keyboard::isKeyPressed(Keyboard::Left));
+    p.setMoveRight(Keyboard::isKeyPressed(Keyboard::Right));
+    p.setMoveUp(Keyboard::isKeyPressed(Keyboard::Up));
 }

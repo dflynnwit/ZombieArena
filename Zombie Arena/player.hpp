@@ -84,6 +84,12 @@ public:
     // How much health has the player currently got?
     int getHealth();
 
+    void setMoveUp(bool up);
+    void setMoveDown(bool down);
+    void setMoveLeft(bool left);
+    void setMoveRight(bool right);
+
+    /*
     // The next four functions move the player
     void moveLeft();
 
@@ -101,6 +107,7 @@ public:
     void stopUp();
 
     void stopDown();
+     */
 
     // We will call this function once every frame
     void update(float elapsedTime, Vector2i mousePosition);
@@ -113,8 +120,6 @@ public:
 
     // Increase the maximum amount of health the player can have
     void increaseHealthLevel(int amount);
-
-
 };
 
 #endif /* player_hpp */
