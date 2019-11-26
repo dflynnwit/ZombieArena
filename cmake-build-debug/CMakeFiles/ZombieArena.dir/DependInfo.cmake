@@ -6,7 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj"
+  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj"
+  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -10,6 +10,9 @@
 #include <SFML/Graphics.hpp>
 #include "player.hpp"
 #include "Arena.h"
+#include "TextureHolder.h"
+#include "Zombie.h"
+#include "ZombieHorde.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -32,6 +35,9 @@ int main(int argc, const char * argv[]) {
 
     //Create main view
     View mainView(sf::FloatRect(0, 0, resolution.x/2, resolution.y/2));
+
+    //Create texture holder singleton
+    TextureHolder textureHolder;
 
     //Prepare game clock
     Clock clock;
@@ -57,6 +63,12 @@ int main(int argc, const char * argv[]) {
     //Load texture for the background
     Texture backgroundTexture;
     backgroundTexture.loadFromFile("../Resources/graphics/background_sheet.png");
+
+
+    //Prepare zombie horde
+    int numZombies = 0;
+    int numZombiesAlive = 0;
+    Zombie* zombies = nullptr;
 
     //Main game loop
     while(window.isOpen()){
@@ -124,6 +136,14 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
+                //Create zombie horde
+                numZombies = 10;
+
+                //Delete previously allocated memory
+                delete[] zombies;
+                zombies = createHorde(numZombies, arena);
+                numZombiesAlive = numZombies;
+
                 //Pass vertex array to createbackground
                 int tileSize = createBackground(background, arena);
 
@@ -162,6 +182,12 @@ int main(int argc, const char * argv[]) {
 
             //Centre main view on player
             mainView.setCenter(player.getCenter());
+
+            //Update zombies in the horde
+            for(int i = 0; i < numZombies; i++){
+                if(zombies[i].isAlive())
+                    zombies[i].update(dt.asSeconds(), playerPosition);
+            }
         }
 
         /*************************************
@@ -178,12 +204,16 @@ int main(int argc, const char * argv[]) {
 
              //Draw player
              window.draw(player.getSprite());
+
+             for(int i = 0; i < numZombies; i++)
+                 window.draw(zombies[i].getSprite());
          }
 
          window.display();
 
     }
 
+    delete[] zombies;
     return 0;
 }
 
