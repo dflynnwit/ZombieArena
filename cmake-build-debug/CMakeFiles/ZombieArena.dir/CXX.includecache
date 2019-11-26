@@ -676,17 +676,11 @@ SFML/Config.hpp
 
 C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/main.cpp
-iostream
--
-SFML/Graphics.hpp
--
-player.hpp
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.cpp
+Arena.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.h
 
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.h
 SFML/Graphics.hpp
--
-cmath
 -
 

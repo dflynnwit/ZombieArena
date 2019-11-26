@@ -248,6 +248,24 @@ ZombieArena_BINARY_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena/cmake-bui
 //Value Computed by CMake
 ZombieArena_SOURCE_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena
 
+//Value Computed by CMake
+ZombieArenaa_BINARY_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug
+
+//Value Computed by CMake
+ZombieArenaa_SOURCE_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena
+
+//Value Computed by CMake
+ZombieArenaaa_BINARY_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug
+
+//Value Computed by CMake
+ZombieArenaaa_SOURCE_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena
+
+//Value Computed by CMake
+ZombieArenaaaa_BINARY_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug
+
+//Value Computed by CMake
+ZombieArenaaaa_SOURCE_DIR:STATIC=C:/Users/pokor/CLionProjects/ZombieArena
+
 
 ########################
 # INTERNAL cache entries

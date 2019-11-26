@@ -78,7 +78,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/main.cpp">
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.h">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp">

@@ -9,6 +9,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "player.hpp"
+#include "Arena.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -49,6 +50,13 @@ int main(int argc, const char * argv[]) {
 
     //Arena boundaries
     IntRect arena;
+
+    //Create background
+    VertexArray background;
+
+    //Load texture for the background
+    Texture backgroundTexture;
+    backgroundTexture.loadFromFile("../Resources/graphics/background_sheet.png");
 
     //Main game loop
     while(window.isOpen()){
@@ -116,8 +124,8 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
-                // We will modify this line of code later
-                int tileSize = 50;
+                //Pass vertex array to createbackground
+                int tileSize = createBackground(background, arena);
 
                 // Spawn the player in the middle of the arena
                 player.spawn(arena, resolution, tileSize);
@@ -164,6 +172,9 @@ int main(int argc, const char * argv[]) {
 
              //Set view to main view
              window.setView(mainView);
+
+             //Draw background
+             window.draw(background, &backgroundTexture);
 
              //Draw player
              window.draw(player.getSprite());

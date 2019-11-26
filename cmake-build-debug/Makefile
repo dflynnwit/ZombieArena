@@ -122,32 +122,59 @@ ZombieArena/fast:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/build
 .PHONY : ZombieArena/fast
 
-Zombie_Arena/main.obj: Zombie_Arena/main.cpp.obj
+Zombie_Arena/Arena.obj: Zombie_Arena/Arena.cpp.obj
 
-.PHONY : Zombie_Arena/main.obj
+.PHONY : Zombie_Arena/Arena.obj
 
 # target to build an object file
-Zombie_Arena/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/main.cpp.obj
-.PHONY : Zombie_Arena/main.cpp.obj
+Zombie_Arena/Arena.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj
+.PHONY : Zombie_Arena/Arena.cpp.obj
 
-Zombie_Arena/main.i: Zombie_Arena/main.cpp.i
+Zombie_Arena/Arena.i: Zombie_Arena/Arena.cpp.i
 
-.PHONY : Zombie_Arena/main.i
+.PHONY : Zombie_Arena/Arena.i
 
 # target to preprocess a source file
-Zombie_Arena/main.cpp.i:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/main.cpp.i
-.PHONY : Zombie_Arena/main.cpp.i
+Zombie_Arena/Arena.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.i
+.PHONY : Zombie_Arena/Arena.cpp.i
 
-Zombie_Arena/main.s: Zombie_Arena/main.cpp.s
+Zombie_Arena/Arena.s: Zombie_Arena/Arena.cpp.s
 
-.PHONY : Zombie_Arena/main.s
+.PHONY : Zombie_Arena/Arena.s
 
 # target to generate assembly for a file
-Zombie_Arena/main.cpp.s:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/main.cpp.s
-.PHONY : Zombie_Arena/main.cpp.s
+Zombie_Arena/Arena.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.s
+.PHONY : Zombie_Arena/Arena.cpp.s
+
+Zombie_Arena/ZombieArena.obj: Zombie_Arena/ZombieArena.cpp.obj
+
+.PHONY : Zombie_Arena/ZombieArena.obj
+
+# target to build an object file
+Zombie_Arena/ZombieArena.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj
+.PHONY : Zombie_Arena/ZombieArena.cpp.obj
+
+Zombie_Arena/ZombieArena.i: Zombie_Arena/ZombieArena.cpp.i
+
+.PHONY : Zombie_Arena/ZombieArena.i
+
+# target to preprocess a source file
+Zombie_Arena/ZombieArena.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.i
+.PHONY : Zombie_Arena/ZombieArena.cpp.i
+
+Zombie_Arena/ZombieArena.s: Zombie_Arena/ZombieArena.cpp.s
+
+.PHONY : Zombie_Arena/ZombieArena.s
+
+# target to generate assembly for a file
+Zombie_Arena/ZombieArena.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.s
+.PHONY : Zombie_Arena/ZombieArena.cpp.s
 
 Zombie_Arena/player.obj: Zombie_Arena/player.cpp.obj
 
@@ -185,9 +212,12 @@ help:
 	@echo ... ZombieArena
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Zombie_Arena/main.obj
-	@echo ... Zombie_Arena/main.i
-	@echo ... Zombie_Arena/main.s
+	@echo ... Zombie_Arena/Arena.obj
+	@echo ... Zombie_Arena/Arena.i
+	@echo ... Zombie_Arena/Arena.s
+	@echo ... Zombie_Arena/ZombieArena.obj
+	@echo ... Zombie_Arena/ZombieArena.i
+	@echo ... Zombie_Arena/ZombieArena.s
 	@echo ... Zombie_Arena/player.obj
 	@echo ... Zombie_Arena/player.i
 	@echo ... Zombie_Arena/player.s

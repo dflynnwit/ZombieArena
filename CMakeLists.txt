@@ -10,8 +10,8 @@ include_directories(Resources/graphics)
 include_directories(Resources/sound)
 #include_directories(C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include)
 
-add_executable(ZombieArena ${SOURCE_FILES}/main.cpp
-        ${SOURCE_FILES}/player.cpp)
+add_executable(ZombieArena ${SOURCE_FILES}/ZombieArena.cpp
+        ${SOURCE_FILES}/player.cpp  ${SOURCE_FILES}/Arena.cpp)
 
 # Detect and add SFML
 set(SFML_DIR C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML)
