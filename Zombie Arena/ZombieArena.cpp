@@ -13,6 +13,7 @@
 #include "TextureHolder.h"
 #include "Zombie.h"
 #include "ZombieHorde.h"
+#include "Bullet.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -61,14 +62,23 @@ int main(int argc, const char * argv[]) {
     VertexArray background;
 
     //Load texture for the background
-    Texture backgroundTexture;
-    backgroundTexture.loadFromFile("../Resources/graphics/background_sheet.png");
-
+    Texture backgroundTexture = TextureHolder::GetTexture("../Resources/graphics/background_sheet.png");
 
     //Prepare zombie horde
     int numZombies = 0;
     int numZombiesAlive = 0;
     Zombie* zombies = nullptr;
+
+    //Prepare bullets
+    Bullet bullets[100];
+    int currentBullet = 0;
+    int bulletsSpare = 24;
+    int bulletsInClip = 6;
+    int clipSize = 6;
+    float fireRate = 1;
+
+    //Tracks time of last shot
+    Time lastShot;
 
     //Main game loop
     while(window.isOpen()){
@@ -94,6 +104,23 @@ int main(int argc, const char * argv[]) {
                 //Handle quitting by esc
                 if(event.key.code == Keyboard::Escape)
                     window.close();
+
+                if(state == State::PLAYING){
+                    //Reloading
+                    if(event.key.code == Keyboard::R){
+                        if(bulletsSpare >= clipSize){
+                            bulletsInClip = clipSize;
+                            bulletsSpare -= clipSize;
+                        }
+                        else if(bulletsSpare > 0){
+                            bulletsInClip = bulletsSpare;
+                            bulletsSpare = 0;
+                        }
+                        else{
+                            //Reload failed
+                        }
+                    }
+                }
             }
             //Handle quitting by closing window
             if(event.type == Event::Closed)
@@ -103,6 +130,18 @@ int main(int argc, const char * argv[]) {
         //Handle player input
         if(state == State::PLAYING){
             updatePlayerDirectionalControls(player);
+
+            //Fire bullets
+            if(Mouse::isButtonPressed(Mouse::Left)){
+                if(gameTimeTotal.asMilliseconds() - lastShot.asMilliseconds() > 1000/fireRate && bulletsInClip > 0){
+                    //Pass the player pos and crosshair pos to shoot function
+                    bullets[currentBullet].shoot(player.getCenter().x, player.getCenter().y, mouseWorldPosition.x, mouseWorldPosition.y);
+                    currentBullet %= 100;
+
+                    lastShot = gameTimeTotal;
+                    bulletsInClip--;
+                }
+            }
         }
 
         //Handle level up screen
@@ -188,6 +227,12 @@ int main(int argc, const char * argv[]) {
                 if(zombies[i].isAlive())
                     zombies[i].update(dt.asSeconds(), playerPosition);
             }
+
+            //Update bullets in flight
+            for(int i = 0; i < 100; i++){
+                if(bullets[i].isInFlight())
+                    bullets[i].update(dtAsSeconds);
+            }
         }
 
         /*************************************
@@ -205,8 +250,15 @@ int main(int argc, const char * argv[]) {
              //Draw player
              window.draw(player.getSprite());
 
-             for(int i = 0; i < numZombies; i++)
-                 window.draw(zombies[i].getSprite());
+//             //Draw zombies
+//             for(int i = 0; i < numZombies; i++)
+//                 window.draw(zombies[i].getSprite());
+
+             //Draw bullets
+             for(int i = 0; i < 100; i++){
+                 if(bullets[i].isInFlight())
+                     window.draw(bullets[i].getShape());
+             }
          }
 
          window.display();

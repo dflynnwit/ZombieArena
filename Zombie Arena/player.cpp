@@ -5,6 +5,7 @@
 
 //#include "stdafx.h" // <- Visual Studio only
 #include "player.hpp"
+#include "TextureHolder.h"
 #include <iostream>
 
 Player::Player()
@@ -15,8 +16,7 @@ Player::Player()
 
     // Associate a texture with the sprite
     // !!Watch this space!!
-    m_Texture.loadFromFile("../Resources/graphics/player.png");
-    m_Sprite.setTexture(m_Texture);
+    m_Sprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/player.png"));
 
     // Set the origin of the sprite to the centre,
     // for smooth rotation
