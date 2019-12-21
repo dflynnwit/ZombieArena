@@ -176,6 +176,33 @@ Zombie_Arena/Bullet.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.s
 .PHONY : Zombie_Arena/Bullet.cpp.s
 
+Zombie_Arena/Pickup.obj: Zombie_Arena/Pickup.cpp.obj
+
+.PHONY : Zombie_Arena/Pickup.obj
+
+# target to build an object file
+Zombie_Arena/Pickup.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj
+.PHONY : Zombie_Arena/Pickup.cpp.obj
+
+Zombie_Arena/Pickup.i: Zombie_Arena/Pickup.cpp.i
+
+.PHONY : Zombie_Arena/Pickup.i
+
+# target to preprocess a source file
+Zombie_Arena/Pickup.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.i
+.PHONY : Zombie_Arena/Pickup.cpp.i
+
+Zombie_Arena/Pickup.s: Zombie_Arena/Pickup.cpp.s
+
+.PHONY : Zombie_Arena/Pickup.s
+
+# target to generate assembly for a file
+Zombie_Arena/Pickup.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.s
+.PHONY : Zombie_Arena/Pickup.cpp.s
+
 Zombie_Arena/TextureHolder.obj: Zombie_Arena/TextureHolder.cpp.obj
 
 .PHONY : Zombie_Arena/TextureHolder.obj
@@ -326,6 +353,9 @@ help:
 	@echo ... Zombie_Arena/Bullet.obj
 	@echo ... Zombie_Arena/Bullet.i
 	@echo ... Zombie_Arena/Bullet.s
+	@echo ... Zombie_Arena/Pickup.obj
+	@echo ... Zombie_Arena/Pickup.i
+	@echo ... Zombie_Arena/Pickup.s
 	@echo ... Zombie_Arena/TextureHolder.obj
 	@echo ... Zombie_Arena/TextureHolder.i
 	@echo ... Zombie_Arena/TextureHolder.s

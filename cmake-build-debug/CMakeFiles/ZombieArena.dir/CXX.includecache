@@ -684,6 +684,10 @@ C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
 SFML/Graphics.hpp
 -
 
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
+SFML/Graphics.hpp
+-
+
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
 SFML/Graphics.hpp
 -
@@ -711,6 +715,8 @@ ZombieHorde.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.h
 Bullet.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
+Pickup.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
 
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.h
 Zombie.h
