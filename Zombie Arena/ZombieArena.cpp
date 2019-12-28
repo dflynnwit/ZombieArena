@@ -74,6 +74,9 @@ int main(int argc, const char * argv[]) {
     //Prep maze generator
     MazeGenerator mazeGenerator;
 
+    //Store walls
+    Wall* walls = nullptr;
+
     //Arena boundaries
     IntRect arena;
 
@@ -211,7 +214,8 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
-                mazeGenerator.GenerateMaze(50, 50);
+                mazeGenerator.GenerateMazeData(50, 50);
+                walls = mazeGenerator.CreateMaze();
 
                 std::vector<std::vector<int>> vec = mazeGenerator.GetData();
                 for (auto row = vec.begin(); row != vec.end(); ++row)
@@ -219,7 +223,7 @@ int main(int argc, const char * argv[]) {
                     for (auto col = row->begin(); col != row->end(); ++col)
                     {
                         std::cout << *col;
-                        if(*col == 1)
+//                        if(*col == 1)
 
                     }
                     std::cout << std::endl;

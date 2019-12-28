@@ -4,10 +4,13 @@
 
 #include "Wall.h"
 
-void Wall::Spawn() {
-    srand((int)time(0));
-    m_Position.x = (rand() % m_Arena.width);
-    m_Position.y = (rand() % m_Arena.height);
+void Wall::Spawn(float x, float y) {
+    m_Position.x = x;
+    m_Position.y = y;
 
     m_Rotation = 0;
+}
+
+Wall::Wall() {
+
 }

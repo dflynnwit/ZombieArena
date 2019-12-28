@@ -104,3 +104,7 @@ void Zombie::draw(RenderWindow &window) {
 
     Draw(window);
 }
+
+Zombie::Zombie() {
+
+}

@@ -40,6 +40,7 @@ private:
 
     // Public prototypes go here
 public:
+    Zombie();
 
     // Handle when a bullet hits a zombie
     bool hit();

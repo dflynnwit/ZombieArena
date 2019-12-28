@@ -676,14 +676,6 @@ SFML/Config.hpp
 
 C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.h
-SFML/Graphics.hpp
--
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
-SFML/Graphics.hpp
--
-
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
 SFML/Graphics.hpp
 -
@@ -705,12 +697,8 @@ ctime
 -
 cstdlib
 -
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
-SFML/Graphics.hpp
--
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
+Wall.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
 
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
 SFML/Graphics.hpp
@@ -718,43 +706,7 @@ SFML/Graphics.hpp
 map
 -
 
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
-SFML/Graphics.hpp
--
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp
-iostream
--
-SFML/Graphics.hpp
--
-player.hpp
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
-Arena.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.h
-TextureHolder.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
-Zombie.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
-ZombieHorde.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.h
-Bullet.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
-Pickup.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
-MazeGenerator.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.h
-Zombie.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
-SFML/Graphics.hpp
--
-cmath
--
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
 Entity.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
 

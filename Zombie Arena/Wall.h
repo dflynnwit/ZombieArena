@@ -14,7 +14,7 @@ private:
 public:
     Wall();
 
-    void Spawn();
+    void Spawn(float x, float y);
 };
 
 
