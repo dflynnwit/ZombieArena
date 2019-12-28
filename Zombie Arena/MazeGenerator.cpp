@@ -1,0 +1,51 @@
+//
+// Created by Pokora on 28/12/2019.
+//
+
+#include <iostream>
+#include "MazeGenerator.h"
+
+MazeGenerator::MazeGenerator() {
+    MazeGenerator(.1);
+}
+
+MazeGenerator::MazeGenerator(float placementThreshold) {
+    m_placementThreshold = placementThreshold;
+}
+
+void MazeGenerator::GenerateMaze(int width, int height) {
+    //Initialize all values in size
+    m_mazeData.resize(height+1, std::vector<int>(width+1, 0));
+    srand((int)time(0));
+
+    for (int i = 0; i <= height; i++)
+    {
+        for (int j = 0; j <= width; j++)
+        {
+
+
+            if (i == 0 || j == 0 || i == height || j == width)
+            {
+                m_mazeData[i][j] = 1;
+            }
+
+            else if (i % 2 == 0 && j % 2 == 0)
+            {
+                float r = (float)rand() / (RAND_MAX);
+                if (r > m_placementThreshold)
+                {
+                    //3
+                    m_mazeData[i][j] = 1;
+
+                    int a = r < .5 ? 0 : (r < .5 ? -1 : 1);
+                    int b = a != 0 ? 0 : (r < .5 ? -1 : 1);
+                    m_mazeData[i+a][j+b] = 1;
+                }
+            }
+        }
+    }
+}
+
+std::vector<std::vector<int>> MazeGenerator::GetData() {
+    return m_mazeData;
+}

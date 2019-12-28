@@ -96,6 +96,12 @@
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h">
 			<Option target="ZombieArena"/>
 		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h">
+			<Option target="ZombieArena"/>
+		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>
@@ -106,6 +112,12 @@
 			<Option target="ZombieArena"/>
 		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h">
 			<Option target="ZombieArena"/>
 		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.cpp">

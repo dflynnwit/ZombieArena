@@ -203,6 +203,33 @@ Zombie_Arena/Entity.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.s
 .PHONY : Zombie_Arena/Entity.cpp.s
 
+Zombie_Arena/MazeGenerator.obj: Zombie_Arena/MazeGenerator.cpp.obj
+
+.PHONY : Zombie_Arena/MazeGenerator.obj
+
+# target to build an object file
+Zombie_Arena/MazeGenerator.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj
+.PHONY : Zombie_Arena/MazeGenerator.cpp.obj
+
+Zombie_Arena/MazeGenerator.i: Zombie_Arena/MazeGenerator.cpp.i
+
+.PHONY : Zombie_Arena/MazeGenerator.i
+
+# target to preprocess a source file
+Zombie_Arena/MazeGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.i
+.PHONY : Zombie_Arena/MazeGenerator.cpp.i
+
+Zombie_Arena/MazeGenerator.s: Zombie_Arena/MazeGenerator.cpp.s
+
+.PHONY : Zombie_Arena/MazeGenerator.s
+
+# target to generate assembly for a file
+Zombie_Arena/MazeGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.s
+.PHONY : Zombie_Arena/MazeGenerator.cpp.s
+
 Zombie_Arena/Pickup.obj: Zombie_Arena/Pickup.cpp.obj
 
 .PHONY : Zombie_Arena/Pickup.obj
@@ -256,6 +283,33 @@ Zombie_Arena/TextureHolder.s: Zombie_Arena/TextureHolder.cpp.s
 Zombie_Arena/TextureHolder.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.s
 .PHONY : Zombie_Arena/TextureHolder.cpp.s
+
+Zombie_Arena/Wall.obj: Zombie_Arena/Wall.cpp.obj
+
+.PHONY : Zombie_Arena/Wall.obj
+
+# target to build an object file
+Zombie_Arena/Wall.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.obj
+.PHONY : Zombie_Arena/Wall.cpp.obj
+
+Zombie_Arena/Wall.i: Zombie_Arena/Wall.cpp.i
+
+.PHONY : Zombie_Arena/Wall.i
+
+# target to preprocess a source file
+Zombie_Arena/Wall.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.i
+.PHONY : Zombie_Arena/Wall.cpp.i
+
+Zombie_Arena/Wall.s: Zombie_Arena/Wall.cpp.s
+
+.PHONY : Zombie_Arena/Wall.s
+
+# target to generate assembly for a file
+Zombie_Arena/Wall.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.s
+.PHONY : Zombie_Arena/Wall.cpp.s
 
 Zombie_Arena/Zombie.obj: Zombie_Arena/Zombie.cpp.obj
 
@@ -383,12 +437,18 @@ help:
 	@echo ... Zombie_Arena/Entity.obj
 	@echo ... Zombie_Arena/Entity.i
 	@echo ... Zombie_Arena/Entity.s
+	@echo ... Zombie_Arena/MazeGenerator.obj
+	@echo ... Zombie_Arena/MazeGenerator.i
+	@echo ... Zombie_Arena/MazeGenerator.s
 	@echo ... Zombie_Arena/Pickup.obj
 	@echo ... Zombie_Arena/Pickup.i
 	@echo ... Zombie_Arena/Pickup.s
 	@echo ... Zombie_Arena/TextureHolder.obj
 	@echo ... Zombie_Arena/TextureHolder.i
 	@echo ... Zombie_Arena/TextureHolder.s
+	@echo ... Zombie_Arena/Wall.obj
+	@echo ... Zombie_Arena/Wall.i
+	@echo ... Zombie_Arena/Wall.s
 	@echo ... Zombie_Arena/Zombie.obj
 	@echo ... Zombie_Arena/Zombie.i
 	@echo ... Zombie_Arena/Zombie.s

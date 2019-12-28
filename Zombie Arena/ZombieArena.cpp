@@ -15,6 +15,7 @@
 #include "ZombieHorde.h"
 #include "Bullet.h"
 #include "Pickup.h"
+#include "MazeGenerator.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -69,6 +70,9 @@ int main(int argc, const char * argv[]) {
 
     //Create player instance
     Player player;
+
+    //Prep maze generator
+    MazeGenerator mazeGenerator;
 
     //Arena boundaries
     IntRect arena;
@@ -206,6 +210,20 @@ int main(int argc, const char * argv[]) {
                 arena.height = 500;
                 arena.left = 0;
                 arena.top = 0;
+
+                mazeGenerator.GenerateMaze(50, 50);
+
+                std::vector<std::vector<int>> vec = mazeGenerator.GetData();
+                for (auto row = vec.begin(); row != vec.end(); ++row)
+                {
+                    for (auto col = row->begin(); col != row->end(); ++col)
+                    {
+                        std::cout << *col;
+                        if(*col == 1)
+
+                    }
+                    std::cout << std::endl;
+                }
 
                 //Configure pickups
                 healthPickup.setArena(arena);
