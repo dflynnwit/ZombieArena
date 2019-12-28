@@ -6,7 +6,7 @@
 #include "MazeGenerator.h"
 
 MazeGenerator::MazeGenerator() {
-    MazeGenerator(.1);
+    MazeGenerator(.05);
 }
 
 MazeGenerator::MazeGenerator(float placementThreshold) {
@@ -73,4 +73,8 @@ Wall *MazeGenerator::CreateMaze() {
 //    }
 
     return walls;
+}
+
+int MazeGenerator::GetNofWalls() {
+    return m_nOfWalls;
 }

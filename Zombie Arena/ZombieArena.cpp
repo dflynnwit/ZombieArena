@@ -382,7 +382,11 @@ int main(int argc, const char * argv[]) {
              window.setView(mainView);
 
              //Draw background
-             window.draw(background, &backgroundTexture);
+//             window.draw(background, &backgroundTexture);
+            for(int i = 0; i < mazeGenerator.GetNofWalls(); i++) {
+                walls[i].Draw(window);
+                std::cout << walls[i].GetSprite().getPosition().x << ":" << walls[i].GetSprite().getPosition().y;
+            }
 
              //Draw pickups
              healthPickup.draw(window);

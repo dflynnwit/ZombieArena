@@ -22,6 +22,7 @@ public:
     void GenerateMazeData(int width, int height);
     Wall* CreateMaze();
     std::vector<std::vector<int>> GetData();
+    int GetNofWalls();
 };
 
 
