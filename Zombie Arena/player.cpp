@@ -117,8 +117,6 @@ void Player::update(float elapsedTime, Vector2i mousePosition)
 
     //TODO: Check for collisions before updating position instead
 
-//    m_Sprite.setPosition(m_Position);
-
     // Keep the player in the arena
     if (m_Position.x > m_Arena.width - m_TileSize)
     {
@@ -141,14 +139,11 @@ void Player::update(float elapsedTime, Vector2i mousePosition)
     }
 
     // Calculate the angle the player is facing
-    float angle = (atan2(mousePosition.y - m_Resolution.y / 2,
+    m_Rotation = (atan2(mousePosition.y - m_Resolution.y / 2,
                          mousePosition.x - m_Resolution.x / 2)
                    * 180) / 3.141;
 
-//    m_Sprite.setRotation(angle);
-
-    SetPosition(m_Position, angle);
-
+    Update();
 }
 
 void Player::draw(RenderWindow &window) {
@@ -159,8 +154,7 @@ void Player::draw(RenderWindow &window) {
     border.setRotation(m_Sprite.getRotation());
     window.draw(border);
 
-//    Draw(window);
-    window.draw(m_Sprite);
+    Draw(window);
 }
 
 void Player::upgradeSpeed()

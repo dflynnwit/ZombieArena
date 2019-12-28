@@ -8,10 +8,11 @@
 
 
 #include <SFML/Graphics.hpp>
+#include "Entity.h"
 
 using namespace sf;
 
-class Zombie
+class Zombie : public Entity
 {
 private:
     // How fast is each zombie type?
@@ -27,12 +28,6 @@ private:
     // Make each zombie vary its speed slightly
     const int MAX_VARIANCE = 30;
     const int OFFSET = 101 - MAX_VARIANCE;
-
-    // Where is this zombie?
-    Vector2f m_Position;
-
-    // A sprite for the zombie
-    Sprite m_Sprite;
 
     // How fast can this one run/crawl?
     float m_Speed;

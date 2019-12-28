@@ -23,7 +23,6 @@ Pickup::Pickup(int type) : Entity()
         m_Value = AMMO_START_VALUE;
     }
 
-    m_Sprite.setOrigin(25, 25);
     m_SecondsToLive = START_SECONDS_TO_LIVE;
     m_SecondsToWait = START_WAIT_TIME;
 }
@@ -43,13 +42,14 @@ void Pickup::setArena(IntRect arena)
 void Pickup::spawn()
 {
     srand((int)time(0) / m_Type);
-    int x = (rand() % m_Arena.width);
+    m_Position.x = (rand() % m_Arena.width);
     srand((int)time(0) * m_Type);
-    int y = (rand() % m_Arena.height);
+    m_Position.y = (rand() % m_Arena.height);
+
+    m_Rotation = 0;
 
     m_SecondsSinceSpawn = 0;
     m_Spawned = true;
-    m_Sprite.setPosition(x, y);
 }
 
 FloatRect Pickup::getPosition()
@@ -90,6 +90,8 @@ void Pickup::update(float elapsedTime)
     if(m_SecondsSinceDeSpawn > m_SecondsToWait && !m_Spawned){
         spawn();
     }
+
+    Update();
 }
 
 void Pickup::upgrade()
@@ -108,5 +110,5 @@ void Pickup::upgrade()
 
 void Pickup::draw(RenderWindow &window) {
     if(m_Spawned)
-        window.draw(m_Sprite);
+        Draw(window);
 }

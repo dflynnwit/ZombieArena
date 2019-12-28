@@ -23,6 +23,8 @@ public:
 
     void SetPosition(Vector2f position, float angle);
 
+    void Update();
+
     void SetActive(int active);
 
     int GetActive();
@@ -37,6 +39,8 @@ public:
 protected:
     int m_active, m_group_id;
     Sprite m_Sprite;
+    Vector2f m_Position;
+    float m_Rotation;
 };
 
 #endif //ZOMBIEARENA_ENTITY_H

@@ -280,7 +280,74 @@ int main(int argc, const char * argv[]) {
             //Update crosshair
             crosshairSprite.setPosition(mouseWorldPosition.x, mouseWorldPosition.y);
 
+            // Collision detection
+            // Have any zombies been shot?
+            for (int i = 0; i < 100; i++)
+            {
+                for (int j = 0; j < numZombies; j++)
+                {
+                    if (bullets[i].isInFlight() &&
+                        zombies[j].isAlive())
+                    {
+                        if (bullets[i].getPosition().intersects
+                                (zombies[j].getPosition()))
+                        {
+                            // Stop the bullet
+                            bullets[i].stop();
 
+                            // Register the hit and see if it was a kill
+                            if (zombies[j].hit()) {
+                                // Not just a hit but a kill too
+                                score += 10;
+                                if (score >= hiScore)
+                                {
+                                    hiScore = score;
+                                }
+
+                                numZombiesAlive--;
+
+                                // When all the zombies are dead (again)
+                                if (numZombiesAlive == 0) {
+                                    state = State::LEVELING_UP;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }// End zombie being shot
+
+
+            // Have any zombies touched the player?
+            for (int i = 0; i < numZombies; i++)
+            {
+                if(zombies[i].isAlive() && zombies[i].Collision(player)) {
+//                std::cout << "Player collided with zombie" << std::endl;
+                    if (player.hit(gameTimeTotal)) {
+                        //Get hit effect
+                        std::cout << "Player got hit: " << player.getHealth() << std::endl;
+
+                        if(player.getHealth() <= 0) {
+                            std::cout << "Game Over" << std::endl;
+                            state = State::GAME_OVER;
+
+                        }
+
+                    }
+                }
+            }// End player touched
+
+            // Has the player touched health pickup?
+            if(healthPickup.isSpawned() && player.Collision(healthPickup)) {
+                player.increaseHealthLevel(healthPickup.gotIt());
+            }// End player touch health
+
+            // Has the player touched ammo pickup?
+            if (ammoPickup.isSpawned() && ammoPickup.Collision(player))
+            {
+                bulletsSpare += ammoPickup.gotIt();
+            } // End player touch ammo
         }
 
         /*************************************
@@ -303,8 +370,8 @@ int main(int argc, const char * argv[]) {
              player.draw(window);
 
              //Draw zombies
-//             for(int i = 0; i < numZombies; i++)
-//                 zombies[i].draw(window);
+             for(int i = 0; i < numZombies; i++)
+                 zombies[i].draw(window);
 
              //Draw bullets
              for(int i = 0; i < 100; i++){
@@ -316,89 +383,6 @@ int main(int argc, const char * argv[]) {
          }
 
          window.display();
-
-        // Collision detection
-        // Have any zombies been shot?
-        for (int i = 0; i < 100; i++)
-        {
-            for (int j = 0; j < numZombies; j++)
-            {
-                if (bullets[i].isInFlight() &&
-                    zombies[j].isAlive())
-                {
-                    if (bullets[i].getPosition().intersects
-                            (zombies[j].getPosition()))
-                    {
-                        // Stop the bullet
-                        bullets[i].stop();
-
-                        // Register the hit and see if it was a kill
-                        if (zombies[j].hit()) {
-                            // Not just a hit but a kill too
-                            score += 10;
-                            if (score >= hiScore)
-                            {
-                                hiScore = score;
-                            }
-
-                            numZombiesAlive--;
-
-                            // When all the zombies are dead (again)
-                            if (numZombiesAlive == 0) {
-                                state = State::LEVELING_UP;
-                            }
-                        }
-
-                    }
-                }
-
-            }
-        }// End zombie being shot
-
-
-        // Have any zombies touched the player?
-//        for (int i = 0; i < numZombies; i++)
-//        {
-//            if (player.getPosition().intersects
-//                    (zombies[i].getPosition()) && zombies[i].isAlive())
-//            {
-//
-//                if (player.hit(gameTimeTotal))
-//                {
-//                    // More here later
-//                }
-//
-//                if (player.getHealth() <= 0)
-//                {
-//                    state = State::GAME_OVER;
-//
-//
-//                }
-//            }
-//        }// End player touched
-
-
-        // Has the player touched health pickup?
-//        if(healthPickup.isSpawned() && player.Collision(healthPickup)) {
-//            player.increaseHealthLevel(healthPickup.gotIt());
-//            std::cout << "Health pickup collision" << std::endl;
-//        }
-//        if (player.getPosition().intersects
-//                (healthPickup.getPosition()) && healthPickup.isSpawned())
-//        {
-//            player.increaseHealthLevel(healthPickup.gotIt());
-//
-//        }// End player touch health
-
-
-        // Has the player touched ammo pickup?
-        if (player.getPosition().intersects
-                (ammoPickup.getPosition()) && ammoPickup.isSpawned())
-        {
-            bulletsSpare += ammoPickup.gotIt();
-
-        } // End player touch ammo
-
     }
 
     delete[] zombies;

@@ -19,9 +19,6 @@ private:
     const float START_SPEED = 200;
     const float START_HEALTH = 100;
 
-    // Where is the player
-    Vector2f m_Position;
-
     // What is the screen resolution
     Vector2f m_Resolution;
 

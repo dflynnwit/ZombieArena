@@ -10,7 +10,6 @@ Entity::Entity(const std::string filename) {
 }
 
 void Entity::Draw(RenderWindow &window){
-    std::cout << "Drawing entity" << std::endl;
     window.draw(m_Sprite);
 }
 
@@ -43,12 +42,16 @@ Entity::Entity() {
 void Entity::SetSprite(const std::string filename) {
     m_Sprite = Sprite(TextureHolder::GetTexture(filename));
     m_Sprite.setOrigin(m_Sprite.getLocalBounds().width/2, m_Sprite.getLocalBounds().height/2);
-//    m_Sprite.setOrigin(25, 25);
 }
 
 void Entity::SetPosition(Vector2f position, float angle) {
     m_Sprite.setPosition(position.x, position.y);
     m_Sprite.setRotation(angle);
+}
+
+void Entity::Update() {
+    m_Sprite.setPosition(m_Position.x, m_Position.y);
+    m_Sprite.setRotation(m_Rotation);
 }
 
 

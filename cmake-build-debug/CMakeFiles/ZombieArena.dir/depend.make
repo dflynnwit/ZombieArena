@@ -463,6 +463,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: C:/Dev/SFML-2.5.1_for_Mi
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Window.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Entity.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Zombie.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Zombie.h
@@ -625,6 +626,8 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: C:/Dev/SFML-2.5.1_f
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Window.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: ../Zombie\ Arena/Zombie.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: ../Zombie\ Arena/ZombieHorde.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: ../Zombie\ Arena/ZombieHorde.h

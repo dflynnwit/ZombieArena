@@ -51,9 +51,6 @@ void Zombie::spawn(float startX, float startY, int type, int seed) {
 
     m_Position.x = startX;
     m_Position.y = startY;
-
-    m_Sprite.setOrigin(25, 25);
-    m_Sprite.setPosition(m_Position);
 }
 
 FloatRect Zombie::getPosition() {
@@ -89,24 +86,21 @@ void Zombie::update(float elapsedTime, Vector2f playerLocation) {
         m_Position.y = m_Position.y - m_Speed * elapsedTime;
     }
 
-    // Move the sprite
-    m_Sprite.setPosition(m_Position);
-
     // Face the sprite in the correct direction
-    float angle = (atan2(playerY - m_Position.y,
+    m_Rotation = (atan2(playerY - m_Position.y,
                          playerX - m_Position.x)
                    * 180) / 3.141;
 
-    m_Sprite.setRotation(angle);
+    Update();
 }
 
 void Zombie::draw(RenderWindow &window) {
     RectangleShape border(Vector2f(m_Sprite.getLocalBounds().width, m_Sprite.getLocalBounds().height));
     border.setFillColor(Color(255, 0, 0, 200));
-    border.setOrigin(25, 25);
+    border.setOrigin(m_Sprite.getOrigin());
     border.setPosition(m_Position);
     border.setRotation(m_Sprite.getRotation());
     window.draw(border);
 
-    window.draw(m_Sprite);
+    Draw(window);
 }
