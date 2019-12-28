@@ -8,11 +8,12 @@
 
 #include <SFML/Graphics.hpp>
 #include <cmath>       /* atan2 */
+#include "Entity.h"
 
 
 using namespace sf;
 
-class Player
+class Player : public Entity
 {
 private:
     const float START_SPEED = 200;
@@ -20,13 +21,6 @@ private:
 
     // Where is the player
     Vector2f m_Position;
-
-    // Of course we will need a sprite
-    Sprite m_Sprite;
-
-    // And a texture
-    // !!Watch this space!!
-    Texture m_Texture;
 
     // What is the screen resolution
     Vector2f m_Resolution;
@@ -88,6 +82,8 @@ public:
     void setMoveDown(bool down);
     void setMoveLeft(bool left);
     void setMoveRight(bool right);
+
+    void draw(RenderWindow &window);
 
     /*
     // The next four functions move the player

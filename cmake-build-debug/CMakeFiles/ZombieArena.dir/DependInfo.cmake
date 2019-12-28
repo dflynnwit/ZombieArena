@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj"
+  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj"

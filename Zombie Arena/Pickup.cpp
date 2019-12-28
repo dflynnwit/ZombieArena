@@ -5,20 +5,20 @@
 #include "Pickup.h"
 #include "TextureHolder.h"
 
-Pickup::Pickup(int type)
+Pickup::Pickup(int type) : Entity()
 {
     //store type of pickup (1 - health, 2 - ammo)
     m_Type = type;
 
     //Associate type with texture
     if(m_Type == 1){
-        m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/health_pickup.png"));
+        SetSprite("../Resources/graphics/health_pickup.png");
 
         //set worth
         m_Value = HEALTH_START_VALUE;
     }
     else{
-        m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/ammo_pickup.png"));
+        SetSprite("../Resources/graphics/ammo_pickup.png");
 
         m_Value = AMMO_START_VALUE;
     }
@@ -104,4 +104,9 @@ void Pickup::upgrade()
     //Make them last longer and more frequent
     m_SecondsToLive += (START_SECONDS_TO_LIVE * .1);
     m_SecondsToWait -= (START_WAIT_TIME * .1);
+}
+
+void Pickup::draw(RenderWindow &window) {
+    if(m_Spawned)
+        window.draw(m_Sprite);
 }

@@ -63,6 +63,8 @@ public:
 
     // Update the zombie each frame
     void update(float elapsedTime, Vector2f playerLocation);
+
+    void draw(RenderWindow& window);
 };
 
 

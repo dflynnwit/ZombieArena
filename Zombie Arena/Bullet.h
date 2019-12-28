@@ -64,6 +64,8 @@ public:
     // Update the bullet each frame
     void update(float elapsedTime);
 
+    void draw(RenderWindow &window);
+
 };
 
 

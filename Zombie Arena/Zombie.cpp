@@ -99,3 +99,14 @@ void Zombie::update(float elapsedTime, Vector2f playerLocation) {
 
     m_Sprite.setRotation(angle);
 }
+
+void Zombie::draw(RenderWindow &window) {
+    RectangleShape border(Vector2f(m_Sprite.getLocalBounds().width, m_Sprite.getLocalBounds().height));
+    border.setFillColor(Color(255, 0, 0, 200));
+    border.setOrigin(25, 25);
+    border.setPosition(m_Position);
+    border.setRotation(m_Sprite.getRotation());
+    window.draw(border);
+
+    window.draw(m_Sprite);
+}

@@ -8,7 +8,7 @@
 #include "TextureHolder.h"
 #include <iostream>
 
-Player::Player()
+Player::Player() : Entity("../Resources/graphics/player.png")
 {
     m_Speed = START_SPEED;
     m_Health = START_HEALTH;
@@ -16,11 +16,11 @@ Player::Player()
 
     // Associate a texture with the sprite
     // !!Watch this space!!
-    m_Sprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/player.png"));
+//    m_Sprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/player.png"));
 
     // Set the origin of the sprite to the centre,
     // for smooth rotation
-    m_Sprite.setOrigin(25, 25);
+//    m_Sprite.setOrigin(25, 25);
 }
 
 void Player::spawn(IntRect arena, Vector2f resolution, int tileSize) {
@@ -117,7 +117,7 @@ void Player::update(float elapsedTime, Vector2i mousePosition)
 
     //TODO: Check for collisions before updating position instead
 
-    m_Sprite.setPosition(m_Position);
+//    m_Sprite.setPosition(m_Position);
 
     // Keep the player in the arena
     if (m_Position.x > m_Arena.width - m_TileSize)
@@ -145,8 +145,22 @@ void Player::update(float elapsedTime, Vector2i mousePosition)
                          mousePosition.x - m_Resolution.x / 2)
                    * 180) / 3.141;
 
-    m_Sprite.setRotation(angle);
+//    m_Sprite.setRotation(angle);
 
+    SetPosition(m_Position, angle);
+
+}
+
+void Player::draw(RenderWindow &window) {
+    RectangleShape border(Vector2f(m_Sprite.getLocalBounds().width, m_Sprite.getLocalBounds().height));
+    border.setFillColor(Color(0, 0, 255, 200));
+    border.setOrigin(m_Sprite.getOrigin());
+    border.setPosition(m_Position);
+    border.setRotation(m_Sprite.getRotation());
+    window.draw(border);
+
+//    Draw(window);
+    window.draw(m_Sprite);
 }
 
 void Player::upgradeSpeed()

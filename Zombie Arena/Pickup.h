@@ -6,10 +6,11 @@
 #define ZOMBIEARENA_PICKUP_H
 
 #include <SFML/Graphics.hpp>
+#include "Entity.h"
 
 using namespace sf;
 
-class Pickup {
+class Pickup : public Entity{
 private:
     //Start value for health pickups
     const int HEALTH_START_VALUE = 50;
@@ -61,6 +62,8 @@ public:
 
     // Get the goodness from the pickup
     int gotIt();
+
+    void draw(RenderWindow &window);
 
     // Upgrade the value of each pickup
     void upgrade();

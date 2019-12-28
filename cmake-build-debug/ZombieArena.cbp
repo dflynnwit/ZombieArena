@@ -90,6 +90,12 @@
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h">
 			<Option target="ZombieArena"/>
 		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h">
+			<Option target="ZombieArena"/>
+		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>

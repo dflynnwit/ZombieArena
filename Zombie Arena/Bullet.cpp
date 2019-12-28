@@ -86,3 +86,8 @@ void Bullet::update(float elapsedTime)
     m_Position.y < m_MinY || m_Position.y > m_MaxY)
         m_InFlight = false;
 }
+
+void Bullet::draw(RenderWindow &window) {
+    if(m_InFlight)
+        window.draw(m_BulletShape);
+}
