@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/pokor/CLionProjects/ZombieArena/Flashlight.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Flashlight.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj"

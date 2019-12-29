@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Flashlight.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Flashlight.h">
+			<Option target="ZombieArena"/>
+		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>

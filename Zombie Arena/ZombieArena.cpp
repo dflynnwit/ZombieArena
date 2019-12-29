@@ -16,6 +16,7 @@
 #include "Bullet.h"
 #include "Pickup.h"
 #include "MazeGenerator.h"
+#include "../Flashlight.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -113,6 +114,9 @@ int main(int argc, const char * argv[]) {
     Sprite crosshairSprite;
     crosshairSprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/crosshair.png"));
     crosshairSprite.setOrigin(25, 25);
+
+    //Prep flashlight shape
+    Flashlight flashlight;
 
     //Store drawable objects pointers
     std::vector<Zombie*> drawable;
@@ -406,6 +410,9 @@ int main(int argc, const char * argv[]) {
                 wall.Draw(window);
             }
 
+            //Draw flashlight effect
+            flashlight.Draw(window, player.getCenter(), player.getRotation());
+
             //Draw crosshair
             window.draw(crosshairSprite);
         }
@@ -427,3 +434,69 @@ void updatePlayerDirectionalControls(Player &p){
     p.setMoveUp(Keyboard::isKeyPressed(Keyboard::Up) ||
                 Keyboard::isKeyPressed(Keyboard::W));
 }
+
+
+
+
+
+//////////////////////LIGHTS DEMO ! !
+//
+//#include <SFML/Graphics.hpp>
+//#include <vector>
+//
+//int main()
+//{
+//    sf::RenderWindow app(sf::VideoMode(800u, 600u), "blending lights");
+//    app.setFramerateLimit(60u);
+//
+//    sf::RenderTexture tex;
+//    tex.create(app.getSize().x, app.getSize().y);
+//
+//    sf::Texture pic;
+//    pic.loadFromFile("C:\\Users\\pokor\\CLionProjects\\ZombieArena\\pano.png");
+//
+//    std::vector<sf::Vector2f> lights;
+//
+//    const sf::Color colors[3] = { sf::Color::Red, sf::Color::Green, sf::Color::Blue };
+//
+//    while(app.isOpen())
+//    {
+//        sf::Event eve;
+//        while(app.pollEvent(eve))
+//        {
+//            if(eve.type == sf::Event::Closed)
+//                app.close();
+//
+//            if(eve.type == sf::Event::MouseButtonPressed)
+//                lights.push_back(app.mapPixelToCoords(sf::Vector2i(eve.mouseButton.x, eve.mouseButton.y)));
+//        }
+//
+//
+//        app.clear();
+//
+//        //start = no light
+//        tex.clear(sf::Color::Black);
+//
+//        //add the lights together
+//        sf::CircleShape sha;
+//        sha.setRadius(150.f);
+//        sha.setOrigin(sha.getRadius(), sha.getRadius());
+//        sha.setPosition(app.mapPixelToCoords(sf::Mouse::getPosition(app)));
+//        tex.draw(sha, sf::BlendAdd);
+//        for(int i = 0; i < lights.size(); ++i)
+//        {
+//
+//            sha.setPosition(lights[i]);
+//            sha.setFillColor(colors[i % 3]);
+//            tex.draw(sha, sf::BlendAdd);
+//        }
+//        tex.display();
+//
+//        //lit scene
+//        app.draw(sf::Sprite(pic));
+//
+//        //multiply by light
+//        app.draw(sf::Sprite(tex.getTexture()), sf::BlendMultiply);
+//        app.display();
+//    }
+//}

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ZombieArena.dir/Flashlight.cpp.obj"
   "CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj"
   "CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj"
   "CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj"

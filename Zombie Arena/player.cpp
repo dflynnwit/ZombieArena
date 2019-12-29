@@ -137,12 +137,12 @@ void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Tile>
 }
 
 void Player::draw(RenderWindow &window) {
-    RectangleShape border(Vector2f(m_Sprite.getLocalBounds().width, m_Sprite.getLocalBounds().height));
-    border.setFillColor(Color(0, 0, 255, 200));
-    border.setOrigin(m_Sprite.getOrigin());
-    border.setPosition(m_Position);
-    border.setRotation(m_Sprite.getRotation());
-    window.draw(border);
+//    RectangleShape border(Vector2f(m_Sprite.getLocalBounds().width, m_Sprite.getLocalBounds().height));
+//    border.setFillColor(Color(0, 0, 255, 200));
+//    border.setOrigin(m_Sprite.getOrigin());
+//    border.setPosition(m_Position);
+//    border.setRotation(m_Sprite.getRotation());
+//    window.draw(border);
 
     Draw(window);
 }

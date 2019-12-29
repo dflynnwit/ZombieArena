@@ -11,7 +11,7 @@ include_directories(Resources/sound)
 #include_directories(C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include)
 
 add_executable(ZombieArena ${SOURCE_FILES}/ZombieArena.cpp
-        ${SOURCE_FILES}/player.cpp  ${SOURCE_FILES}/Arena.cpp "Zombie Arena/TextureHolder.cpp" "Zombie Arena/TextureHolder.h" "Zombie Arena/Zombie.cpp" "Zombie Arena/Zombie.h" "Zombie Arena/ZombieHorde.cpp" "Zombie Arena/ZombieHorde.h" "Zombie Arena/Bullet.cpp" "Zombie Arena/Bullet.h" "Zombie Arena/Pickup.cpp" "Zombie Arena/Pickup.h" "Zombie Arena/Entity.h" "Zombie Arena/Entity.cpp" "Zombie Arena/Tile.cpp" "Zombie Arena/Tile.h" "Zombie Arena/MazeGenerator.cpp" "Zombie Arena/MazeGenerator.h")
+        ${SOURCE_FILES}/player.cpp  ${SOURCE_FILES}/Arena.cpp "Zombie Arena/TextureHolder.cpp" "Zombie Arena/TextureHolder.h" "Zombie Arena/Zombie.cpp" "Zombie Arena/Zombie.h" "Zombie Arena/ZombieHorde.cpp" "Zombie Arena/ZombieHorde.h" "Zombie Arena/Bullet.cpp" "Zombie Arena/Bullet.h" "Zombie Arena/Pickup.cpp" "Zombie Arena/Pickup.h" "Zombie Arena/Entity.h" "Zombie Arena/Entity.cpp" "Zombie Arena/Tile.cpp" "Zombie Arena/Tile.h" "Zombie Arena/MazeGenerator.cpp" "Zombie Arena/MazeGenerator.h" Flashlight.cpp Flashlight.h)
 
 # Detect and add SFML
 set(SFML_DIR C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML)

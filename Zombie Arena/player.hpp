@@ -46,6 +46,8 @@ private:
     // Speed in pixels per second
     float m_Speed;
 
+    Sprite m_flashlightSprite;
+
 public:
 
     Player();
@@ -82,26 +84,6 @@ public:
     void setMoveRight(bool right);
 
     void draw(RenderWindow &window);
-
-    /*
-    // The next four functions move the player
-    void moveLeft();
-
-    void moveRight();
-
-    void moveUp();
-
-    void moveDown();
-
-    // Stop the player moving in a specific direction
-    void stopLeft();
-
-    void stopRight();
-
-    void stopUp();
-
-    void stopDown();
-     */
 
     // We will call this function once every frame
     void update(float elapsedTime, Vector2i mousePosition, std::vector<Tile>& walls);
