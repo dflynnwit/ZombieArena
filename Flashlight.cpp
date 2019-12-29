@@ -13,7 +13,7 @@ Flashlight::Flashlight(RenderWindow &window) {
     m_flashlightVA.resize(7);
 
     m_flashlightVA[0].position = sf::Vector2f(12, 0);
-    m_flashlightVA[0].color = sf::Color(0, 0, 0, 240);
+    m_flashlightVA[0].color = sf::Color(0, 0, 0, 230);
 
     m_flashlightVA[1].position = sf::Vector2f(x, x / 2);
     m_flashlightVA[1].color = sf::Color(0, 0, 0, 255);
@@ -48,7 +48,7 @@ Flashlight::Flashlight(RenderWindow &window) {
 void Flashlight::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     target.draw(m_flashlightVA, states);
-    target.draw(m_laserVA, states);
+//    target.draw(m_laserVA, states);
 }
 
 void Flashlight::Update(Vector2f playerPosition, float rotation) {

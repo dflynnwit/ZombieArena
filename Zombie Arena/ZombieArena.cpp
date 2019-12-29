@@ -38,19 +38,19 @@ int main(int argc, const char * argv[]) {
      * Windowed
      */
     //Create SFML window
-//    RenderWindow window(VideoMode(resolution.x/2, resolution.y/2), "Zombie Arena", Style::Default);
-//
-//    //Create main view
-//    View mainView(sf::FloatRect(0, 0, resolution.x/2, resolution.y/2));
+    RenderWindow window(VideoMode(resolution.x/2, resolution.y/2), "Zombie Arena", Style::Default);
+
+    //Create main view
+    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     /*
      * Fullscreen
      */
     //Create SFML window
-    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
-
-    //Create main view
-    View mainView(sf::FloatRect(0, 0, 1280, 720));
+//    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
+//
+//    //Create main view
+//    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     //Create texture holder singleton
     TextureHolder textureHolder;
@@ -115,9 +115,6 @@ int main(int argc, const char * argv[]) {
 
     //Prep flashlight shape
     Flashlight flashlight(window);
-
-    //Store drawable objects pointers
-    std::vector<Zombie*> drawable;
 
     //init game score
     int score = 0;
@@ -242,14 +239,12 @@ int main(int argc, const char * argv[]) {
                 ammoPickup.setArena(arena);
 
                 //Create zombie horde
-//                numZombies = 10;
+                numZombies = 10;
 
                 //Delete previously allocated memory
                 delete[] zombies;
                 zombies = createHorde(numZombies, arena);
                 numZombiesAlive = numZombies;
-
-                drawable.push_back(zombies);
 
                 //Pass vertex array to createbackground
                 int tileSize = createBackground(background, arena);
@@ -294,7 +289,7 @@ int main(int argc, const char * argv[]) {
             //Update zombies in the horde
             for(int i = 0; i < numZombies; i++){
                 if(zombies[i].isAlive())
-                    zombies[i].update(dt.asSeconds(), playerPosition);
+                    zombies[i].update(dt.asSeconds(), playerPosition, *walls);
             }
 
             //Update pickups
@@ -387,7 +382,8 @@ int main(int argc, const char * argv[]) {
 
             //Draw background
             for(auto tile : *floor)
-                tile.Draw(window);
+                if(player.Distance(tile) < 300)
+                    tile.Draw(window);
 
             //Draw pickups
             healthPickup.draw(window);
@@ -405,16 +401,17 @@ int main(int argc, const char * argv[]) {
                 bullets[i].draw(window);
             }
 
+            //Draw walls
             for(auto wall : *walls) {
-                //                if(player.Distance(walls[i]) < 300)
-                wall.Draw(window);
+                if(player.Distance(wall) < 300)
+                    wall.Draw(window);
             }
 
             //Draw flashlight effect
             window.draw(flashlight);
 
             //Draw crosshair
-//            window.draw(crosshairSprite);
+            window.draw(crosshairSprite);
         }
 
         window.display();
@@ -434,69 +431,3 @@ void updatePlayerDirectionalControls(Player &p){
     p.setMoveUp(Keyboard::isKeyPressed(Keyboard::Up) ||
                 Keyboard::isKeyPressed(Keyboard::W));
 }
-
-
-
-
-
-//////////////////////LIGHTS DEMO ! !
-//
-//#include <SFML/Graphics.hpp>
-//#include <vector>
-//
-//int main()
-//{
-//    sf::RenderWindow app(sf::VideoMode(800u, 600u), "blending lights");
-//    app.setFramerateLimit(60u);
-//
-//    sf::RenderTexture tex;
-//    tex.create(app.getSize().x, app.getSize().y);
-//
-//    sf::Texture pic;
-//    pic.loadFromFile("C:\\Users\\pokor\\CLionProjects\\ZombieArena\\pano.png");
-//
-//    std::vector<sf::Vector2f> lights;
-//
-//    const sf::Color colors[3] = { sf::Color::Red, sf::Color::Green, sf::Color::Blue };
-//
-//    while(app.isOpen())
-//    {
-//        sf::Event eve;
-//        while(app.pollEvent(eve))
-//        {
-//            if(eve.type == sf::Event::Closed)
-//                app.close();
-//
-//            if(eve.type == sf::Event::MouseButtonPressed)
-//                lights.push_back(app.mapPixelToCoords(sf::Vector2i(eve.mouseButton.x, eve.mouseButton.y)));
-//        }
-//
-//
-//        app.clear();
-//
-//        //start = no light
-//        tex.clear(sf::Color::Black);
-//
-//        //add the lights together
-//        sf::CircleShape sha;
-//        sha.setRadius(150.f);
-//        sha.setOrigin(sha.getRadius(), sha.getRadius());
-//        sha.setPosition(app.mapPixelToCoords(sf::Mouse::getPosition(app)));
-//        tex.draw(sha, sf::BlendAdd);
-//        for(int i = 0; i < lights.size(); ++i)
-//        {
-//
-//            sha.setPosition(lights[i]);
-//            sha.setFillColor(colors[i % 3]);
-//            tex.draw(sha, sf::BlendAdd);
-//        }
-//        tex.display();
-//
-//        //lit scene
-//        app.draw(sf::Sprite(pic));
-//
-//        //multiply by light
-//        app.draw(sf::Sprite(tex.getTexture()), sf::BlendMultiply);
-//        app.display();
-//    }
-//}

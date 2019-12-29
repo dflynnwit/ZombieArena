@@ -9,6 +9,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Entity.h"
+#include "Tile.h"
 
 using namespace sf;
 
@@ -58,7 +59,7 @@ public:
     Sprite getSprite();
 
     // Update the zombie each frame
-    void update(float elapsedTime, Vector2f playerLocation);
+    void update(float elapsedTime, Vector2f playerLocation, std::vector<Tile>& walls);
 
     void draw(RenderWindow& window);
 };

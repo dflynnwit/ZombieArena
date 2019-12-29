@@ -61,9 +61,11 @@ Sprite Zombie::getSprite() {
     return m_Sprite;
 }
 
-void Zombie::update(float elapsedTime, Vector2f playerLocation) {
+void Zombie::update(float elapsedTime, Vector2f playerLocation, std::vector<Tile>& walls) {
     float playerX = playerLocation.x;
     float playerY = playerLocation.y;
+
+    Vector2f origPosition = m_Position;
 
     // Update the zombie position variables
     if (playerX > m_Position.x)
@@ -90,6 +92,15 @@ void Zombie::update(float elapsedTime, Vector2f playerLocation) {
     m_Rotation = (atan2(playerY - m_Position.y,
                          playerX - m_Position.x)
                    * 180) / 3.141;
+
+    for(int i = 0; i < walls.size(); i++)
+        if(Collision(walls[i])){
+            //If destination would collide with wall, push player back by 1 pixel in a direction from that wall to the player
+            float magnitude = Distance(walls[i]);
+            m_Position.x += (origPosition.x - walls[i].GetPosition().x) / magnitude ;
+            m_Position.y += (origPosition.y - walls[i].GetPosition().y) / magnitude ;
+            break;
+        }
 
     Update();
 }
