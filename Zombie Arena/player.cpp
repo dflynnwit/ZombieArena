@@ -124,8 +124,8 @@ void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Wall>
                         mousePosition.x - m_Resolution.x / 2)
                   * 180) / 3.141;
 
-    for(int i = 0; i < 100; i++)
-        if(Collision(walls.at(i))){
+    for(int i = 0; i < walls.size(); i++)
+        if(Collision(walls[i])){
             //If destination would collide with wall, push player back by 1 pixel in a direction from that wall to the player
             float magnitude = Distance(walls[i]);
             m_Position.x += (origPosition.x - walls[i].GetPosition().x) / magnitude ;
