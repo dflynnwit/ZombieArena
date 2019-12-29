@@ -35,6 +35,8 @@ public:
 
     Sprite GetSprite();
 
+    Vector2f GetPosition();
+
     void Draw(RenderWindow &window);
 
     sf::Vector2f velocity;

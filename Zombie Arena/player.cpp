@@ -126,8 +126,10 @@ void Player::update(float elapsedTime, Vector2i mousePosition, Wall* walls)
 
     for(int i = 0; i < 100; i++)
         if(Collision(walls[i])){
-            m_Position.x -= 2 *(m_Speed * m_RightPressed - m_Speed * m_LeftPressed) * elapsedTime;
-            m_Position.y -= 2* (m_Speed * m_DownPressed - m_Speed * m_UpPressed) * elapsedTime;
+            //If destination would collide with wall, push player back by 1 pixel in a direction from that wall to the player
+            float magnitude = Distance(walls[i]);
+            m_Position.x += (origPosition.x - walls[i].GetPosition().x) / magnitude ;
+            m_Position.y += (origPosition.y - walls[i].GetPosition().y) / magnitude ;
             break;
         }
 

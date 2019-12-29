@@ -59,4 +59,8 @@ float Entity::Distance(Entity &entity) {
     return sqrt(pow((m_Position.y - entity.m_Position.y), 2) + pow((m_Position.x - entity.m_Position.x), 2));
 }
 
+Vector2f Entity::GetPosition() {
+    return m_Position;
+}
+
 
