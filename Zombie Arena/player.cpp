@@ -110,7 +110,7 @@ void Player::setMoveUp(bool up) {
     m_UpPressed = up;
 }
 
-void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Wall>& walls)
+void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Tile>& walls)
 {
     Vector2f origPosition = m_Position;
     float origAngle = m_Sprite.getRotation();

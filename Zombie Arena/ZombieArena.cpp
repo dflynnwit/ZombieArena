@@ -75,8 +75,9 @@ int main(int argc, const char * argv[]) {
     MazeGenerator mazeGenerator(.2);
 
     //Store walls
-//    Wall* walls = nullptr;
-    std::vector<Wall>* walls = nullptr;
+    std::vector<Tile>* walls = nullptr;
+    //And floor tiles
+    std::vector<Tile>* floor = nullptr;
 
     //Arena boundaries
     IntRect arena;
@@ -217,6 +218,7 @@ int main(int argc, const char * argv[]) {
 
                 mazeGenerator.GenerateMazeData(37, 11);
                 walls = mazeGenerator.CreateMaze();
+                floor = mazeGenerator.GetFloor();
 
                 std::vector<std::vector<int>> vec = mazeGenerator.GetData();
                 for (auto row = vec.begin(); row != vec.end(); ++row)
@@ -386,11 +388,8 @@ int main(int argc, const char * argv[]) {
              window.setView(mainView);
 
              //Draw background
-//             window.draw(background, &backgroundTexture);
-            for(auto wall : *walls) {
-//                if(player.Distance(walls[i]) < 300)
-                    wall.Draw(window);
-            }
+             for(auto tile : *floor)
+                 tile.Draw(window);
 
              //Draw pickups
              healthPickup.draw(window);
@@ -406,6 +405,11 @@ int main(int argc, const char * argv[]) {
              //Draw bullets
              for(int i = 0; i < 100; i++){
                  bullets[i].draw(window);
+             }
+
+             for(auto wall : *walls) {
+                 //                if(player.Distance(walls[i]) < 300)
+                 wall.Draw(window);
              }
 
              //Draw crosshair

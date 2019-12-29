@@ -8,22 +8,25 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
-#include "Wall.h"
+#include "Tile.h"
 
 class MazeGenerator {
 private:
     std::vector<std::vector<int>> m_mazeData;
-    std::vector<Wall>* m_walls;
+    std::vector<Tile>* m_walls;
+    std::vector<Tile>* m_floor;
     float m_placementThreshold;
 public:
     MazeGenerator(float placementThreshold = .5);
 
     void GenerateMazeData(int width, int height);
-    std::vector<Wall>* CreateMaze();
+    std::vector<Tile>* CreateMaze();
     std::vector<std::vector<int>> GetData();
 
     void SetPlacementThreshold(float threshold);
     float GetPlacementThreshold();
+
+    std::vector<Tile> *GetFloor();
 };
 
 

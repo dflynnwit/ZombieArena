@@ -690,11 +690,13 @@ SFML/Graphics.hpp
 map
 -
 
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.cpp
-Wall.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.cpp
+random
+-
+Tile.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
 
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
 Entity.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
 

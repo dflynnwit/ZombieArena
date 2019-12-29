@@ -312,7 +312,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.cpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
- C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
+ C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp
@@ -469,7 +469,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.cpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
-CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.obj
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/BlendMode.hpp
@@ -546,8 +546,8 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.obj
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
- C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.cpp
- C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
+ C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.cpp
+ C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp
@@ -708,7 +708,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
- C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
+ C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.h
@@ -870,6 +870,6 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
- C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h
+ C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp

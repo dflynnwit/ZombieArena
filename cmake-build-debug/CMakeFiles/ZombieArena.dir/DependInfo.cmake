@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.obj"
+  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj"
   "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj"

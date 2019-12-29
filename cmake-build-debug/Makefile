@@ -284,32 +284,32 @@ Zombie_Arena/TextureHolder.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.s
 .PHONY : Zombie_Arena/TextureHolder.cpp.s
 
-Zombie_Arena/Wall.obj: Zombie_Arena/Wall.cpp.obj
+Zombie_Arena/Tile.obj: Zombie_Arena/Tile.cpp.obj
 
-.PHONY : Zombie_Arena/Wall.obj
+.PHONY : Zombie_Arena/Tile.obj
 
 # target to build an object file
-Zombie_Arena/Wall.cpp.obj:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.obj
-.PHONY : Zombie_Arena/Wall.cpp.obj
+Zombie_Arena/Tile.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj
+.PHONY : Zombie_Arena/Tile.cpp.obj
 
-Zombie_Arena/Wall.i: Zombie_Arena/Wall.cpp.i
+Zombie_Arena/Tile.i: Zombie_Arena/Tile.cpp.i
 
-.PHONY : Zombie_Arena/Wall.i
+.PHONY : Zombie_Arena/Tile.i
 
 # target to preprocess a source file
-Zombie_Arena/Wall.cpp.i:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.i
-.PHONY : Zombie_Arena/Wall.cpp.i
+Zombie_Arena/Tile.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.i
+.PHONY : Zombie_Arena/Tile.cpp.i
 
-Zombie_Arena/Wall.s: Zombie_Arena/Wall.cpp.s
+Zombie_Arena/Tile.s: Zombie_Arena/Tile.cpp.s
 
-.PHONY : Zombie_Arena/Wall.s
+.PHONY : Zombie_Arena/Tile.s
 
 # target to generate assembly for a file
-Zombie_Arena/Wall.cpp.s:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Wall.cpp.s
-.PHONY : Zombie_Arena/Wall.cpp.s
+Zombie_Arena/Tile.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.s
+.PHONY : Zombie_Arena/Tile.cpp.s
 
 Zombie_Arena/Zombie.obj: Zombie_Arena/Zombie.cpp.obj
 
@@ -446,9 +446,9 @@ help:
 	@echo ... Zombie_Arena/TextureHolder.obj
 	@echo ... Zombie_Arena/TextureHolder.i
 	@echo ... Zombie_Arena/TextureHolder.s
-	@echo ... Zombie_Arena/Wall.obj
-	@echo ... Zombie_Arena/Wall.i
-	@echo ... Zombie_Arena/Wall.s
+	@echo ... Zombie_Arena/Tile.obj
+	@echo ... Zombie_Arena/Tile.i
+	@echo ... Zombie_Arena/Tile.s
 	@echo ... Zombie_Arena/Zombie.obj
 	@echo ... Zombie_Arena/Zombie.i
 	@echo ... Zombie_Arena/Zombie.s

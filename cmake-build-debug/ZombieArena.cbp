@@ -114,10 +114,10 @@
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h">
 			<Option target="ZombieArena"/>
 		</Unit>
-		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.cpp">
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>
-		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Wall.h">
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h">
 			<Option target="ZombieArena"/>
 		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.cpp">

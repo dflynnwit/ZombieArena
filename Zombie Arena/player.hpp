@@ -9,7 +9,7 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>       /* atan2 */
 #include "Entity.h"
-#include "Wall.h"
+#include "Tile.h"
 
 
 using namespace sf;
@@ -104,7 +104,7 @@ public:
      */
 
     // We will call this function once every frame
-    void update(float elapsedTime, Vector2i mousePosition, std::vector<Wall>& walls);
+    void update(float elapsedTime, Vector2i mousePosition, std::vector<Tile>& walls);
 
     // Give player a speed boost
     void upgradeSpeed();
