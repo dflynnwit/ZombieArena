@@ -237,7 +237,7 @@ int main(int argc, const char * argv[]) {
                 ammoPickup.setArena(arena);
 
                 //Create zombie horde
-                numZombies = 10;
+//                numZombies = 10;
 
                 //Delete previously allocated memory
                 delete[] zombies;
@@ -278,7 +278,7 @@ int main(int argc, const char * argv[]) {
 
 
             //Update player position
-            player.update(dtAsSeconds, Mouse::getPosition());
+            player.update(dtAsSeconds, Mouse::getPosition(), walls);
 
             //Record player new position
             Vector2f playerPosition(player.getCenter());

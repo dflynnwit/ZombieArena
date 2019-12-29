@@ -6,6 +6,7 @@
 //#include "stdafx.h" // <- Visual Studio only
 #include "player.hpp"
 #include "TextureHolder.h"
+
 #include <iostream>
 
 Player::Player() : Entity("../Resources/graphics/player.png")
@@ -109,11 +110,19 @@ void Player::setMoveUp(bool up) {
     m_UpPressed = up;
 }
 
-void Player::update(float elapsedTime, Vector2i mousePosition)
+void Player::update(float elapsedTime, Vector2i mousePosition, Wall* walls)
 {
+    Vector2f origPosition = m_Position;
+
     //Since true is 1 and false is 0 we can calculate displacement by subtracting opposite values multiplied by the booleans
     m_Position.x += (m_Speed * m_RightPressed - m_Speed * m_LeftPressed) * elapsedTime;
     m_Position.y += (m_Speed * m_DownPressed - m_Speed * m_UpPressed) * elapsedTime;
+
+    for(int i = 0; i < 100; i++)
+        if(Collision(walls[i])){
+            m_Position = origPosition;
+            break;
+        }
 
     //TODO: Check for collisions before updating position instead
 
