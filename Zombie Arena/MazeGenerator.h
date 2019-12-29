@@ -15,15 +15,13 @@ private:
     std::vector<std::vector<int>> m_mazeData;
     std::vector<Wall>* m_walls;
     float m_placementThreshold;
-    int m_nOfWalls;
 public:
     MazeGenerator(float placementThreshold = .5);
 
     void GenerateMazeData(int width, int height);
     Wall* CreateMaze();
     std::vector<std::vector<int>> GetData();
-    std::vector<Wall> GetWalls();
-    int GetNofWalls();
+    std::vector<Wall>* GetWalls();
 
     void SetPlacementThreshold(float threshold);
     float GetPlacementThreshold();

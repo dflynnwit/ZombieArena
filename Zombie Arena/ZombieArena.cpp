@@ -75,7 +75,8 @@ int main(int argc, const char * argv[]) {
     MazeGenerator mazeGenerator(.2);
 
     //Store walls
-    Wall* walls = nullptr;
+//    Wall* walls = nullptr;
+    std::vector<Wall>* walls = nullptr;
 
     //Arena boundaries
     IntRect arena;
@@ -215,7 +216,9 @@ int main(int argc, const char * argv[]) {
                 arena.top = 0;
 
                 mazeGenerator.GenerateMazeData(37, 11);
-                walls = mazeGenerator.CreateMaze();
+                mazeGenerator.CreateMaze();
+
+                walls = mazeGenerator.GetWalls();
 
                 std::vector<std::vector<int>> vec = mazeGenerator.GetData();
                 for (auto row = vec.begin(); row != vec.end(); ++row)
@@ -278,7 +281,7 @@ int main(int argc, const char * argv[]) {
 
 
             //Update player position
-            player.update(dtAsSeconds, Mouse::getPosition(), walls);
+            player.update(dtAsSeconds, Mouse::getPosition(), *walls);
 
             //Record player new position
             Vector2f playerPosition(player.getCenter());
@@ -386,9 +389,9 @@ int main(int argc, const char * argv[]) {
 
              //Draw background
 //             window.draw(background, &backgroundTexture);
-            for(int i = 0; i < mazeGenerator.GetNofWalls(); i++) {
+            for(auto wall : *walls) {
 //                if(player.Distance(walls[i]) < 300)
-                    walls[i].Draw(window);
+                    wall.Draw(window);
             }
 
              //Draw pickups

@@ -104,7 +104,7 @@ public:
      */
 
     // We will call this function once every frame
-    void update(float elapsedTime, Vector2i mousePosition, Wall* walls);
+    void update(float elapsedTime, Vector2i mousePosition, std::vector<Wall>& walls);
 
     // Give player a speed boost
     void upgradeSpeed();
