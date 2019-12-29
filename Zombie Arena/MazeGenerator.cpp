@@ -5,6 +5,10 @@
 #include <iostream>
 #include "MazeGenerator.h"
 
+MazeGenerator::MazeGenerator() {
+    MazeGenerator(.05);
+}
+
 MazeGenerator::MazeGenerator(float placementThreshold) {
     m_placementThreshold = placementThreshold;
 }
@@ -13,7 +17,6 @@ void MazeGenerator::GenerateMazeData(int width, int height) {
     //Initialize all values in size
     m_mazeData.resize(height+1, std::vector<int>(width+1, 0));
     m_nOfWalls = 0;
-    std::cout << m_placementThreshold << std::endl;
     srand((int)time(0));
 
     for (int i = 0; i <= height; i++)
@@ -53,29 +56,25 @@ Wall *MazeGenerator::CreateMaze() {
 
     for(int row = 0; row < m_mazeData.size(); row++){
         for(int col = 0; col < m_mazeData[0].size(); col++){
-            if(m_mazeData[row][col] == 1) {
-                walls[index].Spawn(col, row);
-                m_walls.push_back(walls[index]);
-                index++;
-            }
+            if(m_mazeData[row][col] == 1)
+                walls[index].Spawn(col,row);
         }
     }
+
+//    for (auto row = m_mazeData.begin(); row != m_mazeData.end(); ++row)
+//    {
+//        for (auto col = row->begin(); col != row->end(); ++col)
+//        {
+//            std::cout << *col;
+//            if(*col == 1)
+//                walls[index].Spawn(0,0);
+//        }
+//        std::cout << std::endl;
+//    }
 
     return walls;
 }
 
 int MazeGenerator::GetNofWalls() {
     return m_nOfWalls;
-}
-
-std::vector<Wall> MazeGenerator::GetWalls() {
-    return m_walls;
-}
-
-void MazeGenerator::SetPlacementThreshold(float threshold) {
-    m_placementThreshold = threshold;
-}
-
-float MazeGenerator::GetPlacementThreshold() {
-    return m_placementThreshold;
 }

@@ -72,8 +72,7 @@ int main(int argc, const char * argv[]) {
     Player player;
 
     //Prep maze generator
-    MazeGenerator mazeGenerator(.1);
-
+    MazeGenerator mazeGenerator;
 
     //Store walls
     Wall* walls = nullptr;
@@ -215,23 +214,17 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
-                std::cout<<"Before generating maze data: " << mazeGenerator.GetPlacementThreshold() << std::endl;
-
                 mazeGenerator.GenerateMazeData(50, 50);
-                std::cout<<"Before creating maze: " << mazeGenerator.GetPlacementThreshold() << std::endl;
-                mazeGenerator.CreateMaze();
-//                std::cout<<"After creating maze: " << mazeGenerator.GetPlacementThreshold() << std::endl;
+                walls = mazeGenerator.CreateMaze();
 
                 std::vector<std::vector<int>> vec = mazeGenerator.GetData();
                 for (auto row = vec.begin(); row != vec.end(); ++row)
                 {
                     for (auto col = row->begin(); col != row->end(); ++col)
                     {
-//                        std::cout << *col;
-                        if(*col == 1)
-                            std::cout << "##";
-                        else
-                            std::cout << "  ";
+                        std::cout << *col;
+//                        if(*col == 1)
+
                     }
                     std::cout << std::endl;
                 }
@@ -280,9 +273,6 @@ int main(int argc, const char * argv[]) {
             //Convert mouse position to world coords of main view (relative to window for windowed mode)
             mouseWorldPosition = window.mapPixelToCoords(Mouse::getPosition(window), mainView);
 
-            //Update walls - WHY?!
-            for(int i = 0; i < mazeGenerator.GetNofWalls(); i++)
-                walls[i].Update();
 
             //Update player position
             player.update(dtAsSeconds, Mouse::getPosition());
@@ -393,27 +383,10 @@ int main(int argc, const char * argv[]) {
 
              //Draw background
 //             window.draw(background, &backgroundTexture);
-
-//             for (auto row = walls.begin(); row != walls.end(); ++row)
-//             {
-//                 for (auto col = row->begin(); col != row->end(); ++col)
-//                 {
-//
-//                 }
-//             }
-
             for(int i = 0; i < mazeGenerator.GetNofWalls(); i++) {
                 walls[i].Draw(window);
-//                std::cout << i << " - " << walls[i].GetSprite().getPosition().x << ":" << walls[i].GetSprite().getPosition().y << std::endl;
+                std::cout << walls[i].GetSprite().getPosition().x << ":" << walls[i].GetSprite().getPosition().y;
             }
-
-
-//             std::cout << walls[0].GetSprite().getPosition().x << ":" << walls[0].GetSprite().getPosition().y << std::endl;
-//             std::cout << walls[2].GetSprite().getPosition().x << ":" << walls[2].GetSprite().getPosition().y << std::endl;
-//             std::cout << walls[4].GetSprite().getPosition().x << ":" << walls[4].GetSprite().getPosition().y << std::endl;
-//             std::cout << walls[6].GetSprite().getPosition().x << ":" << walls[6].GetSprite().getPosition().y << std::endl;
-//             std::cout << walls[8].GetSprite().getPosition().x << ":" << walls[8].GetSprite().getPosition().y << std::endl;
-//             std::cout << walls[10].GetSprite().getPosition().x << ":" << walls[10].GetSprite().getPosition().y << std::endl;
 
              //Draw pickups
              healthPickup.draw(window);
