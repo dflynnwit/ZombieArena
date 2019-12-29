@@ -5,35 +5,53 @@
 #include "Flashlight.h"
 
 Flashlight::Flashlight(RenderWindow &window) {
-    int y = window.getSize().y;
-    int x = window.getSize().x;
+    //Decrease size to 60% of screen width to avoid blank spots but retain quick gradient
+    int x = window.getSize().x/10*6;
 
-    m_vshape.setPrimitiveType(TriangleFan);
-    m_vshape.resize(5);
+    //Flashlight
+    m_flashlightVA.setPrimitiveType(TriangleFan);
+    m_flashlightVA.resize(7);
 
-    m_vshape[0].position = sf::Vector2f(12, 0);
-    m_vshape[0].color = sf::Color(0,0,0,240);
+    m_flashlightVA[0].position = sf::Vector2f(12, 0);
+    m_flashlightVA[0].color = sf::Color(0, 0, 0, 240);
 
-    m_vshape[1].position = sf::Vector2f(x, y);
-    m_vshape[1].color = sf::Color(0,0,0,255);
+    m_flashlightVA[1].position = sf::Vector2f(x, x / 2);
+    m_flashlightVA[1].color = sf::Color(0, 0, 0, 255);
 
-    m_vshape[2].position = sf::Vector2f(- x, y);
-    m_vshape[2].color = sf::Color(0,0,0,255);
+    m_flashlightVA[2].position = sf::Vector2f(x, x);
+    m_flashlightVA[2].color = sf::Color(0, 0, 0, 255);
 
-    m_vshape[3].position = sf::Vector2f(- x, - y);
-    m_vshape[3].color = sf::Color(0,0,0,255);
+    m_flashlightVA[3].position = sf::Vector2f(- x, x);
+    m_flashlightVA[3].color = sf::Color(0, 0, 0, 255);
 
-    m_vshape[4].position = sf::Vector2f(x, - y);
-    m_vshape[4].color = sf::Color(0,0,0,255);
+    m_flashlightVA[4].position = sf::Vector2f(- x, - x);
+    m_flashlightVA[4].color = sf::Color(0, 0, 0, 255);
+
+    m_flashlightVA[5].position = sf::Vector2f(x, - x);
+    m_flashlightVA[5].color = sf::Color(0, 0, 0, 255);
+
+    m_flashlightVA[6].position = sf::Vector2f(x, - x / 2);
+    m_flashlightVA[6].color = sf::Color(0, 0, 0, 255);
+
+
+    //Laser pointer
+    m_laserVA.setPrimitiveType(Lines);
+    m_laserVA.resize(2);
+
+    m_laserVA[0].position = Vector2f(15, 0);
+    m_laserVA[0].color = Color(255, 50, 0, 200);
+
+    m_laserVA[1].position = Vector2f(x, 0);
+    m_laserVA[1].color = Color(255, 50, 0, 10);
 }
 
 void Flashlight::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
-    target.draw(m_vshape, states);
+    target.draw(m_flashlightVA, states);
+    target.draw(m_laserVA, states);
 }
 
 void Flashlight::Update(Vector2f playerPosition, float rotation) {
     this->setPosition(playerPosition);
     this->setRotation(rotation);
-    this->setScale(1.1,1.1);
 }

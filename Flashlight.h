@@ -13,7 +13,8 @@ class Flashlight : public Drawable, public Transformable{
 private:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-    VertexArray m_vshape;
+    VertexArray m_flashlightVA;
+    VertexArray m_laserVA;
 public:
     Flashlight(RenderWindow& window);
 

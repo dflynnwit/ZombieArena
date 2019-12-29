@@ -38,21 +38,19 @@ int main(int argc, const char * argv[]) {
      * Windowed
      */
     //Create SFML window
-    RenderWindow window(VideoMode(resolution.x/2, resolution.y/2), "Zombie Arena", Style::Default);
-
-    //Create main view
-    View mainView(sf::FloatRect(0, 0, resolution.x/2, resolution.y/2));
+//    RenderWindow window(VideoMode(resolution.x/2, resolution.y/2), "Zombie Arena", Style::Default);
+//
+//    //Create main view
+//    View mainView(sf::FloatRect(0, 0, resolution.x/2, resolution.y/2));
 
     /*
      * Fullscreen
      */
     //Create SFML window
-//    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
-//    const int fpsCap = 60;
-//    window.setFramerateLimit(fpsCap);
-//
-//    //Create main view
-//    View mainView(sf::FloatRect(0, 0, resolution.x, resolution.y));
+    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
+
+    //Create main view
+    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     //Create texture holder singleton
     TextureHolder textureHolder;
@@ -416,7 +414,7 @@ int main(int argc, const char * argv[]) {
             window.draw(flashlight);
 
             //Draw crosshair
-            window.draw(crosshairSprite);
+//            window.draw(crosshairSprite);
         }
 
         window.display();
