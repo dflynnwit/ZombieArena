@@ -10,11 +10,10 @@
 
 class Wall : public Entity{
 private:
-    IntRect m_Arena;
+
 public:
     Wall();
-
-    void Spawn(float x, float y);
+    void Spawn(float x, float y, bool isEdge = false);
 };
 
 

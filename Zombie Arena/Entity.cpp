@@ -2,6 +2,7 @@
 // Created by Pokora on 28/12/2019.
 //
 
+#include <cmath>
 #include "Entity.h"
 
 Entity::Entity(const std::string filename) {
@@ -52,6 +53,10 @@ void Entity::SetPosition(Vector2f position, float angle) {
 void Entity::Update() {
     m_Sprite.setPosition(m_Position.x, m_Position.y);
     m_Sprite.setRotation(m_Rotation);
+}
+
+float Entity::Distance(Entity &entity) {
+    return sqrt(pow((m_Position.y - entity.m_Position.y), 2) + pow((m_Position.x - entity.m_Position.x), 2));
 }
 
 

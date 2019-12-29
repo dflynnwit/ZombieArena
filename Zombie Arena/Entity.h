@@ -19,6 +19,8 @@ public:
 
     bool Collision(Entity& entity);
 
+    float Distance(Entity& entity);
+
     void SetSprite(const std::string filename);
 
     void SetPosition(Vector2f position, float angle);

@@ -21,7 +21,7 @@ void MazeGenerator::GenerateMazeData(int width, int height) {
         {
             if (i == 0 || j == 0 || i == height || j == width)
             {
-                m_mazeData[i][j] = 1;
+                m_mazeData[i][j] = 10;
             }
 
             else if (i % 2 == 0 && j % 2 == 0)
@@ -54,6 +54,8 @@ Wall *MazeGenerator::CreateMaze() {
         for(int col = 0; col < m_mazeData[0].size(); col++){
             if(m_mazeData[row][col] == 1)
                 walls[index++].Spawn(col,row);
+            if(m_mazeData[row][col] == 10)
+                walls[index++].Spawn(col,row, true);
         }
     }
 

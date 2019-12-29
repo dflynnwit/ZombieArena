@@ -214,7 +214,7 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
-                mazeGenerator.GenerateMazeData(50, 50);
+                mazeGenerator.GenerateMazeData(37, 11);
                 walls = mazeGenerator.CreateMaze();
 
                 std::vector<std::vector<int>> vec = mazeGenerator.GetData();
@@ -222,9 +222,12 @@ int main(int argc, const char * argv[]) {
                 {
                     for (auto col = row->begin(); col != row->end(); ++col)
                     {
-                        std::cout << *col;
-//                        if(*col == 1)
-
+                        if(*col == 1)
+                            std::cout << "O";
+                        else if(*col == 10)
+                            std::cout << "X";
+                        else
+                            std::cout << " ";
                     }
                     std::cout << std::endl;
                 }
@@ -384,7 +387,8 @@ int main(int argc, const char * argv[]) {
              //Draw background
 //             window.draw(background, &backgroundTexture);
             for(int i = 0; i < mazeGenerator.GetNofWalls(); i++) {
-                walls[i].Draw(window);
+//                if(player.Distance(walls[i]) < 300)
+                    walls[i].Draw(window);
             }
 
              //Draw pickups
