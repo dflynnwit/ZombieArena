@@ -223,8 +223,6 @@ int main(int argc, const char * argv[]) {
                     for (auto col = row->begin(); col != row->end(); ++col)
                     {
                         std::cout << *col;
-//                        if(*col == 1)
-
                     }
                     std::cout << std::endl;
                 }
@@ -273,6 +271,9 @@ int main(int argc, const char * argv[]) {
             //Convert mouse position to world coords of main view (relative to window for windowed mode)
             mouseWorldPosition = window.mapPixelToCoords(Mouse::getPosition(window), mainView);
 
+            //Update walls - WHY?!
+            for(int i = 0; i < mazeGenerator.GetNofWalls(); i++)
+                walls[i].Update();
 
             //Update player position
             player.update(dtAsSeconds, Mouse::getPosition());
@@ -385,8 +386,16 @@ int main(int argc, const char * argv[]) {
 //             window.draw(background, &backgroundTexture);
             for(int i = 0; i < mazeGenerator.GetNofWalls(); i++) {
                 walls[i].Draw(window);
-                std::cout << walls[i].GetSprite().getPosition().x << ":" << walls[i].GetSprite().getPosition().y;
+//                std::cout << i << " - " << walls[i].GetSprite().getPosition().x << ":" << walls[i].GetSprite().getPosition().y << std::endl;
             }
+
+
+//             std::cout << walls[0].GetSprite().getPosition().x << ":" << walls[0].GetSprite().getPosition().y << std::endl;
+//             std::cout << walls[2].GetSprite().getPosition().x << ":" << walls[2].GetSprite().getPosition().y << std::endl;
+//             std::cout << walls[4].GetSprite().getPosition().x << ":" << walls[4].GetSprite().getPosition().y << std::endl;
+//             std::cout << walls[6].GetSprite().getPosition().x << ":" << walls[6].GetSprite().getPosition().y << std::endl;
+//             std::cout << walls[8].GetSprite().getPosition().x << ":" << walls[8].GetSprite().getPosition().y << std::endl;
+//             std::cout << walls[10].GetSprite().getPosition().x << ":" << walls[10].GetSprite().getPosition().y << std::endl;
 
              //Draw pickups
              healthPickup.draw(window);
