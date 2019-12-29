@@ -301,50 +301,44 @@ int main(int argc, const char * argv[]) {
 
             //Update bullets in flight
             for(int i = 0; i < 100; i++){
-                if(bullets[i].isInFlight())
+                if(bullets[i].isInFlight()){
                     bullets[i].update(dtAsSeconds);
+                    //Check bullets collision against zombies
+                    for (int j = 0; j < numZombies; j++) {
+                        if (zombies[j].isAlive()) {
+                            if (bullets[i].Collision(zombies[j])) {
+                                // Stop the bullet
+                                bullets[i].stop();
+
+                                // Register the hit and see if it was a kill
+                                if (zombies[j].hit()) {
+                                    // Not just a hit but a kill too
+                                    score += 10;
+                                    if (score >= hiScore) {
+                                        hiScore = score;
+                                    }
+
+                                    numZombiesAlive--;
+
+                                    // When all the zombies are dead (again)
+                                    if (numZombiesAlive == 0) {
+                                        state = State::LEVELING_UP;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    //Check bullets collision against walls
+                    for(auto wall : *walls)
+                        if(bullets[i].Collision(wall))
+                            bullets[i].stop();
+
+                }
             }
 
             //Update crosshair
             crosshairSprite.setPosition(mouseWorldPosition.x, mouseWorldPosition.y);
-
-            // Collision detection
-            // Have any zombies been shot?
-            for (int i = 0; i < 100; i++)
-            {
-                for (int j = 0; j < numZombies; j++)
-                {
-                    if (bullets[i].isInFlight() &&
-                        zombies[j].isAlive())
-                    {
-                        if (bullets[i].getPosition().intersects
-                                (zombies[j].getPosition()))
-                        {
-                            // Stop the bullet
-                            bullets[i].stop();
-
-                            // Register the hit and see if it was a kill
-                            if (zombies[j].hit()) {
-                                // Not just a hit but a kill too
-                                score += 10;
-                                if (score >= hiScore)
-                                {
-                                    hiScore = score;
-                                }
-
-                                numZombiesAlive--;
-
-                                // When all the zombies are dead (again)
-                                if (numZombiesAlive == 0) {
-                                    state = State::LEVELING_UP;
-                                }
-                            }
-
-                        }
-                    }
-
-                }
-            }// End zombie being shot
 
 
             // Have any zombies touched the player?
@@ -381,42 +375,42 @@ int main(int argc, const char * argv[]) {
         /*************************************
          * DRAW THE FRAME
          *************************************/
-         if(state == State::PLAYING){
-             window.clear();
+        if(state == State::PLAYING){
+            window.clear();
 
-             //Set view to main view
-             window.setView(mainView);
+            //Set view to main view
+            window.setView(mainView);
 
-             //Draw background
-             for(auto tile : *floor)
-                 tile.Draw(window);
+            //Draw background
+            for(auto tile : *floor)
+                tile.Draw(window);
 
-             //Draw pickups
-             healthPickup.draw(window);
-             ammoPickup.draw(window);
+            //Draw pickups
+            healthPickup.draw(window);
+            ammoPickup.draw(window);
 
-             //Draw player
-             player.draw(window);
+            //Draw player
+            player.draw(window);
 
-             //Draw zombies
-             for(int i = 0; i < numZombies; i++)
-                 zombies[i].draw(window);
+            //Draw zombies
+            for(int i = 0; i < numZombies; i++)
+                zombies[i].draw(window);
 
-             //Draw bullets
-             for(int i = 0; i < 100; i++){
-                 bullets[i].draw(window);
-             }
+            //Draw bullets
+            for(int i = 0; i < 100; i++){
+                bullets[i].draw(window);
+            }
 
-             for(auto wall : *walls) {
-                 //                if(player.Distance(walls[i]) < 300)
-                 wall.Draw(window);
-             }
+            for(auto wall : *walls) {
+                //                if(player.Distance(walls[i]) < 300)
+                wall.Draw(window);
+            }
 
-             //Draw crosshair
-             window.draw(crosshairSprite);
-         }
+            //Draw crosshair
+            window.draw(crosshairSprite);
+        }
 
-         window.display();
+        window.display();
     }
 
     delete[] zombies;
@@ -425,11 +419,11 @@ int main(int argc, const char * argv[]) {
 
 void updatePlayerDirectionalControls(Player &p){
     p.setMoveDown(Keyboard::isKeyPressed(Keyboard::Down) ||
-                          Keyboard::isKeyPressed(Keyboard::S));
+                  Keyboard::isKeyPressed(Keyboard::S));
     p.setMoveLeft(Keyboard::isKeyPressed(Keyboard::Left) ||
-                          Keyboard::isKeyPressed(Keyboard::A));
+                  Keyboard::isKeyPressed(Keyboard::A));
     p.setMoveRight(Keyboard::isKeyPressed(Keyboard::Right) ||
-                           Keyboard::isKeyPressed(Keyboard::D));
+                   Keyboard::isKeyPressed(Keyboard::D));
     p.setMoveUp(Keyboard::isKeyPressed(Keyboard::Up) ||
-                        Keyboard::isKeyPressed(Keyboard::W));
+                Keyboard::isKeyPressed(Keyboard::W));
 }

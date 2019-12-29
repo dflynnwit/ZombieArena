@@ -154,6 +154,8 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: C:/Dev/SFML-2.5.1_for_Mi
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Bullet.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Bullet.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp

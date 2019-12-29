@@ -8,10 +8,11 @@
 #define bullet_hpp
 
 #include <SFML/Graphics.hpp>
+#include "Entity.h"
 
 using namespace sf;
 
-class Bullet
+class Bullet : public Entity
 {
 private:
     // Where is the bullet?
@@ -54,6 +55,8 @@ public:
     // Launch a new bullet
     void shoot(float startX, float startY,
                float xTarget, float yTarget);
+
+    bool Collision(Entity& entity);
 
     // Tell the calling code where the bullet is in the world
     FloatRect getPosition();

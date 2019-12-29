@@ -91,3 +91,7 @@ void Bullet::draw(RenderWindow &window) {
     if(m_InFlight)
         window.draw(m_BulletShape);
 }
+
+bool Bullet::Collision(Entity &entity) {
+    return m_BulletShape.getGlobalBounds().intersects(entity.GetSprite().getGlobalBounds());
+}
