@@ -72,7 +72,7 @@ int main(int argc, const char * argv[]) {
     Player player;
 
     //Prep maze generator
-    MazeGenerator mazeGenerator;
+    MazeGenerator mazeGenerator(.2);
 
     //Store walls
     Wall* walls = nullptr;
@@ -385,7 +385,6 @@ int main(int argc, const char * argv[]) {
 //             window.draw(background, &backgroundTexture);
             for(int i = 0; i < mazeGenerator.GetNofWalls(); i++) {
                 walls[i].Draw(window);
-                std::cout << walls[i].GetSprite().getPosition().x << ":" << walls[i].GetSprite().getPosition().y;
             }
 
              //Draw pickups

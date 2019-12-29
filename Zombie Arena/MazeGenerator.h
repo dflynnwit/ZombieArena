@@ -17,7 +17,7 @@ private:
     float m_placementThreshold;
     int m_nOfWalls;
 public:
-    MazeGenerator(float placementThreshold = .1);
+    MazeGenerator(float placementThreshold = .5);
 
     void GenerateMazeData(int width, int height);
     Wall* CreateMaze();

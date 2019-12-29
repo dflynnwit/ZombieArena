@@ -5,10 +5,6 @@
 #include <iostream>
 #include "MazeGenerator.h"
 
-MazeGenerator::MazeGenerator() {
-    MazeGenerator(.05);
-}
-
 MazeGenerator::MazeGenerator(float placementThreshold) {
     m_placementThreshold = placementThreshold;
 }
@@ -57,20 +53,9 @@ Wall *MazeGenerator::CreateMaze() {
     for(int row = 0; row < m_mazeData.size(); row++){
         for(int col = 0; col < m_mazeData[0].size(); col++){
             if(m_mazeData[row][col] == 1)
-                walls[index].Spawn(col,row);
+                walls[index++].Spawn(col,row);
         }
     }
-
-//    for (auto row = m_mazeData.begin(); row != m_mazeData.end(); ++row)
-//    {
-//        for (auto col = row->begin(); col != row->end(); ++col)
-//        {
-//            std::cout << *col;
-//            if(*col == 1)
-//                walls[index].Spawn(0,0);
-//        }
-//        std::cout << std::endl;
-//    }
 
     return walls;
 }
