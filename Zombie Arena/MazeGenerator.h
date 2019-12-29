@@ -19,9 +19,8 @@ public:
     MazeGenerator(float placementThreshold = .5);
 
     void GenerateMazeData(int width, int height);
-    Wall* CreateMaze();
+    std::vector<Wall>* CreateMaze();
     std::vector<std::vector<int>> GetData();
-    std::vector<Wall>* GetWalls();
 
     void SetPlacementThreshold(float threshold);
     float GetPlacementThreshold();

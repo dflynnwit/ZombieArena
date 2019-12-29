@@ -43,36 +43,22 @@ std::vector<std::vector<int>> MazeGenerator::GetData() {
     return m_mazeData;
 }
 
-Wall *MazeGenerator::CreateMaze() {
-    int nOfWalls = 0;
-    for(auto row : m_mazeData){
-        for(auto col : row){
-            if(col != 0)
-                nOfWalls++;
-        }
-    }
-
-
-    Wall* walls = new Wall[nOfWalls];
-    int index = 0;
-
+std::vector<Wall> *MazeGenerator::CreateMaze() {
     m_walls = new std::vector<Wall>();
-    m_walls->resize(nOfWalls);
+//    m_walls->resize(nOfWalls);
 
     for(int row = 0; row < m_mazeData.size(); row++){
         for(int col = 0; col < m_mazeData[0].size(); col++){
-            if(m_mazeData[row][col] == 1)
-                m_walls->at(index++).Spawn(col, row);
-//                walls[index++].Spawn(col,row);
-            if(m_mazeData[row][col] == 10)
-                m_walls->at(index++).Spawn(col, row, true);
-//                walls[index++].Spawn(col,row, true);
+            if(m_mazeData[row][col] == 1) {
+                m_walls->push_back(Wall(col, row));
+            }
+//                m_walls->at(index++).Spawn(col, row);
+            else if(m_mazeData[row][col] == 10) {
+                m_walls->push_back(Wall(col, row, true));
+            }
+//                m_walls->at(index++).Spawn(col, row, true);
         }
     }
 
-    return walls;
-}
-
-std::vector<Wall> *MazeGenerator::GetWalls() {
     return m_walls;
 }

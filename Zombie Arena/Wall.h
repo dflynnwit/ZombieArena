@@ -12,8 +12,8 @@ class Wall : public Entity{
 private:
 
 public:
-    Wall();
-    void Spawn(float x, float y, bool isEdge = false);
+    Wall(float x, float y, bool isEdge = false);
+    void Spawn(float x, float y, bool isEdge, int r);
 };
 
 

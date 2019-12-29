@@ -216,9 +216,7 @@ int main(int argc, const char * argv[]) {
                 arena.top = 0;
 
                 mazeGenerator.GenerateMazeData(37, 11);
-                mazeGenerator.CreateMaze();
-
-                walls = mazeGenerator.GetWalls();
+                walls = mazeGenerator.CreateMaze();
 
                 std::vector<std::vector<int>> vec = mazeGenerator.GetData();
                 for (auto row = vec.begin(); row != vec.end(); ++row)
