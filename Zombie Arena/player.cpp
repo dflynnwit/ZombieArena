@@ -113,44 +113,23 @@ void Player::setMoveUp(bool up) {
 void Player::update(float elapsedTime, Vector2i mousePosition, Wall* walls)
 {
     Vector2f origPosition = m_Position;
+    float origAngle = m_Sprite.getRotation();
 
     //Since true is 1 and false is 0 we can calculate displacement by subtracting opposite values multiplied by the booleans
     m_Position.x += (m_Speed * m_RightPressed - m_Speed * m_LeftPressed) * elapsedTime;
     m_Position.y += (m_Speed * m_DownPressed - m_Speed * m_UpPressed) * elapsedTime;
 
-    for(int i = 0; i < 100; i++)
-        if(Collision(walls[i])){
-            m_Position = origPosition;
-            break;
-        }
-
-    //TODO: Check for collisions before updating position instead
-
-//    // Keep the player in the arena
-//    if (m_Position.x > m_Arena.width - m_TileSize)
-//    {
-//        m_Position.x = m_Arena.width - m_TileSize;
-//    }
-//
-//    if (m_Position.x < m_Arena.left + m_TileSize)
-//    {
-//        m_Position.x = m_Arena.left + m_TileSize;
-//    }
-//
-//    if (m_Position.y > m_Arena.height - m_TileSize)
-//    {
-//        m_Position.y = m_Arena.height - m_TileSize;
-//    }
-//
-//    if (m_Position.y < m_Arena.top + m_TileSize)
-//    {
-//        m_Position.y = m_Arena.top + m_TileSize;
-//    }
-
     // Calculate the angle the player is facing
     m_Rotation = (atan2(mousePosition.y - m_Resolution.y / 2,
-                         mousePosition.x - m_Resolution.x / 2)
-                   * 180) / 3.141;
+                        mousePosition.x - m_Resolution.x / 2)
+                  * 180) / 3.141;
+
+    for(int i = 0; i < 100; i++)
+        if(Collision(walls[i])){
+            m_Position.x -= 2 *(m_Speed * m_RightPressed - m_Speed * m_LeftPressed) * elapsedTime;
+            m_Position.y -= 2* (m_Speed * m_DownPressed - m_Speed * m_UpPressed) * elapsedTime;
+            break;
+        }
 
     Update();
 }
