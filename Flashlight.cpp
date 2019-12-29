@@ -4,23 +4,36 @@
 
 #include "Flashlight.h"
 
-Flashlight::Flashlight() {
-    m_shape.setPointCount(6);
+Flashlight::Flashlight(RenderWindow &window) {
+    int y = window.getSize().y;
+    int x = window.getSize().x;
 
-    // define the points
-    m_shape.setPoint(0, sf::Vector2f(12, 0));
-    m_shape.setPoint(1, sf::Vector2f(1500, 1000));
-    m_shape.setPoint(2, sf::Vector2f(1500, 2000));
-    m_shape.setPoint(3, sf::Vector2f(-1500, 2000));
-    m_shape.setPoint(4, sf::Vector2f(-1500, -2000));
-    m_shape.setPoint(5, sf::Vector2f(1500, -1000));
+    m_vshape.setPrimitiveType(TriangleFan);
+    m_vshape.resize(5);
 
-    //Set outside color
-    m_shape.setFillColor(Color(0, 0, 0, 240));
+    m_vshape[0].position = sf::Vector2f(12, 0);
+    m_vshape[0].color = sf::Color(0,0,0,240);
+
+    m_vshape[1].position = sf::Vector2f(x, y);
+    m_vshape[1].color = sf::Color(0,0,0,255);
+
+    m_vshape[2].position = sf::Vector2f(- x, y);
+    m_vshape[2].color = sf::Color(0,0,0,255);
+
+    m_vshape[3].position = sf::Vector2f(- x, - y);
+    m_vshape[3].color = sf::Color(0,0,0,255);
+
+    m_vshape[4].position = sf::Vector2f(x, - y);
+    m_vshape[4].color = sf::Color(0,0,0,255);
 }
 
-void Flashlight::Draw(RenderWindow &window, Vector2f playerPosition, float playerRotation) {
-    m_shape.setPosition(playerPosition);
-    m_shape.setRotation(playerRotation);
-    window.draw(m_shape);
+void Flashlight::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    states.transform *= getTransform();
+    target.draw(m_vshape, states);
+}
+
+void Flashlight::Update(Vector2f playerPosition, float rotation) {
+    this->setPosition(playerPosition);
+    this->setRotation(rotation);
+    this->setScale(1.1,1.1);
 }

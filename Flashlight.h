@@ -9,14 +9,15 @@
 
 using namespace sf;
 
-class Flashlight {
+class Flashlight : public Drawable, public Transformable{
 private:
-    Vector2f m_position;
-    float m_rotation;
-    ConvexShape m_shape;
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
+    VertexArray m_vshape;
 public:
-    Flashlight();
-    void Draw(RenderWindow& window, Vector2f playerPosition, float playerRotation);
+    Flashlight(RenderWindow& window);
+
+    void Update(Vector2f playerPosition, float rotation);
 };
 
 

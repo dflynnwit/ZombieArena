@@ -116,7 +116,7 @@ int main(int argc, const char * argv[]) {
     crosshairSprite.setOrigin(25, 25);
 
     //Prep flashlight shape
-    Flashlight flashlight;
+    Flashlight flashlight(window);
 
     //Store drawable objects pointers
     std::vector<Zombie*> drawable;
@@ -344,6 +344,8 @@ int main(int argc, const char * argv[]) {
             //Update crosshair
             crosshairSprite.setPosition(mouseWorldPosition.x, mouseWorldPosition.y);
 
+            //Update flashlight
+            flashlight.Update(player.getCenter(), player.getRotation());
 
             // Have any zombies touched the player?
             for (int i = 0; i < numZombies; i++)
@@ -411,7 +413,7 @@ int main(int argc, const char * argv[]) {
             }
 
             //Draw flashlight effect
-            flashlight.Draw(window, player.getCenter(), player.getRotation());
+            window.draw(flashlight);
 
             //Draw crosshair
             window.draw(crosshairSprite);
