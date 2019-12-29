@@ -50,6 +50,8 @@ Wall *MazeGenerator::CreateMaze() {
     Wall* walls = new Wall[m_nOfWalls];
     int index = 0;
 
+    m_walls = new std::vector<Wall>();
+
     for(int row = 0; row < m_mazeData.size(); row++){
         for(int col = 0; col < m_mazeData[0].size(); col++){
             if(m_mazeData[row][col] == 1)
