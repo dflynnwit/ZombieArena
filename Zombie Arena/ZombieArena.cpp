@@ -72,7 +72,8 @@ int main(int argc, const char * argv[]) {
     Player player;
 
     //Prep maze generator
-    MazeGenerator mazeGenerator;
+    MazeGenerator mazeGenerator(.1);
+
 
     //Store walls
     Wall* walls = nullptr;
@@ -214,15 +215,23 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
+                std::cout<<"Before generating maze data: " << mazeGenerator.GetPlacementThreshold() << std::endl;
+
                 mazeGenerator.GenerateMazeData(50, 50);
-                walls = mazeGenerator.CreateMaze();
+                std::cout<<"Before creating maze: " << mazeGenerator.GetPlacementThreshold() << std::endl;
+                mazeGenerator.CreateMaze();
+//                std::cout<<"After creating maze: " << mazeGenerator.GetPlacementThreshold() << std::endl;
 
                 std::vector<std::vector<int>> vec = mazeGenerator.GetData();
                 for (auto row = vec.begin(); row != vec.end(); ++row)
                 {
                     for (auto col = row->begin(); col != row->end(); ++col)
                     {
-                        std::cout << *col;
+//                        std::cout << *col;
+                        if(*col == 1)
+                            std::cout << "##";
+                        else
+                            std::cout << "  ";
                     }
                     std::cout << std::endl;
                 }
@@ -384,6 +393,15 @@ int main(int argc, const char * argv[]) {
 
              //Draw background
 //             window.draw(background, &backgroundTexture);
+
+//             for (auto row = walls.begin(); row != walls.end(); ++row)
+//             {
+//                 for (auto col = row->begin(); col != row->end(); ++col)
+//                 {
+//
+//                 }
+//             }
+
             for(int i = 0; i < mazeGenerator.GetNofWalls(); i++) {
                 walls[i].Draw(window);
 //                std::cout << i << " - " << walls[i].GetSprite().getPosition().x << ":" << walls[i].GetSprite().getPosition().y << std::endl;
