@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include <SFML/Graphics.hpp>
 #include "player.hpp"
 #include "Arena.h"
@@ -41,7 +42,7 @@ int main(int argc, const char * argv[]) {
     RenderWindow window(VideoMode(resolution.x/2, resolution.y/2), "Zombie Arena", Style::Default);
 
     //Create main view
-    View mainView(sf::FloatRect(0, 0, 1280, 720));
+    View mainView(sf::FloatRect(0, 0, resolution.x/2, resolution.y/2));
 
     /*
      * Fullscreen
@@ -119,6 +120,125 @@ int main(int argc, const char * argv[]) {
     //init game score
     int score = 0;
     int hiScore = 0;
+
+    //Prep menu screens
+    Sprite gameOverSprite;
+
+    Texture gameOverTexture = TextureHolder::GetTexture("../Resources/graphics/background.png");
+    gameOverSprite.setTexture(gameOverTexture);
+    gameOverSprite.setPosition(0, 0);
+
+    //Scale the bg image
+    gameOverSprite.setScale(resolution.x/1920, resolution.y/1080);
+
+    //Create HUD view
+    View hudView(FloatRect(0, 0, resolution.x, resolution.y));
+
+    //Create hud icons
+    //Ammo
+    Sprite ammoIconSprite;
+    Texture ammoIconTexture = TextureHolder::GetTexture("../Resources/graphics/ammo_icon.png");
+    ammoIconSprite.setTexture(ammoIconTexture);
+    ammoIconSprite.setPosition(20, resolution.y - 200);
+
+    //Prep game font
+    Font font;
+    font.loadFromFile("../Resources/fonts/zombiecontrol.ttf");
+
+    //Pause text
+    Text pausedText;
+    pausedText.setFont(font);
+    pausedText.setCharacterSize(155);
+    pausedText.setFillColor(Color::White);
+    pausedText.setString("Press ENTER \nto continue");
+
+    //Center pause text
+    FloatRect pauseRect = pausedText.getLocalBounds();
+    pausedText.setOrigin(pauseRect.left + pauseRect.width/2.0f, pauseRect.top + pauseRect.height/2.0f);
+    pausedText.setPosition(resolution.x/2, resolution.y/2);
+
+    // Game Over
+    Text gameOverText;
+    gameOverText.setFont(font);
+    gameOverText.setCharacterSize(125);
+    gameOverText.setFillColor(sf::Color::White);
+    gameOverText.setString("Press Enter to play");
+
+    FloatRect gameOverRect = gameOverText.getLocalBounds();
+    gameOverText.setOrigin(gameOverRect.left+gameOverRect.width/2.0f, gameOverRect.top+gameOverRect.height/2.0f);
+    gameOverText.setPosition(resolution.x/2, resolution.y/2);
+
+    // Levelling up
+    Text levelUpText;
+    levelUpText.setFont(font);
+    levelUpText.setCharacterSize(80);
+    levelUpText.setFillColor(Color::White);
+    levelUpText.setPosition(150, 250);
+    std::stringstream levelUpStream;
+    levelUpStream <<
+                  "1- Increased rate of fire" <<
+                  "\n2- Increased clip size(next reload)" <<
+                  "\n3- Increased max health" <<
+                  "\n4- Increased run speed" <<
+                  "\n5- More and better health pickups" <<
+                  "\n6- More and better ammo pickups";
+    levelUpText.setString(levelUpStream.str());
+
+    FloatRect levelUpRect = levelUpText.getLocalBounds();
+    levelUpText.setOrigin(levelUpRect.left+levelUpRect.width/2.0f, levelUpRect.top+levelUpRect.height/2.0f);
+    levelUpText.setPosition(resolution.x/2, resolution.y/2);
+
+    // Ammo
+    Text ammoText;
+    ammoText.setFont(font);
+    ammoText.setCharacterSize(55);
+    ammoText.setFillColor(Color::White);
+    ammoText.setPosition(200, resolution.y-200);
+
+    // Score
+    Text scoreText;
+    scoreText.setFont(font);
+    scoreText.setCharacterSize(55);
+    scoreText.setFillColor(Color::White);
+    scoreText.setPosition(20, 0);
+
+    // Hi Score
+    Text hiScoreText;
+    hiScoreText.setFont(font);
+    hiScoreText.setCharacterSize(55);
+    hiScoreText.setFillColor(Color::White);
+    hiScoreText.setPosition(resolution.x-400, 0);
+    std::stringstream s;
+    s << "Hi Score:" << hiScore;
+    hiScoreText.setString(s.str());
+
+    // Zombies remaining
+    Text zombiesRemainingText;
+    zombiesRemainingText.setFont(font);
+    zombiesRemainingText.setCharacterSize(55);
+    zombiesRemainingText.setFillColor(Color::White);
+    zombiesRemainingText.setPosition(resolution.x-400, resolution.y-200);
+    zombiesRemainingText.setString("Zombies: 100");
+
+    // Wave number
+    int wave = 0;
+    Text waveNumberText;
+    waveNumberText.setFont(font);
+    waveNumberText.setCharacterSize(55);
+    waveNumberText.setFillColor(Color::White);
+    waveNumberText.setPosition(resolution.x*0.66, resolution.y-200);
+    waveNumberText.setString("Wave: 0");
+
+    // Health bar
+    RectangleShape healthBar;
+    healthBar.setFillColor(Color::Red);
+    healthBar.setPosition(resolution.x*0.33, resolution.y-200);
+
+    //Time since last HUD update
+    int framesSinceLastHUDUpdate = 0;
+
+    //HUD update frequency (in frames)
+    int fpsMeasurementFrameInterval = 1000;
 
     //Main game loop
     while(window.isOpen()){
@@ -369,6 +489,34 @@ int main(int argc, const char * argv[]) {
             {
                 bulletsSpare += ammoPickup.gotIt();
             } // End player touch ammo
+
+            //Update healthbar
+            healthBar.setSize(Vector2f(player.getHealth()*3, 70));
+
+            framesSinceLastHUDUpdate++;
+
+            //Calculate FPS every 1k frames
+            if(framesSinceLastHUDUpdate > fpsMeasurementFrameInterval){
+                std::stringstream ssAmmo, ssScore, ssHiScore, ssWave, ssZombiesAlive;
+
+                ssAmmo << bulletsInClip << "/" << bulletsSpare;
+                ammoText.setString(ssAmmo.str());
+
+                ssScore << "Score: " << score;
+                scoreText.setString(ssScore.str());
+
+                ssHiScore << "Hi Score: " <<  hiScore;
+                hiScoreText.setString(ssHiScore.str());
+
+                ssWave << "Wave: " << wave;
+                waveNumberText.setString(ssWave.str());
+
+                ssZombiesAlive << "Zombies: " << numZombiesAlive;
+                zombiesRemainingText.setString(ssZombiesAlive.str());
+
+                framesSinceLastHUDUpdate = 0;
+
+            }
         }
 
         /*************************************
@@ -412,7 +560,31 @@ int main(int argc, const char * argv[]) {
 
             //Draw crosshair
             window.draw(crosshairSprite);
+
+            window.setView(hudView);
+
+            window.draw(ammoIconSprite);
+            window.draw(ammoText);
+            window.draw(scoreText);
+            window.draw(hiScoreText);
+            window.draw(healthBar);
+            window.draw(waveNumberText);
+            window.draw(zombiesRemainingText);
         }
+        else if(state == State::LEVELING_UP){
+            window.draw(gameOverSprite);
+            window.draw(levelUpText);
+        }
+        else if(state == State::PAUSED){
+            window.draw(pausedText);
+        }
+        else if(state == State::GAME_OVER){
+            window.draw(gameOverSprite);
+            window.draw(gameOverText);
+            window.draw(scoreText);
+            window.draw(hiScoreText);
+        }
+
 
         window.display();
     }
