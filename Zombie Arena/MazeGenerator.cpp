@@ -11,6 +11,7 @@ MazeGenerator::MazeGenerator(float placementThreshold) {
 
 void MazeGenerator::GenerateMazeData(int width, int height) {
     //Initialize all values in size
+    m_mazeData.clear();
     m_mazeData.resize(height+1, std::vector<int>(width+1, 0));
     srand((int)time(0));
 
@@ -36,7 +37,7 @@ void MazeGenerator::GenerateMazeData(int width, int height) {
                 }
                 //TODO: Add some threshold for pickups
                 else
-                    m_mazeData[i][j] = 2;
+                    m_mazeData[i][j] =  r > .5 ? 2 : 3;
             }
         }
     }

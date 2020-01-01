@@ -405,7 +405,20 @@ int main(int argc, const char * argv[]) {
             }
 
             if(state == State::PLAYING){
-                // Prepare the level
+                ///********************
+                /// Prepare the level
+                ///********************
+//                if(walls)
+//                    walls->clear();
+//                if(floor)
+//                    floor->clear();
+
+                delete(walls);
+                delete(floor);
+
+                ammoPickups.clear();
+                healthPickups.clear();
+
                 wave++;
 
                 arena.width = 500 * wave;
@@ -500,12 +513,6 @@ int main(int argc, const char * argv[]) {
                 if(zombies[i].isAlive())
                     zombies[i].update(dt.asSeconds(), playerPosition, *walls);
             }
-
-            //Update pickups
-//            for(auto p : healthPickups)
-//                p.update(dtAsSeconds);
-//            for(auto p : ammoPickups)
-//                p.update(dtAsSeconds);
 
             //Update bullets in flight
             for(int i = 0; i < 100; i++){
