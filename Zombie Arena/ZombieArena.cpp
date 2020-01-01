@@ -98,8 +98,9 @@ int main(int argc, const char * argv[]) {
     Zombie* zombies = nullptr;
 
     //Create some pickups
-    Pickup healthPickup(1);
-    Pickup ammoPickup(2);
+    std::vector<Pickup*> healthPickups;
+    std::vector<Pickup*> ammoPickups;
+
 
     //Prepare bullets
     Bullet bullets[100];
@@ -257,7 +258,6 @@ int main(int argc, const char * argv[]) {
     Sound hit;
     hit.setBuffer(hitBuffer);
 
-
     // Prepare the splat sound
     SoundBuffer splatBuffer;
     splatBuffer.loadFromFile("../Resources/sound/splat.wav");
@@ -395,11 +395,11 @@ int main(int argc, const char * argv[]) {
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num5:
-                    healthPickup.upgrade();
+//                    healthPickup.upgrade();
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num6:
-                    ammoPickup.upgrade();
+//                    ammoPickup.upgrade();
                     state = State::PLAYING;
                     break;
             }
@@ -413,28 +413,36 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
-                mazeGenerator.GenerateMazeData(37, 11);
+                mazeGenerator.GenerateMazeData(10 + 5 * wave, 10 + 5 * wave);
                 walls = mazeGenerator.CreateMaze();
                 floor = mazeGenerator.GetFloor();
 
-                std::vector<std::vector<int>> vec = mazeGenerator.GetData();
-                for (auto row = vec.begin(); row != vec.end(); ++row)
+                std::vector<std::vector<int>> mazeData = mazeGenerator.GetData();
+
+                for(int i = 0; i < mazeData.size(); i++){
+                    for(int j = 0; j < mazeData[0].size(); j++){
+                        if(mazeData[i][j] == 2)
+                            healthPickups.push_back(new Pickup(Pickup::HEALTH, Vector2f(i * 64, j * 64)));
+                        else if(mazeData[i][j] == 3)
+                            ammoPickups.push_back(new Pickup(Pickup::AMMO, Vector2f(i * 64, j * 64)));
+
+                    }
+                }
+
+                for (auto row = mazeData.begin(); row != mazeData.end(); ++row)
                 {
                     for (auto col = row->begin(); col != row->end(); ++col)
                     {
-                        if(*col == 1)
-                            std::cout << "O";
-                        else if(*col == 10)
-                            std::cout << "X";
-                        else
-                            std::cout << " ";
+
                     }
                     std::cout << std::endl;
                 }
 
+
+
                 //Configure pickups
-                healthPickup.setArena(arena);
-                ammoPickup.setArena(arena);
+//                healthPickup.setArena(arena);
+//                ammoPickup.setArena(arena);
 
                 //Create zombie horde
                 numZombies = 5 * wave;
@@ -494,8 +502,10 @@ int main(int argc, const char * argv[]) {
             }
 
             //Update pickups
-            healthPickup.update(dtAsSeconds);
-            ammoPickup.update(dtAsSeconds);
+//            for(auto p : healthPickups)
+//                p.update(dtAsSeconds);
+//            for(auto p : ammoPickups)
+//                p.update(dtAsSeconds);
 
             //Update bullets in flight
             for(int i = 0; i < 100; i++){
@@ -565,18 +575,22 @@ int main(int argc, const char * argv[]) {
                 }
             }// End player touched
 
-            // Has the player touched health pickup?
-            if(healthPickup.isSpawned() && player.Collision(healthPickup)) {
-                player.increaseHealthLevel(healthPickup.gotIt());
-                pickup.play();
-            }// End player touch health
+            //Pickup collisions
+            //Health
+            for(auto hp : healthPickups){
+                if(hp->isSpawned() && player.Collision(*hp)){
+                    player.increaseHealthLevel(hp->gotIt());
+                    pickup.play();
+                }
+            }
 
-            // Has the player touched ammo pickup?
-            if (ammoPickup.isSpawned() && ammoPickup.Collision(player))
-            {
-                bulletsSpare += ammoPickup.gotIt();
-                reload.play();
-            } // End player touch ammo
+            //Ammo
+            for(auto ammo : ammoPickups){
+                if(ammo->isSpawned() && player.Collision(*ammo)){
+                    bulletsSpare += ammo->gotIt();
+                    reload.play();
+                }
+            }
 
             //Update healthbar
             healthBar.setSize(Vector2f(player.getHealth()*3, 70));
@@ -622,15 +636,22 @@ int main(int argc, const char * argv[]) {
                     tile.Draw(window);
 
             //Draw pickups
-            healthPickup.draw(window);
-            ammoPickup.draw(window);
-
-            //Draw player
-            player.draw(window);
+            for(auto p : healthPickups)
+                if(p->Distance(player) < 300) {
+                    p->draw(window);
+                    std::cout << "Drawing medkit" << std::endl;
+                }
+            for(auto p : ammoPickups)
+                if(p->Distance(player) < 300)
+                    p->draw(window);
 
             //Draw zombies
             for(int i = 0; i < numZombies; i++)
-                zombies[i].draw(window);
+                if(zombies[i].Distance(player) < 300)
+                    zombies[i].draw(window);
+
+            //Draw player
+            player.draw(window);
 
             //Draw bullets
             for(int i = 0; i < 100; i++){

@@ -106,12 +106,12 @@ void Zombie::update(float elapsedTime, Vector2f playerLocation, std::vector<Tile
 }
 
 void Zombie::draw(RenderWindow &window) {
-    RectangleShape border(Vector2f(m_Sprite.getLocalBounds().width, m_Sprite.getLocalBounds().height));
-    border.setFillColor(Color(255, 0, 0, 200));
-    border.setOrigin(m_Sprite.getOrigin());
-    border.setPosition(m_Position);
-    border.setRotation(m_Sprite.getRotation());
-    window.draw(border);
+//    RectangleShape border(Vector2f(m_Sprite.getLocalBounds().width, m_Sprite.getLocalBounds().height));
+//    border.setFillColor(Color(255, 0, 0, 200));
+//    border.setOrigin(m_Sprite.getOrigin());
+//    border.setPosition(m_Position);
+//    border.setRotation(m_Sprite.getRotation());
+//    window.draw(border);
 
     Draw(window);
 }

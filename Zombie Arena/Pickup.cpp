@@ -5,7 +5,7 @@
 #include "Pickup.h"
 #include "TextureHolder.h"
 
-Pickup::Pickup(int type) : Entity()
+Pickup::Pickup(TYPE type, Vector2f position) : Entity()
 {
     //store type of pickup (1 - health, 2 - ammo)
     m_Type = type;
@@ -23,8 +23,15 @@ Pickup::Pickup(int type) : Entity()
         m_Value = AMMO_START_VALUE;
     }
 
+    m_Position = position;
+    m_Rotation = 0;
+
     m_SecondsToLive = START_SECONDS_TO_LIVE;
     m_SecondsToWait = START_WAIT_TIME;
+
+    m_Spawned = true;
+
+    Update();
 }
 
 void Pickup::setArena(IntRect arena)

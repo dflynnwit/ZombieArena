@@ -708,6 +708,23 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.cpp
  C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/AlResource.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Export.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/InputSoundFile.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Listener.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Music.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/OutputSoundFile.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Sound.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundBuffer.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundBufferRecorder.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileFactory.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileFactory.inl
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileReader.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileWriter.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundRecorder.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundSource.hpp
+ C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundStream.hpp
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp
  C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/BlendMode.hpp

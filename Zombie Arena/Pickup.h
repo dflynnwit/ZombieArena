@@ -37,8 +37,8 @@ private:
 
 
 public:
-
-    Pickup(int type);
+    enum TYPE{HEALTH = 1, AMMO = 2};
+    Pickup(TYPE type, Vector2f position);
 
     // Prepare a new pickup
     void setArena(IntRect arena);

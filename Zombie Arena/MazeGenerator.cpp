@@ -34,6 +34,9 @@ void MazeGenerator::GenerateMazeData(int width, int height) {
                     int b = a != 0 ? 0 : (r < .5 ? -1 : 1);
                     m_mazeData[i+a][j+b] = 1;
                 }
+                //TODO: Add some threshold for pickups
+                else
+                    m_mazeData[i][j] = 2;
             }
         }
     }
