@@ -10,6 +10,7 @@
 #include <sstream>
 #include <fstream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "player.hpp"
 #include "Arena.h"
 #include "TextureHolder.h"
@@ -250,6 +251,50 @@ int main(int argc, const char * argv[]) {
     //HUD update frequency (in frames)
     int fpsMeasurementFrameInterval = 1000;
 
+    //Prep sound buffers
+    SoundBuffer hitBuffer;
+    hitBuffer.loadFromFile("../Resources/sound/hit.wav");
+    Sound hit;
+    hit.setBuffer(hitBuffer);
+
+
+    // Prepare the splat sound
+    SoundBuffer splatBuffer;
+    splatBuffer.loadFromFile("../Resources/sound/splat.wav");
+    sf::Sound splat;
+    splat.setBuffer(splatBuffer);
+
+    // Prepare the shoot sound
+    SoundBuffer shootBuffer;
+    shootBuffer.loadFromFile("../Resources/sound/shoot.wav");
+    Sound shoot;
+    shoot.setBuffer(shootBuffer);
+
+    // Prepare the reload sound
+    SoundBuffer reloadBuffer;
+    reloadBuffer.loadFromFile("../Resources/sound/reload.wav");
+    Sound reload;
+    reload.setBuffer(reloadBuffer);
+
+    // Prepare the failed sound
+    SoundBuffer reloadFailedBuffer;
+    reloadFailedBuffer.loadFromFile("../Resources/sound/reload_failed.wav");
+    Sound reloadFailed;
+    reloadFailed.setBuffer(reloadFailedBuffer);
+
+    // Prepare the powerup sound
+    SoundBuffer powerupBuffer;
+    powerupBuffer.loadFromFile("../Resources/sound/powerup.wav");
+    Sound powerup;
+    powerup.setBuffer(powerupBuffer);
+
+    // Prepare the pickup sound
+    SoundBuffer pickupBuffer;
+    pickupBuffer.loadFromFile("../Resources/sound/pickup.wav");
+    Sound pickup;
+    pickup.setBuffer(pickupBuffer);
+
+
     //Main game loop
     while(window.isOpen()){
         /*************************************
@@ -267,8 +312,20 @@ int main(int argc, const char * argv[]) {
                         state = State::PLAYING;
                         //restart the clock to avoid frame jumps
                         clock.restart();
-                    } else if (state == State::GAME_OVER)
+                    } else if (state == State::GAME_OVER) {
+                        score = 0;
+                        wave = 0;
+
+                        currentBullet = 0;
+                        bulletsSpare = 24;
+                        bulletsInClip = 6;
+                        clipSize = 6;
+                        fireRate = 1;
+
+                        player.resetPlayerStats();
+
                         state = State::LEVELING_UP;
+                    }
                 }
 
                 //Handle quitting by esc
@@ -281,13 +338,16 @@ int main(int argc, const char * argv[]) {
                         if(bulletsSpare >= clipSize){
                             bulletsInClip = clipSize;
                             bulletsSpare -= clipSize;
+                            reload.play();
                         }
                         else if(bulletsSpare > 0){
                             bulletsInClip = bulletsSpare;
                             bulletsSpare = 0;
+                            reload.play();
                         }
                         else{
                             //Reload failed
+                            reloadFailed.play();
                         }
                     }
                 }
@@ -310,6 +370,7 @@ int main(int argc, const char * argv[]) {
 
                     lastShot = gameTimeTotal;
                     bulletsInClip--;
+                    shoot.play();
                 }
             }
         }
@@ -318,30 +379,37 @@ int main(int argc, const char * argv[]) {
         if(state == State::LEVELING_UP){
             switch (event.key.code){
                 case Keyboard::Num1:
+                    fireRate++;
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num2:
+                    clipSize+=clipSize;
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num3:
+                    player.upgradeHealth();
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num4:
+                    player.upgradeSpeed();
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num5:
+                    healthPickup.upgrade();
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num6:
+                    ammoPickup.upgrade();
                     state = State::PLAYING;
                     break;
             }
 
             if(state == State::PLAYING){
                 // Prepare the level
-                // We will modify the next two lines later
-                arena.width = 500;
-                arena.height = 500;
+                wave++;
+
+                arena.width = 500 * wave;
+                arena.height = 500 * wave;
                 arena.left = 0;
                 arena.top = 0;
 
@@ -369,7 +437,7 @@ int main(int argc, const char * argv[]) {
                 ammoPickup.setArena(arena);
 
                 //Create zombie horde
-                numZombies = 10;
+                numZombies = 5 * wave;
 
                 //Delete previously allocated memory
                 delete[] zombies;
@@ -381,6 +449,9 @@ int main(int argc, const char * argv[]) {
 
                 // Spawn the player in the middle of the arena
                 player.spawn(arena, resolution, tileSize);
+
+                //play upgrade sound
+                powerup.play();
 
                 // Reset the clock so there isn't a frame jump
                 clock.restart();
@@ -440,6 +511,7 @@ int main(int argc, const char * argv[]) {
                                 // Register the hit and see if it was a kill
                                 if (zombies[j].hit()) {
                                     // Not just a hit but a kill too
+                                    splat.play();
                                     score += 10;
                                     if (score >= hiScore) {
                                         hiScore = score;
@@ -477,6 +549,7 @@ int main(int argc, const char * argv[]) {
 //                std::cout << "Player collided with zombie" << std::endl;
                     if (player.hit(gameTimeTotal)) {
                         //Get hit effect
+                        hit.play();
                         std::cout << "Player got hit: " << player.getHealth() << std::endl;
 
                         if(player.getHealth() <= 0) {
@@ -495,12 +568,14 @@ int main(int argc, const char * argv[]) {
             // Has the player touched health pickup?
             if(healthPickup.isSpawned() && player.Collision(healthPickup)) {
                 player.increaseHealthLevel(healthPickup.gotIt());
+                pickup.play();
             }// End player touch health
 
             // Has the player touched ammo pickup?
             if (ammoPickup.isSpawned() && ammoPickup.Collision(player))
             {
                 bulletsSpare += ammoPickup.gotIt();
+                reload.play();
             } // End player touch ammo
 
             //Update healthbar
