@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include <SFML/Graphics.hpp>
 #include "player.hpp"
 #include "Arena.h"
@@ -203,6 +204,13 @@ int main(int argc, const char * argv[]) {
     scoreText.setCharacterSize(55);
     scoreText.setFillColor(Color::White);
     scoreText.setPosition(20, 0);
+
+    //Load hi score from file
+    std::ifstream inputFile("../Resources/gamedata/scores.txt");
+    if(inputFile.is_open()){
+        inputFile >> hiScore;
+        inputFile.close();
+    }
 
     // Hi Score
     Text hiScoreText;
@@ -475,6 +483,9 @@ int main(int argc, const char * argv[]) {
                             std::cout << "Game Over" << std::endl;
                             state = State::GAME_OVER;
 
+                            std::ofstream outputFile("../Resources/gamedata/scores.txt");
+                            outputFile << hiScore;
+                            outputFile.close();
                         }
 
                     }
