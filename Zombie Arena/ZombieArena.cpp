@@ -31,18 +31,20 @@ int main(int argc, const char * argv[]) {
     State state = State::GAME_OVER;
 
     //Get screen resolution for SFML window
-    Vector2f resolution;
-    resolution.x = VideoMode::getDesktopMode().width;
-    resolution.y = VideoMode::getDesktopMode().height;
+    Vector2f screenResolution;
+    screenResolution.x = VideoMode::getDesktopMode().width;
+    screenResolution.y = VideoMode::getDesktopMode().height;
+
+    Vector2f resolution(screenResolution.x, screenResolution.y);
 
     /*
      * Windowed
      */
     //Create SFML window
-    RenderWindow window(VideoMode(resolution.x/2, resolution.y/2), "Zombie Arena", Style::Default);
+    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Default);
 
     //Create main view
-    View mainView(sf::FloatRect(0, 0, resolution.x/2, resolution.y/2));
+    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     /*
      * Fullscreen
