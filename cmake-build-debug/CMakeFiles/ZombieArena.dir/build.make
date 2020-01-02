@@ -126,24 +126,10 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.s"
 	C:\Dev\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\Zombie.cpp" -o CMakeFiles\ZombieArena.dir\Zombie_Arena\Zombie.cpp.s
 
-CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
-CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
-CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj: ../Zombie\ Arena/ZombieHorde.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj"
-	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\ZombieHorde.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\ZombieHorde.cpp"
-
-CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.i"
-	C:\Dev\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\ZombieHorde.cpp" > CMakeFiles\ZombieArena.dir\Zombie_Arena\ZombieHorde.cpp.i
-
-CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.s"
-	C:\Dev\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\ZombieHorde.cpp" -o CMakeFiles\ZombieArena.dir\Zombie_Arena\ZombieHorde.cpp.s
-
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\Bullet.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\Bullet.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.i: cmake_force
@@ -157,7 +143,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.s: cmake_force
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/Pickup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\Pickup.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\Pickup.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.i: cmake_force
@@ -171,7 +157,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.s: cmake_force
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/Entity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\Entity.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\Entity.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.i: cmake_force
@@ -185,7 +171,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.s: cmake_force
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/Tile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\Tile.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\Tile.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.i: cmake_force
@@ -199,7 +185,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.s: cmake_force
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/MazeGenerator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\MazeGenerator.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\MazeGenerator.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.i: cmake_force
@@ -213,7 +199,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.s: cmake_force
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: ../Zombie\ Arena/Flashlight.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\Flashlight.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\Flashlight.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.i: cmake_force
@@ -227,7 +213,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.s: cmake_force
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/Key.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\Key.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\Key.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.i: cmake_force
@@ -241,7 +227,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.s: cmake_force
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: CMakeFiles/ZombieArena.dir/flags.make
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: CMakeFiles/ZombieArena.dir/includes_CXX.rsp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/ExitTerminal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj"
 	C:\Dev\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZombieArena.dir\Zombie_Arena\ExitTerminal.cpp.obj -c "C:\Users\pokor\CLionProjects\ZombieArena\Zombie Arena\ExitTerminal.cpp"
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.i: cmake_force
@@ -259,7 +245,6 @@ ZombieArena_OBJECTS = \
 "CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj" \
 "CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj" \
 "CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj" \
-"CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj" \
 "CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj" \
 "CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj" \
 "CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj" \
@@ -277,7 +262,6 @@ ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj
-ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieHorde.cpp.obj
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj
@@ -294,7 +278,7 @@ ZombieArena.exe: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/libsfml-system-d.a
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/linklibs.rsp
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/objects1.rsp
 ZombieArena.exe: CMakeFiles/ZombieArena.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ZombieArena.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pokor\CLionProjects\ZombieArena\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ZombieArena.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ZombieArena.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

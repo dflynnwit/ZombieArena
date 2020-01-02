@@ -147,12 +147,6 @@
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>
-		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieHorde.h">
-			<Option target="ZombieArena"/>
-		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>

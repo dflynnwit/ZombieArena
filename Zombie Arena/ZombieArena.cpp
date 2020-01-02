@@ -89,10 +89,7 @@ int main(int argc, const char * argv[]) {
     //Load texture for the background
     Texture backgroundTexture = TextureHolder::GetTexture("../Resources/graphics/background_sheet.png");
 
-    //Prepare zombie horde
-    int numZombies = 0;
-    int numZombiesAlive = 0;
-    Zombie* zombies = nullptr;
+    std::vector<Zombie*> zombies;
 
     //Create some pickups
     std::vector<Pickup*> healthPickups;
@@ -457,11 +454,11 @@ int main(int argc, const char * argv[]) {
                 delete(floor);
                 delete(entrance);
                 delete(exit);
-                delete[] zombies;
 
                 ammoPickups.clear();
                 healthPickups.clear();
                 keys.clear();
+                zombies.clear();
 
                 keysCollected = 0;
                 exitUnlocked = false;
@@ -486,6 +483,7 @@ int main(int argc, const char * argv[]) {
                                 ammoPickups.push_back(new Pickup(Pickup::AMMO, Vector2f(j * 64, i * 64)));
                                 break;
                             case 4: //Enemy
+                                zombies.push_back(new Zombie(j * 64, i * 64));
                                 break;
                             case 5: //Player spawn
                                 entrance = new Entity("../Resources/graphics/entrance.png", j * 64, i * 64);
@@ -500,8 +498,6 @@ int main(int argc, const char * argv[]) {
                         }
                     }
                 }
-
-                numZombiesAlive = difficulty;
 
                 //play upgrade sound
                 powerup.play();
@@ -544,9 +540,9 @@ int main(int argc, const char * argv[]) {
             mainView.setCenter(player.getCenter());
 
             //Update zombies in the horde
-            for(int i = 0; i < numZombies; i++){
-                if(zombies[i].isAlive())
-                    zombies[i].update(dt.asSeconds(), playerPosition, *walls);
+            for(auto zombie : zombies){
+                if(zombie->isAlive())
+                    zombie->update(dt.asSeconds(), playerPosition, *walls);
             }
 
             //Update exit terminal
@@ -573,26 +569,19 @@ int main(int argc, const char * argv[]) {
                 if(bullet.isInFlight()){
                     bullet.update(dtAsSeconds);
                     //Check bullets collision against zombies
-                    for (int j = 0; j < numZombies; j++) {
-                        if (zombies[j].isAlive()) {
-                            if (bullet.Collision(zombies[j])) {
+                    for (auto zombie : zombies) {
+                        if (zombie->isAlive()) {
+                            if (bullet.Collision(*zombie)) {
                                 // Stop the bullet
                                 bullet.stop();
 
                                 // Register the hit and see if it was a kill
-                                if (zombies[j].hit()) {
+                                if (zombie->hit()) {
                                     // Not just a hit but a kill too
                                     splat.play();
                                     score += 10;
                                     if (score >= hiScore) {
                                         hiScore = score;
-                                    }
-
-                                    numZombiesAlive--;
-
-                                    // When all the zombies are dead (again)
-                                    if (numZombiesAlive == 0) {
-                                        state = State::LEVELING_UP;
                                     }
                                 }
                             }
@@ -614,9 +603,9 @@ int main(int argc, const char * argv[]) {
             flashlight.Update(player.getCenter(), player.getRotation());
 
             // Have any zombies touched the player?
-            for (int i = 0; i < numZombies; i++)
+            for (auto zombie : zombies)
             {
-                if(zombies[i].isAlive() && zombies[i].Collision(player)) {
+                if(zombie->isAlive() && zombie->Collision(player)) {
                     if (player.hit(gameTimeTotal)) {
                         //Get hit effect
                         hit.play();
@@ -724,9 +713,9 @@ int main(int argc, const char * argv[]) {
                 entrance->Draw(window);
 
             //Draw zombies
-            for(int i = 0; i < numZombies; i++)
-                if(zombies[i].Distance(player) < 300)
-                    zombies[i].draw(window);
+            for(auto zombie : zombies)
+                if(zombie->Distance(player) < 300)
+                    zombie->draw(window);
 
             //Draw player
             player.draw(window);
@@ -777,7 +766,6 @@ int main(int argc, const char * argv[]) {
         window.display();
     }
 
-    delete[] zombies;
     delete(walls);
     delete(floor);
     delete(entrance);

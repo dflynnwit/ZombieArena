@@ -43,6 +43,8 @@ private:
 public:
     Zombie();
 
+    Zombie(int x, int y);
+
     // Handle when a bullet hits a zombie
     bool hit();
 

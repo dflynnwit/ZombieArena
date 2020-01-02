@@ -22,8 +22,9 @@ bool Zombie::isAlive() {
     return m_Alive;
 }
 
-void Zombie::spawn(float startX, float startY, int type, int seed) {
-    switch (type){
+Zombie::Zombie(int x, int y) {
+    int r = rand();
+    switch (r % 3){
         case 0:
             //Bloater
             m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/bloater.png"));
@@ -44,14 +45,14 @@ void Zombie::spawn(float startX, float startY, int type, int seed) {
     }
 
     //Randomize speed to prevent bunching
-    srand((int)time(0) * seed);
-    float modifier = (rand() % MAX_VARIANCE) + OFFSET;
+    float modifier = (r % MAX_VARIANCE) + OFFSET;
     modifier /= 100;
     m_Speed *= modifier;
 
-    m_Position.x = startX;
-    m_Position.y = startY;
+    m_Position.x = x;
+    m_Position.y = y;
 }
+
 
 FloatRect Zombie::getPosition() {
     return m_Sprite.getGlobalBounds();
@@ -114,8 +115,4 @@ void Zombie::draw(RenderWindow &window) {
 //    window.draw(border);
 
     Draw(window);
-}
-
-Zombie::Zombie() {
-
 }
