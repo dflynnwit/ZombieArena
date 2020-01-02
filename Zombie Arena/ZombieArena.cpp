@@ -108,6 +108,8 @@ int main(int argc, const char * argv[]) {
 
     //Prepare exit object
     ExitTerminal* exit = nullptr;
+    Entity* entrance = nullptr;
+    bool exitUnlocked = false;
 
     //Prepare bullets
     Bullet bullets[100];
@@ -434,6 +436,8 @@ int main(int argc, const char * argv[]) {
                 ///********************
                 delete(walls);
                 delete(floor);
+                delete(entrance);
+                delete(exit);
                 delete[] zombies;
 
                 ammoPickups.clear();
@@ -441,6 +445,7 @@ int main(int argc, const char * argv[]) {
                 keys.clear();
 
                 keysCollected = 0;
+                exitUnlocked = false;
 
                 wave++;
 
@@ -469,6 +474,7 @@ int main(int argc, const char * argv[]) {
                             case 4: //Enemy
                                 break;
                             case 5: //Player spawn
+                                entrance = new Entity("../Resources/graphics/entrance.png", j * 64, i * 64);
                                 player.spawn(j * 64, i * 64, resolution);
                                 break;
                             case 6: //Exit
@@ -530,14 +536,17 @@ int main(int argc, const char * argv[]) {
             exit->Update(dt.asSeconds());
 
             if(exit->Collision(player)) {
-                bool exitActive = exit->ActivateExit(keysCollected == keysNeeded);
-                if(exitActive) {
+                exitUnlocked = exit->ActivateExit(keysCollected == keysNeeded);
+                if(exitUnlocked) {
                     if (keyboardClack.getStatus() != 2)
                         keyboardClack.play();
                 }
                 else if(alarm.getStatus() != 2)
                     alarm.play();
             }
+
+            if(exitUnlocked && entrance->Collision(player))
+                state = State::LEVELING_UP;
 
             //Update bullets in flight
             for(auto & bullet : bullets){
@@ -588,7 +597,6 @@ int main(int argc, const char * argv[]) {
             for (int i = 0; i < numZombies; i++)
             {
                 if(zombies[i].isAlive() && zombies[i].Collision(player)) {
-//                std::cout << "Player collided with zombie" << std::endl;
                     if (player.hit(gameTimeTotal)) {
                         //Get hit effect
                         hit.play();
@@ -688,8 +696,12 @@ int main(int argc, const char * argv[]) {
                     k->Draw(window);
 
             //Draw exit terminal
-            if(exit->Collision(player) < 300)
+            if(exit->Distance(player) < 300)
                 exit->Draw(window);
+
+            //Draw entrance hatch
+            if(entrance->Distance(player) < 300)
+                entrance->Draw(window);
 
             //Draw zombies
             for(int i = 0; i < numZombies; i++)

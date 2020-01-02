@@ -10,6 +10,14 @@ Entity::Entity(const std::string filename) {
     SetSprite(filename);
 }
 
+Entity::Entity(const std::string filename, int x, int y) {
+    m_active = 1;
+    m_Position.x = x;
+    m_Position.y = y;
+
+    SetSprite(filename);
+}
+
 void Entity::Draw(RenderWindow &window){
     window.draw(m_Sprite);
 }
@@ -63,5 +71,3 @@ float Entity::Distance(Entity &entity) {
 Vector2f Entity::GetPosition() {
     return m_Position;
 }
-
-

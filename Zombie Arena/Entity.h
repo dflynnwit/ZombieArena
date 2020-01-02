@@ -17,6 +17,8 @@ public:
 
     Entity(const std::string filename);
 
+    Entity(const std::string filename, int x, int y);
+
     bool Collision(Entity& entity);
 
     float Distance(Entity& entity);
