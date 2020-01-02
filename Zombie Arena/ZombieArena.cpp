@@ -83,9 +83,6 @@ int main(int argc, const char * argv[]) {
     //And floor tiles
     std::vector<Tile>* floor = nullptr;
 
-    //Arena boundaries
-    IntRect arena;
-
     //Create background
     VertexArray background;
 
@@ -100,6 +97,9 @@ int main(int argc, const char * argv[]) {
     //Create some pickups
     std::vector<Pickup*> healthPickups;
     std::vector<Pickup*> ammoPickups;
+
+    //Store pickup spawn threshold
+    float pickupThreshold = .01f;
 
     //Store keys
     std::vector<Key*> keys;
@@ -156,12 +156,13 @@ int main(int argc, const char * argv[]) {
     ammoIconSprite.setPosition(20, resolution.y - 200);
 
     //Prep game font
-    Font font;
-    font.loadFromFile("../Resources/fonts/zombiecontrol.ttf");
+    Font zombieFont, labFont;
+    zombieFont.loadFromFile("../Resources/fonts/zombiecontrol.ttf");
+    labFont.loadFromFile("../Resources/fonts/xirod.ttf");
 
     //Pause text
     Text pausedText;
-    pausedText.setFont(font);
+    pausedText.setFont(labFont);
     pausedText.setCharacterSize(155);
     pausedText.setFillColor(Color::White);
     pausedText.setString("Press ENTER \nto continue");
@@ -172,30 +173,44 @@ int main(int argc, const char * argv[]) {
     pausedText.setPosition(resolution.x/2, resolution.y/2);
 
     // Game Over
-    Text gameOverText;
-    gameOverText.setFont(font);
-    gameOverText.setCharacterSize(125);
-    gameOverText.setFillColor(sf::Color::White);
-    gameOverText.setString("Press Enter to play");
+    Text gameOverText1, gameOverText2;
+    gameOverText1.setFont(labFont);
+    gameOverText1.setCharacterSize(35);
+    gameOverText1.setFillColor(sf::Color::White);
+    gameOverText1.setString("Scientist still didn't learn after all this time.\n"
+                           "Another zombie outbreak. Wee need a sacrifice. We need you...\n"
+                           "Get in, grab the security passes\n"
+                           "and switch on the self destruct protocol at the mainframe.\n"
+                           "You'll have 30 seconds to get out.\n\n"
+                           "Come back. We need people that are able to come back.\n");
 
-    FloatRect gameOverRect = gameOverText.getLocalBounds();
-    gameOverText.setOrigin(gameOverRect.left+gameOverRect.width/2.0f, gameOverRect.top+gameOverRect.height/2.0f);
-    gameOverText.setPosition(resolution.x/2, resolution.y/2);
+    gameOverText2.setFont(zombieFont);
+    gameOverText2.setCharacterSize(135);
+    gameOverText2.setFillColor(sf::Color::White);
+    gameOverText2.setString("Press ENTER to play.");
+
+    FloatRect gameOverRect1 = gameOverText1.getLocalBounds();
+    gameOverText1.setOrigin(gameOverRect1.left + gameOverRect1.width / 2.0f, gameOverRect1.top + gameOverRect1.height / 2.0f);
+    gameOverText1.setPosition(resolution.x / 2, resolution.y / 4 * 3);
+
+    FloatRect gameOverRect2 = gameOverText2.getLocalBounds();
+    gameOverText2.setOrigin(gameOverRect2.left + gameOverRect2.width / 2.0f, gameOverRect2.top + gameOverRect2.height / 2.0f);
+    gameOverText2.setPosition(resolution.x / 2, resolution.y / 4 * 1);
 
     // Levelling up
     Text levelUpText;
-    levelUpText.setFont(font);
-    levelUpText.setCharacterSize(80);
+    levelUpText.setFont(labFont);
+    levelUpText.setCharacterSize(50);
     levelUpText.setFillColor(Color::White);
     levelUpText.setPosition(150, 250);
     std::stringstream levelUpStream;
-    levelUpStream <<
+    levelUpStream << "Prepare for the next lab: \n\n"
                   "1- Increased rate of fire" <<
                   "\n2- Increased clip size(next reload)" <<
                   "\n3- Increased max health" <<
                   "\n4- Increased run speed" <<
-                  "\n5- More and better health pickups" <<
-                  "\n6- More and better ammo pickups";
+                  "\n5- More pickups";
+
     levelUpText.setString(levelUpStream.str());
 
     FloatRect levelUpRect = levelUpText.getLocalBounds();
@@ -204,14 +219,14 @@ int main(int argc, const char * argv[]) {
 
     // Ammo
     Text ammoText;
-    ammoText.setFont(font);
+    ammoText.setFont(zombieFont);
     ammoText.setCharacterSize(55);
     ammoText.setFillColor(Color::White);
     ammoText.setPosition(200, resolution.y-200);
 
     // Score
     Text scoreText;
-    scoreText.setFont(font);
+    scoreText.setFont(zombieFont);
     scoreText.setCharacterSize(55);
     scoreText.setFillColor(Color::White);
     scoreText.setPosition(20, 0);
@@ -225,7 +240,7 @@ int main(int argc, const char * argv[]) {
 
     // Hi Score
     Text hiScoreText;
-    hiScoreText.setFont(font);
+    hiScoreText.setFont(zombieFont);
     hiScoreText.setCharacterSize(55);
     hiScoreText.setFillColor(Color::White);
     hiScoreText.setPosition(resolution.x-400, 0);
@@ -235,7 +250,7 @@ int main(int argc, const char * argv[]) {
 
     // Zombies remaining
     Text keysCollectedText;
-    keysCollectedText.setFont(font);
+    keysCollectedText.setFont(zombieFont);
     keysCollectedText.setCharacterSize(55);
     keysCollectedText.setFillColor(Color::White);
     keysCollectedText.setPosition(resolution.x - 400, resolution.y - 200);
@@ -244,7 +259,7 @@ int main(int argc, const char * argv[]) {
     // Wave number
     int wave = 0;
     Text waveNumberText;
-    waveNumberText.setFont(font);
+    waveNumberText.setFont(zombieFont);
     waveNumberText.setCharacterSize(55);
     waveNumberText.setFillColor(Color::White);
     waveNumberText.setPosition(resolution.x*0.66, resolution.y-200);
@@ -429,11 +444,7 @@ int main(int argc, const char * argv[]) {
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num5:
-//                    healthPickup.upgrade();
-                    state = State::PLAYING;
-                    break;
-                case Keyboard::Num6:
-//                    ammoPickup.upgrade();
+                    pickupThreshold += .01f;
                     state = State::PLAYING;
                     break;
             }
@@ -459,12 +470,7 @@ int main(int argc, const char * argv[]) {
 
                 int difficulty = wave * 5;
 
-                arena.width = 500 * wave;
-                arena.height = 500 * wave;
-                arena.left = 0;
-                arena.top = 0;
-
-                mazeGenerator.GenerateMazeData(10 + difficulty, 10 + difficulty, difficulty, keysNeeded);
+                mazeGenerator.GenerateMazeData(10 + difficulty, 10 + difficulty, difficulty, keysNeeded, pickupThreshold);
                 walls = mazeGenerator.CreateMaze();
                 floor = mazeGenerator.GetFloor();
 
@@ -630,7 +636,7 @@ int main(int argc, const char * argv[]) {
             //Pickup collisions
             //Health
             for(auto hp : healthPickups){
-                if(hp->isSpawned() && player.Collision(*hp)){
+                if(hp->isSpawned() && player.Collision(*hp) && player.isHurt()){
                     player.increaseHealthLevel(hp->gotIt());
                     pickup.play();
                 }
@@ -761,7 +767,8 @@ int main(int argc, const char * argv[]) {
         }
         else if(state == State::GAME_OVER){
             window.draw(gameOverSprite);
-            window.draw(gameOverText);
+            window.draw(gameOverText1);
+            window.draw(gameOverText2);
             window.draw(scoreText);
             window.draw(hiScoreText);
         }
@@ -771,8 +778,10 @@ int main(int argc, const char * argv[]) {
     }
 
     delete[] zombies;
-    delete walls;
-    delete floor;
+    delete(walls);
+    delete(floor);
+    delete(entrance);
+    delete(exit);
     return 0;
 }
 

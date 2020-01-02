@@ -25,7 +25,7 @@ private:
 public:
     MazeGenerator(float placementThreshold = .1);
 
-    void GenerateMazeData(int width, int height, int enemyAmount, int keysAmount);
+    void GenerateMazeData(int width, int height, int enemyAmount, int keysAmount, float pickupChance);
     std::vector<Tile>* CreateMaze();
 
     std::vector<std::vector<int>> GetData();

@@ -9,7 +9,7 @@ MazeGenerator::MazeGenerator(float placementThreshold) {
     m_placementThreshold = placementThreshold;
 }
 
-void MazeGenerator::GenerateMazeData(int width, int height, int enemyAmount, int keysAmount) {
+void MazeGenerator::GenerateMazeData(int width, int height, int enemyAmount, int keysAmount, float pickupChance) {
     //Initialize all values in size
     m_mazeData.clear();
     m_mazeData.resize(height+1, std::vector<int>(width+1, 0));
@@ -41,7 +41,7 @@ void MazeGenerator::GenerateMazeData(int width, int height, int enemyAmount, int
 
     addEntrance();
     addExit();
-    addPickups(.1);
+    addPickups(pickupChance);
 
     for(int i = 0; i < keysAmount; i++)
         addKeys();
