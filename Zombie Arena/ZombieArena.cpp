@@ -103,7 +103,7 @@ int main(int argc, const char * argv[]) {
 
     //Store keys
     std::vector<Key*> keys;
-    int keysCollected;
+    int keysCollected = 0;
     int keysNeeded = 2;
 
     //Prepare exit object
@@ -307,12 +307,16 @@ int main(int argc, const char * argv[]) {
     Sound keycardSound;
     keycardSound.setBuffer(keycardBuffer);
 
-    //Prepare alarm sound
+    //Prepare terminal sounds
     SoundBuffer alarmBuffer;
     alarmBuffer.loadFromFile("../Resources/sound/alarm.ogg");
     Sound alarm;
     alarm.setBuffer(alarmBuffer);
 
+    SoundBuffer keyboardClackBuffer;
+    keyboardClackBuffer.loadFromFile("../Resources/sound/keyboard.ogg");
+    Sound keyboardClack;
+    keyboardClack.setBuffer(keyboardClackBuffer);
 
 
     //Main game loop
@@ -525,20 +529,26 @@ int main(int argc, const char * argv[]) {
             //Update exit terminal
             exit->Update(dt.asSeconds());
 
-            if(exit->Collision(player))
-                if(!exit->ActivateExit(keysCollected == keysNeeded))
+            if(exit->Collision(player)) {
+                bool exitActive = exit->ActivateExit(keysCollected == keysNeeded);
+                if(exitActive) {
+                    if (keyboardClack.getStatus() != 2)
+                        keyboardClack.play();
+                }
+                else if(alarm.getStatus() != 2)
                     alarm.play();
+            }
 
             //Update bullets in flight
-            for(int i = 0; i < 100; i++){
-                if(bullets[i].isInFlight()){
-                    bullets[i].update(dtAsSeconds);
+            for(auto & bullet : bullets){
+                if(bullet.isInFlight()){
+                    bullet.update(dtAsSeconds);
                     //Check bullets collision against zombies
                     for (int j = 0; j < numZombies; j++) {
                         if (zombies[j].isAlive()) {
-                            if (bullets[i].Collision(zombies[j])) {
+                            if (bullet.Collision(zombies[j])) {
                                 // Stop the bullet
-                                bullets[i].stop();
+                                bullet.stop();
 
                                 // Register the hit and see if it was a kill
                                 if (zombies[j].hit()) {
@@ -562,8 +572,8 @@ int main(int argc, const char * argv[]) {
 
                     //Check bullets collision against walls
                     for(auto wall : *walls)
-                        if(bullets[i].Collision(wall))
-                            bullets[i].stop();
+                        if(bullet.Collision(wall))
+                            bullet.stop();
 
                 }
             }

@@ -79,8 +79,8 @@ std::vector<Tile> *MazeGenerator::GetFloor() {
 }
 
 void MazeGenerator::addEntrance() {
-    for(int i = 0; i < m_mazeData.size(); i++){
-        for(int j = 0; j < m_mazeData[0].size(); j++){
+    for(int i = 3; i < m_mazeData.size(); i++){
+        for(int j = 3; j < m_mazeData[0].size(); j++){
             if(m_mazeData[i][j] == 0) {
                 m_mazeData[i][j] = 5;
                 return;
@@ -102,8 +102,8 @@ void MazeGenerator::addPickups(float pickupChance) {
 }
 
 void MazeGenerator::addExit() {
-    for(int i = m_mazeData.size() - 1; i >= 0; i--){
-        for(int j = m_mazeData[0].size() - 1; j >= 0 ; j--){
+    for(int i = m_mazeData.size() / 3 * 2; i < m_mazeData.size(); i++){
+        for(int j = m_mazeData[0].size() / 3 * 2 ; j < m_mazeData[0].size() ; j++){
             if(m_mazeData[i][j] == 0) {
                 m_mazeData[i][j] = 6;
                 return;

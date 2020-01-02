@@ -23,7 +23,7 @@ private:
     void addEnemy();
     void addKeys();
 public:
-    MazeGenerator(float placementThreshold = .5);
+    MazeGenerator(float placementThreshold = .1);
 
     void GenerateMazeData(int width, int height, int enemyAmount, int keysAmount);
     std::vector<Tile>* CreateMaze();

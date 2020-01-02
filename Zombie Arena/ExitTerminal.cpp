@@ -30,6 +30,5 @@ ExitTerminal::ExitTerminal(int x, int y) {
     m_TimeSinceActivation = 0;
     SetSprite("../Resources/graphics/terminal.png");
 
-    std::cout<<"Exit spawned at " << x << ":" << y << std::endl;
     Entity::Update();
 }
