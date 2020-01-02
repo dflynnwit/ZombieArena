@@ -96,6 +96,12 @@
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h">
 			<Option target="ZombieArena"/>
 		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h">
+			<Option target="ZombieArena"/>
+		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>

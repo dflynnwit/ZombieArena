@@ -19,6 +19,7 @@
 #include "MazeGenerator.h"
 #include "Flashlight.h"
 #include "Key.h"
+#include "ExitTerminal.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -104,6 +105,9 @@ int main(int argc, const char * argv[]) {
     std::vector<Key*> keys;
     int keysCollected;
     int keysNeeded = 2;
+
+    //Prepare exit object
+    ExitTerminal* exit = nullptr;
 
     //Prepare bullets
     Bullet bullets[100];
@@ -464,6 +468,7 @@ int main(int argc, const char * argv[]) {
                                 player.spawn(j * 64, i * 64, resolution);
                                 break;
                             case 6: //Exit
+                                exit = new ExitTerminal(j * 64, i * 64);
                                 break;
                             case 7: //Key
                                 keys.push_back(new Key(j * 64, i * 64));
@@ -516,6 +521,13 @@ int main(int argc, const char * argv[]) {
                 if(zombies[i].isAlive())
                     zombies[i].update(dt.asSeconds(), playerPosition, *walls);
             }
+
+            //Update exit terminal
+            exit->Update(dt.asSeconds());
+
+            if(exit->Collision(player))
+                if(!exit->ActivateExit(keysCollected == keysNeeded))
+                    alarm.play();
 
             //Update bullets in flight
             for(int i = 0; i < 100; i++){
@@ -665,6 +677,9 @@ int main(int argc, const char * argv[]) {
                 if(k->Distance(player) < 300)
                     k->Draw(window);
 
+            //Draw exit terminal
+            if(exit->Collision(player) < 300)
+                exit->Draw(window);
 
             //Draw zombies
             for(int i = 0; i < numZombies; i++)

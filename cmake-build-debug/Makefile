@@ -203,6 +203,33 @@ Zombie_Arena/Entity.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.s
 .PHONY : Zombie_Arena/Entity.cpp.s
 
+Zombie_Arena/ExitTerminal.obj: Zombie_Arena/ExitTerminal.cpp.obj
+
+.PHONY : Zombie_Arena/ExitTerminal.obj
+
+# target to build an object file
+Zombie_Arena/ExitTerminal.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj
+.PHONY : Zombie_Arena/ExitTerminal.cpp.obj
+
+Zombie_Arena/ExitTerminal.i: Zombie_Arena/ExitTerminal.cpp.i
+
+.PHONY : Zombie_Arena/ExitTerminal.i
+
+# target to preprocess a source file
+Zombie_Arena/ExitTerminal.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.i
+.PHONY : Zombie_Arena/ExitTerminal.cpp.i
+
+Zombie_Arena/ExitTerminal.s: Zombie_Arena/ExitTerminal.cpp.s
+
+.PHONY : Zombie_Arena/ExitTerminal.s
+
+# target to generate assembly for a file
+Zombie_Arena/ExitTerminal.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.s
+.PHONY : Zombie_Arena/ExitTerminal.cpp.s
+
 Zombie_Arena/Flashlight.obj: Zombie_Arena/Flashlight.cpp.obj
 
 .PHONY : Zombie_Arena/Flashlight.obj
@@ -491,6 +518,9 @@ help:
 	@echo ... Zombie_Arena/Entity.obj
 	@echo ... Zombie_Arena/Entity.i
 	@echo ... Zombie_Arena/Entity.s
+	@echo ... Zombie_Arena/ExitTerminal.obj
+	@echo ... Zombie_Arena/ExitTerminal.i
+	@echo ... Zombie_Arena/ExitTerminal.s
 	@echo ... Zombie_Arena/Flashlight.obj
 	@echo ... Zombie_Arena/Flashlight.i
 	@echo ... Zombie_Arena/Flashlight.s

@@ -235,6 +235,86 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/Entity.
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/Entity.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/BlendMode.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/CircleShape.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Color.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/ConvexShape.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Drawable.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Export.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Font.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Glsl.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Glsl.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Glyph.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Image.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/PrimitiveType.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Rect.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Rect.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RectangleShape.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderStates.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderTarget.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderTexture.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderWindow.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Shader.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Shape.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Sprite.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Text.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Texture.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Transform.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Transformable.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Vertex.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/VertexArray.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/VertexBuffer.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/View.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Clock.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Err.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Export.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/FileInputStream.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/InputStream.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Lock.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/MemoryInputStream.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Mutex.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/NonCopyable.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Sleep.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/String.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/String.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Thread.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Thread.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/ThreadLocal.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/ThreadLocalPtr.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/ThreadLocalPtr.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Time.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Utf.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Utf.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector2.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector2.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector3.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector3.inl
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Clipboard.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Context.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/ContextSettings.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Cursor.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Event.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Export.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/GlResource.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Joystick.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Keyboard.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Mouse.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Sensor.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Touch.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/VideoMode.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Window.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowHandle.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/ExitTerminal.cpp
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/ExitTerminal.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/TextureHolder.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/Tile.h
+
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/BlendMode.hpp
@@ -879,6 +959,7 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: C:/Dev/SFML-2.5.1_f
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Bullet.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/ExitTerminal.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Flashlight.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Key.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/MazeGenerator.h

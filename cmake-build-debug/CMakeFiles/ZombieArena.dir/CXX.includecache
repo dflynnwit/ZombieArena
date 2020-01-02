@@ -864,6 +864,14 @@ iostream
 TextureHolder.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
 
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.cpp
+ExitTerminal.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h
+Tile.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
+
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.h
 SFML/Graphics.hpp
 -
@@ -933,6 +941,8 @@ Flashlight.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.h
 Key.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Key.h
+ExitTerminal.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h
 
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
 SFML/Graphics.hpp

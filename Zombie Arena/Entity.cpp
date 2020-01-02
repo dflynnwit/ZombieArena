@@ -43,6 +43,7 @@ Entity::Entity() {
 void Entity::SetSprite(const std::string filename) {
     m_Sprite = Sprite(TextureHolder::GetTexture(filename));
     m_Sprite.setOrigin(m_Sprite.getLocalBounds().width/2, m_Sprite.getLocalBounds().height/2);
+    Update();
 }
 
 void Entity::SetPosition(Vector2f position, float angle) {
