@@ -321,6 +321,11 @@ int main(int argc, const char * argv[]) {
     keyboardClack.setBuffer(keyboardClackBuffer);
 
 
+    //Prepare music
+    Music ambient, alarmed;
+    ambient.openFromFile("../Resources/sound/ambient.ogg");
+    alarmed.openFromFile("../Resources/sound/alarmed.ogg");
+
     //Main game loop
     while(window.isOpen()){
         /*************************************
@@ -403,6 +408,9 @@ int main(int argc, const char * argv[]) {
 
         //Handle level up screen
         if(state == State::LEVELING_UP){
+            //Stop alarmed music from previous level
+            alarmed.stop();
+
             switch (event.key.code){
                 case Keyboard::Num1:
                     fireRate++;
@@ -494,6 +502,9 @@ int main(int argc, const char * argv[]) {
 
                 // Reset the clock so there isn't a frame jump
                 clock.restart();
+
+                //Start playing main ambient music
+                ambient.play();
             }
         }
 
@@ -538,6 +549,9 @@ int main(int argc, const char * argv[]) {
             if(exit->Collision(player)) {
                 exitUnlocked = exit->ActivateExit(keysCollected == keysNeeded);
                 if(exitUnlocked) {
+                    ambient.stop();
+                    if(alarmed.getStatus() != 2)
+                        alarmed.play();
                     if (keyboardClack.getStatus() != 2)
                         keyboardClack.play();
                 }

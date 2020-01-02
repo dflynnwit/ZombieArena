@@ -14,6 +14,7 @@ Entity::Entity(const std::string filename, int x, int y) {
     m_active = 1;
     m_Position.x = x;
     m_Position.y = y;
+    m_Rotation = 0;
 
     SetSprite(filename);
 }
