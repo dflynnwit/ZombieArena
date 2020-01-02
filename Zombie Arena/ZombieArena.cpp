@@ -408,25 +408,23 @@ int main(int argc, const char * argv[]) {
                 ///********************
                 /// Prepare the level
                 ///********************
-//                if(walls)
-//                    walls->clear();
-//                if(floor)
-//                    floor->clear();
-
                 delete(walls);
                 delete(floor);
+                delete[] zombies;
 
                 ammoPickups.clear();
                 healthPickups.clear();
 
                 wave++;
 
+                int difficulty = wave * 5;
+
                 arena.width = 500 * wave;
                 arena.height = 500 * wave;
                 arena.left = 0;
                 arena.top = 0;
 
-                mazeGenerator.GenerateMazeData(10 + 5 * wave, 10 + 5 * wave, 5 * wave);
+                mazeGenerator.GenerateMazeData(10 + difficulty, 10 + difficulty, difficulty);
                 walls = mazeGenerator.CreateMaze();
                 floor = mazeGenerator.GetFloor();
 
@@ -434,42 +432,27 @@ int main(int argc, const char * argv[]) {
 
                 for(int i = 0; i < mazeData.size(); i++){
                     for(int j = 0; j < mazeData[0].size(); j++){
-                        if(mazeData[i][j] == 2)
-                            healthPickups.push_back(new Pickup(Pickup::HEALTH, Vector2f(i * 64, j * 64)));
-                        else if(mazeData[i][j] == 3)
-                            ammoPickups.push_back(new Pickup(Pickup::AMMO, Vector2f(i * 64, j * 64)));
-
+                        switch(mazeData[i][j]) {
+                            case 2: //Medkit
+                                healthPickups.push_back(new Pickup(Pickup::HEALTH, Vector2f(j * 64, i * 64)));
+                                break;
+                            case 3: //Ammo
+                                ammoPickups.push_back(new Pickup(Pickup::AMMO, Vector2f(j * 64, i * 64)));
+                                break;
+                            case 4: //Enemy
+                                break;
+                            case 5: //Player spawn
+                                player.spawn(j * 64, i * 64, resolution);
+                                break;
+                            case 6: //Exit
+                                break;
+                            case 7: //Key
+                                break;
+                        }
                     }
                 }
 
-                for (auto row = mazeData.begin(); row != mazeData.end(); ++row)
-                {
-                    for (auto col = row->begin(); col != row->end(); ++col)
-                    {
-
-                    }
-                    std::cout << std::endl;
-                }
-
-
-
-                //Configure pickups
-//                healthPickup.setArena(arena);
-//                ammoPickup.setArena(arena);
-
-                //Create zombie horde
-                numZombies = 5 * wave;
-
-                //Delete previously allocated memory
-                delete[] zombies;
-                zombies = createHorde(numZombies, arena);
-                numZombiesAlive = numZombies;
-
-                //Pass vertex array to createbackground
-                int tileSize = createBackground(background, arena);
-
-                // Spawn the player in the middle of the arena
-                player.spawn(arena, resolution, tileSize);
+                numZombiesAlive = difficulty;
 
                 //play upgrade sound
                 powerup.play();
@@ -567,10 +550,8 @@ int main(int argc, const char * argv[]) {
                     if (player.hit(gameTimeTotal)) {
                         //Get hit effect
                         hit.play();
-                        std::cout << "Player got hit: " << player.getHealth() << std::endl;
 
                         if(player.getHealth() <= 0) {
-                            std::cout << "Game Over" << std::endl;
                             state = State::GAME_OVER;
 
                             std::ofstream outputFile("../Resources/gamedata/scores.txt");

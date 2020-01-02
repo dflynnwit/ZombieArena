@@ -52,7 +52,7 @@ public:
 
     Player();
 
-    void spawn(IntRect arena, Vector2f resolution, int tileSize);
+    void spawn(int x, int y, Vector2f resolution);
 
     // Call this at the end of every game
     void resetPlayerStats();

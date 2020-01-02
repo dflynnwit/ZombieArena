@@ -92,7 +92,6 @@ void MazeGenerator::addPickups(float pickupChance) {
             float r = (float)rand()/RAND_MAX;
             if(m_mazeData[i][j] == 0 && r <= pickupChance) {
                 //Randomly choose between health pickup (2) or ammo pickup (3)
-                std::cout << "Pickups spawned. r = " << r << std::endl;
                 m_mazeData[i][j] = rand()%2 == 0? 2 : 3;
             }
         }
