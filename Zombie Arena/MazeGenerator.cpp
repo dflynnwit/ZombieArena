@@ -9,7 +9,7 @@ MazeGenerator::MazeGenerator(float placementThreshold) {
     m_placementThreshold = placementThreshold;
 }
 
-void MazeGenerator::GenerateMazeData(int width, int height, int enemyAmount) {
+void MazeGenerator::GenerateMazeData(int width, int height, int enemyAmount, int keysAmount) {
     //Initialize all values in size
     m_mazeData.clear();
     m_mazeData.resize(height+1, std::vector<int>(width+1, 0));
@@ -42,6 +42,9 @@ void MazeGenerator::GenerateMazeData(int width, int height, int enemyAmount) {
     addEntrance();
     addExit();
     addPickups(.1);
+
+    for(int i = 0; i < keysAmount; i++)
+        addKeys();
 
     for(int i = 0; i < enemyAmount; i++)
         addEnemy();
@@ -112,7 +115,25 @@ void MazeGenerator::addExit() {
 void MazeGenerator::addEnemy() {
     for(int i = rand() % m_mazeData.size(); i < m_mazeData.size(); i++){
         for(int j = rand() % m_mazeData[0].size(); j < m_mazeData[0].size(); j++)
-            if(m_mazeData[i][j] != 1 && m_mazeData[i][j] != 10)
+            if(m_mazeData[i][j] != 1 && m_mazeData[i][j] != 10) {
                 m_mazeData[i][j] = 4;
+                return;
+            }
+    }
+}
+
+void MazeGenerator::addKeys() {
+    bool keyPlaced = false;
+
+    while(!keyPlaced) {
+        for (int i = rand() % m_mazeData.size(); i < m_mazeData.size(); i++) {
+            for (int j = rand() % m_mazeData[0].size(); j < m_mazeData[0].size(); j++) {
+                if (m_mazeData[i][j] == 0) {
+                    m_mazeData[i][j] = 7;
+                    keyPlaced = true;
+                    return;
+                }
+            }
+        }
     }
 }

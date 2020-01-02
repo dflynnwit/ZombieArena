@@ -122,33 +122,6 @@ ZombieArena/fast:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/build
 .PHONY : ZombieArena/fast
 
-Flashlight.obj: Flashlight.cpp.obj
-
-.PHONY : Flashlight.obj
-
-# target to build an object file
-Flashlight.cpp.obj:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Flashlight.cpp.obj
-.PHONY : Flashlight.cpp.obj
-
-Flashlight.i: Flashlight.cpp.i
-
-.PHONY : Flashlight.i
-
-# target to preprocess a source file
-Flashlight.cpp.i:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Flashlight.cpp.i
-.PHONY : Flashlight.cpp.i
-
-Flashlight.s: Flashlight.cpp.s
-
-.PHONY : Flashlight.s
-
-# target to generate assembly for a file
-Flashlight.cpp.s:
-	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Flashlight.cpp.s
-.PHONY : Flashlight.cpp.s
-
 Zombie_Arena/Arena.obj: Zombie_Arena/Arena.cpp.obj
 
 .PHONY : Zombie_Arena/Arena.obj
@@ -229,6 +202,60 @@ Zombie_Arena/Entity.s: Zombie_Arena/Entity.cpp.s
 Zombie_Arena/Entity.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.s
 .PHONY : Zombie_Arena/Entity.cpp.s
+
+Zombie_Arena/Flashlight.obj: Zombie_Arena/Flashlight.cpp.obj
+
+.PHONY : Zombie_Arena/Flashlight.obj
+
+# target to build an object file
+Zombie_Arena/Flashlight.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj
+.PHONY : Zombie_Arena/Flashlight.cpp.obj
+
+Zombie_Arena/Flashlight.i: Zombie_Arena/Flashlight.cpp.i
+
+.PHONY : Zombie_Arena/Flashlight.i
+
+# target to preprocess a source file
+Zombie_Arena/Flashlight.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.i
+.PHONY : Zombie_Arena/Flashlight.cpp.i
+
+Zombie_Arena/Flashlight.s: Zombie_Arena/Flashlight.cpp.s
+
+.PHONY : Zombie_Arena/Flashlight.s
+
+# target to generate assembly for a file
+Zombie_Arena/Flashlight.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.s
+.PHONY : Zombie_Arena/Flashlight.cpp.s
+
+Zombie_Arena/Key.obj: Zombie_Arena/Key.cpp.obj
+
+.PHONY : Zombie_Arena/Key.obj
+
+# target to build an object file
+Zombie_Arena/Key.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj
+.PHONY : Zombie_Arena/Key.cpp.obj
+
+Zombie_Arena/Key.i: Zombie_Arena/Key.cpp.i
+
+.PHONY : Zombie_Arena/Key.i
+
+# target to preprocess a source file
+Zombie_Arena/Key.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.i
+.PHONY : Zombie_Arena/Key.cpp.i
+
+Zombie_Arena/Key.s: Zombie_Arena/Key.cpp.s
+
+.PHONY : Zombie_Arena/Key.s
+
+# target to generate assembly for a file
+Zombie_Arena/Key.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.s
+.PHONY : Zombie_Arena/Key.cpp.s
 
 Zombie_Arena/MazeGenerator.obj: Zombie_Arena/MazeGenerator.cpp.obj
 
@@ -455,9 +482,6 @@ help:
 	@echo ... ZombieArena
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Flashlight.obj
-	@echo ... Flashlight.i
-	@echo ... Flashlight.s
 	@echo ... Zombie_Arena/Arena.obj
 	@echo ... Zombie_Arena/Arena.i
 	@echo ... Zombie_Arena/Arena.s
@@ -467,6 +491,12 @@ help:
 	@echo ... Zombie_Arena/Entity.obj
 	@echo ... Zombie_Arena/Entity.i
 	@echo ... Zombie_Arena/Entity.s
+	@echo ... Zombie_Arena/Flashlight.obj
+	@echo ... Zombie_Arena/Flashlight.i
+	@echo ... Zombie_Arena/Flashlight.s
+	@echo ... Zombie_Arena/Key.obj
+	@echo ... Zombie_Arena/Key.i
+	@echo ... Zombie_Arena/Key.s
 	@echo ... Zombie_Arena/MazeGenerator.obj
 	@echo ... Zombie_Arena/MazeGenerator.i
 	@echo ... Zombie_Arena/MazeGenerator.s

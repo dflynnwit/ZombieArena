@@ -21,10 +21,11 @@ private:
     void addExit();
     void addPickups(float pickupChance);
     void addEnemy();
+    void addKeys();
 public:
     MazeGenerator(float placementThreshold = .5);
 
-    void GenerateMazeData(int width, int height, int enemyAmount);
+    void GenerateMazeData(int width, int height, int enemyAmount, int keysAmount);
     std::vector<Tile>* CreateMaze();
 
     std::vector<std::vector<int>> GetData();

@@ -12,14 +12,13 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "player.hpp"
-#include "Arena.h"
 #include "TextureHolder.h"
 #include "Zombie.h"
-#include "ZombieHorde.h"
 #include "Bullet.h"
 #include "Pickup.h"
 #include "MazeGenerator.h"
-#include "../Flashlight.h"
+#include "Flashlight.h"
+#include "Key.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -101,6 +100,10 @@ int main(int argc, const char * argv[]) {
     std::vector<Pickup*> healthPickups;
     std::vector<Pickup*> ammoPickups;
 
+    //Store keys
+    std::vector<Key*> keys;
+    int keysCollected;
+    int keysNeeded = 2;
 
     //Prepare bullets
     Bullet bullets[100];
@@ -225,12 +228,12 @@ int main(int argc, const char * argv[]) {
     hiScoreText.setString(s.str());
 
     // Zombies remaining
-    Text zombiesRemainingText;
-    zombiesRemainingText.setFont(font);
-    zombiesRemainingText.setCharacterSize(55);
-    zombiesRemainingText.setFillColor(Color::White);
-    zombiesRemainingText.setPosition(resolution.x-400, resolution.y-200);
-    zombiesRemainingText.setString("Zombies: 100");
+    Text keysCollectedText;
+    keysCollectedText.setFont(font);
+    keysCollectedText.setCharacterSize(55);
+    keysCollectedText.setFillColor(Color::White);
+    keysCollectedText.setPosition(resolution.x - 400, resolution.y - 200);
+    keysCollectedText.setString("Keys: 0");
 
     // Wave number
     int wave = 0;
@@ -293,6 +296,19 @@ int main(int argc, const char * argv[]) {
     pickupBuffer.loadFromFile("../Resources/sound/pickup.wav");
     Sound pickup;
     pickup.setBuffer(pickupBuffer);
+
+    //Prepare keycard sound
+    SoundBuffer keycardBuffer;
+    keycardBuffer.loadFromFile("../Resources/sound/keycard.ogg");
+    Sound keycardSound;
+    keycardSound.setBuffer(keycardBuffer);
+
+    //Prepare alarm sound
+    SoundBuffer alarmBuffer;
+    alarmBuffer.loadFromFile("../Resources/sound/alarm.ogg");
+    Sound alarm;
+    alarm.setBuffer(alarmBuffer);
+
 
 
     //Main game loop
@@ -414,6 +430,9 @@ int main(int argc, const char * argv[]) {
 
                 ammoPickups.clear();
                 healthPickups.clear();
+                keys.clear();
+
+                keysCollected = 0;
 
                 wave++;
 
@@ -424,7 +443,7 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
-                mazeGenerator.GenerateMazeData(10 + difficulty, 10 + difficulty, difficulty);
+                mazeGenerator.GenerateMazeData(10 + difficulty, 10 + difficulty, difficulty, keysNeeded);
                 walls = mazeGenerator.CreateMaze();
                 floor = mazeGenerator.GetFloor();
 
@@ -447,6 +466,7 @@ int main(int argc, const char * argv[]) {
                             case 6: //Exit
                                 break;
                             case 7: //Key
+                                keys.push_back(new Key(j * 64, i * 64));
                                 break;
                         }
                     }
@@ -580,6 +600,15 @@ int main(int argc, const char * argv[]) {
                 }
             }
 
+            //Keycards
+            for(auto k : keys){
+                if(!k->isCollected() && player.Collision(*k)){
+                    k->Collect();
+                    keysCollected++;
+                    keycardSound.play();
+                }
+            }
+
             //Update healthbar
             healthBar.setSize(Vector2f(player.getHealth()*3, 70));
 
@@ -587,7 +616,7 @@ int main(int argc, const char * argv[]) {
 
             //Calculate FPS every 1k frames
             if(framesSinceLastHUDUpdate > fpsMeasurementFrameInterval){
-                std::stringstream ssAmmo, ssScore, ssHiScore, ssWave, ssZombiesAlive;
+                std::stringstream ssAmmo, ssScore, ssHiScore, ssWave, ssKeysCollected;
 
                 ssAmmo << bulletsInClip << "/" << bulletsSpare;
                 ammoText.setString(ssAmmo.str());
@@ -601,8 +630,8 @@ int main(int argc, const char * argv[]) {
                 ssWave << "Wave: " << wave;
                 waveNumberText.setString(ssWave.str());
 
-                ssZombiesAlive << "Zombies: " << numZombiesAlive;
-                zombiesRemainingText.setString(ssZombiesAlive.str());
+                ssKeysCollected << "Keys: " << keysCollected << "/" << keysNeeded;
+                keysCollectedText.setString(ssKeysCollected.str());
 
                 framesSinceLastHUDUpdate = 0;
 
@@ -631,6 +660,11 @@ int main(int argc, const char * argv[]) {
             for(auto p : ammoPickups)
                 if(p->Distance(player) < 300)
                     p->draw(window);
+
+            for(auto k: keys)
+                if(k->Distance(player) < 300)
+                    k->Draw(window);
+
 
             //Draw zombies
             for(int i = 0; i < numZombies; i++)
@@ -665,7 +699,7 @@ int main(int argc, const char * argv[]) {
             window.draw(hiScoreText);
             window.draw(healthBar);
             window.draw(waveNumberText);
-            window.draw(zombiesRemainingText);
+            window.draw(keysCollectedText);
         }
         else if(state == State::LEVELING_UP){
             window.draw(gameOverSprite);
@@ -686,6 +720,8 @@ int main(int argc, const char * argv[]) {
     }
 
     delete[] zombies;
+    delete walls;
+    delete floor;
     return 0;
 }
 
