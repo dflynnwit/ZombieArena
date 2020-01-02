@@ -16,11 +16,17 @@ private:
     std::vector<Tile>* m_walls;
     std::vector<Tile>* m_floor;
     float m_placementThreshold;
+
+    void addEntrance();
+    void addExit();
+    void addPickups(float pickupChance);
+    void addEnemy();
 public:
     MazeGenerator(float placementThreshold = .5);
 
-    void GenerateMazeData(int width, int height);
+    void GenerateMazeData(int width, int height, int enemyAmount);
     std::vector<Tile>* CreateMaze();
+
     std::vector<std::vector<int>> GetData();
 
     void SetPlacementThreshold(float threshold);

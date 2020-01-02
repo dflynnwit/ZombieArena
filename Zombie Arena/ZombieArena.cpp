@@ -426,7 +426,7 @@ int main(int argc, const char * argv[]) {
                 arena.left = 0;
                 arena.top = 0;
 
-                mazeGenerator.GenerateMazeData(10 + 5 * wave, 10 + 5 * wave);
+                mazeGenerator.GenerateMazeData(10 + 5 * wave, 10 + 5 * wave, 5 * wave);
                 walls = mazeGenerator.CreateMaze();
                 floor = mazeGenerator.GetFloor();
 
@@ -646,7 +646,6 @@ int main(int argc, const char * argv[]) {
             for(auto p : healthPickups)
                 if(p->Distance(player) < 300) {
                     p->draw(window);
-                    std::cout << "Drawing medkit" << std::endl;
                 }
             for(auto p : ammoPickups)
                 if(p->Distance(player) < 300)

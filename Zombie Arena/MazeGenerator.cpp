@@ -9,7 +9,7 @@ MazeGenerator::MazeGenerator(float placementThreshold) {
     m_placementThreshold = placementThreshold;
 }
 
-void MazeGenerator::GenerateMazeData(int width, int height) {
+void MazeGenerator::GenerateMazeData(int width, int height, int enemyAmount) {
     //Initialize all values in size
     m_mazeData.clear();
     m_mazeData.resize(height+1, std::vector<int>(width+1, 0));
@@ -35,12 +35,16 @@ void MazeGenerator::GenerateMazeData(int width, int height) {
                     int b = a != 0 ? 0 : (r < .5 ? -1 : 1);
                     m_mazeData[i+a][j+b] = 1;
                 }
-                //TODO: Add some threshold for pickups
-                else
-                    m_mazeData[i][j] =  r > .5 ? 2 : 3;
             }
         }
     }
+
+    addEntrance();
+    addExit();
+    addPickups(.1);
+
+    for(int i = 0; i < enemyAmount; i++)
+        addEnemy();
 }
 
 std::vector<std::vector<int>> MazeGenerator::GetData() {
@@ -69,4 +73,47 @@ std::vector<Tile> *MazeGenerator::CreateMaze() {
 
 std::vector<Tile> *MazeGenerator::GetFloor() {
     return m_floor;
+}
+
+void MazeGenerator::addEntrance() {
+    for(int i = 0; i < m_mazeData.size(); i++){
+        for(int j = 0; j < m_mazeData[0].size(); j++){
+            if(m_mazeData[i][j] == 0) {
+                m_mazeData[i][j] = 5;
+                return;
+            }
+        }
+    }
+}
+
+void MazeGenerator::addPickups(float pickupChance) {
+    for(int i = 0; i < m_mazeData.size(); i++){
+        for(int j = 0; j < m_mazeData[0].size(); j++){
+            float r = (float)rand()/RAND_MAX;
+            if(m_mazeData[i][j] == 0 && r <= pickupChance) {
+                //Randomly choose between health pickup (2) or ammo pickup (3)
+                std::cout << "Pickups spawned. r = " << r << std::endl;
+                m_mazeData[i][j] = rand()%2 == 0? 2 : 3;
+            }
+        }
+    }
+}
+
+void MazeGenerator::addExit() {
+    for(int i = m_mazeData.size() - 1; i >= 0; i--){
+        for(int j = m_mazeData[0].size() - 1; j >= 0 ; j--){
+            if(m_mazeData[i][j] == 0) {
+                m_mazeData[i][j] = 6;
+                return;
+            }
+        }
+    }
+}
+
+void MazeGenerator::addEnemy() {
+    for(int i = rand() % m_mazeData.size(); i < m_mazeData.size(); i++){
+        for(int j = rand() % m_mazeData[0].size(); j < m_mazeData[0].size(); j++)
+            if(m_mazeData[i][j] != 1 && m_mazeData[i][j] != 10)
+                m_mazeData[i][j] = 4;
+    }
 }
