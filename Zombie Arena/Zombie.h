@@ -61,7 +61,7 @@ public:
     Sprite getSprite();
 
     // Update the zombie each frame
-    void update(float elapsedTime, Vector2f playerLocation, std::vector<Tile>& walls);
+    void update(float elapsedTime, Vector2f playerLocation, std::vector<Tile*>& walls);
 
     void draw(RenderWindow& window);
 };

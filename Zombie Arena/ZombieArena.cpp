@@ -79,9 +79,9 @@ int main(int argc, const char * argv[]) {
     MazeGenerator mazeGenerator(.2);
 
     //Store walls
-    std::vector<Tile>* walls = nullptr;
+    std::vector<Tile*> walls;
     //And floor tiles
-    std::vector<Tile>* floor = nullptr;
+    std::vector<Tile*> floor;
 
     //Create background
     VertexArray background;
@@ -450,11 +450,11 @@ int main(int argc, const char * argv[]) {
                 ///********************
                 /// Prepare the level
                 ///********************
-                delete(walls);
-                delete(floor);
                 delete(entrance);
                 delete(exit);
 
+                walls.clear();
+                floor.clear();
                 ammoPickups.clear();
                 healthPickups.clear();
                 keys.clear();
@@ -468,8 +468,8 @@ int main(int argc, const char * argv[]) {
                 int difficulty = wave * 5;
 
                 mazeGenerator.GenerateMazeData(10 + difficulty, 10 + difficulty, difficulty, keysNeeded, pickupThreshold);
-                walls = mazeGenerator.CreateMaze();
-                floor = mazeGenerator.GetFloor();
+                walls = *mazeGenerator.CreateMaze();
+                floor = *mazeGenerator.GetFloor();
 
                 std::vector<std::vector<int>> mazeData = mazeGenerator.GetData();
 
@@ -531,7 +531,7 @@ int main(int argc, const char * argv[]) {
 
 
             //Update player position
-            player.update(dtAsSeconds, Mouse::getPosition(), *walls);
+            player.update(dtAsSeconds, Mouse::getPosition(), walls);
 
             //Record player new position
             Vector2f playerPosition(player.getCenter());
@@ -542,7 +542,7 @@ int main(int argc, const char * argv[]) {
             //Update zombies in the horde
             for(auto zombie : zombies){
                 if(zombie->isAlive())
-                    zombie->update(dt.asSeconds(), playerPosition, *walls);
+                    zombie->update(dt.asSeconds(), playerPosition, walls);
             }
 
             //Update exit terminal
@@ -589,9 +589,11 @@ int main(int argc, const char * argv[]) {
                     }
 
                     //Check bullets collision against walls
-                    for(auto wall : *walls)
-                        if(bullet.Collision(wall))
+                    for(auto wall : walls)
+                        if(bullet.Collision(*wall) && wall->isActive()) {
                             bullet.stop();
+                            wall->Destroy();
+                        }
 
                 }
             }
@@ -621,6 +623,11 @@ int main(int argc, const char * argv[]) {
                     }
                 }
             }// End player touched
+
+            //update walls ????
+            for(auto w : walls){
+                w->Update();
+            }
 
             //Pickup collisions
             //Health
@@ -687,9 +694,9 @@ int main(int argc, const char * argv[]) {
             window.setView(mainView);
 
             //Draw background
-            for(auto tile : *floor)
-                if(player.Distance(tile) < 300)
-                    tile.Draw(window);
+            for(auto tile : floor)
+                if(player.Distance(*tile) < 300)
+                    tile->Draw(window);
 
             //Draw pickups
             for(auto p : healthPickups)
@@ -726,9 +733,9 @@ int main(int argc, const char * argv[]) {
             }
 
             //Draw walls
-            for(auto wall : *walls) {
-                if(player.Distance(wall) < 300)
-                    wall.Draw(window);
+            for(auto wall : walls) {
+                if(player.Distance(*wall) < 300)
+                    wall->Draw(window);
             }
 
             //Draw flashlight effect
@@ -766,8 +773,6 @@ int main(int argc, const char * argv[]) {
         window.display();
     }
 
-    delete(walls);
-    delete(floor);
     delete(entrance);
     delete(exit);
     return 0;

@@ -42,6 +42,8 @@ public:
     void Draw(RenderWindow &window);
 
     sf::Vector2f velocity;
+
+    bool isActive();
 protected:
     int m_active, m_group_id;
     Sprite m_Sprite;

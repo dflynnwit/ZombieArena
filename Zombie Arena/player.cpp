@@ -102,7 +102,7 @@ void Player::setMoveUp(bool up) {
     m_UpPressed = up;
 }
 
-void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Tile>& walls)
+void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Tile *> &walls)
 {
     Vector2f origPosition = m_Position;
     float origAngle = m_Sprite.getRotation();
@@ -117,11 +117,11 @@ void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Tile>
                   * 180) / 3.141;
 
     for(int i = 0; i < walls.size(); i++)
-        if(Collision(walls[i])){
+        if(Collision(*walls[i])){
             //If destination would collide with wall, push player back by 1 pixel in a direction from that wall to the player
-            float magnitude = Distance(walls[i]);
-            m_Position.x += (origPosition.x - walls[i].GetPosition().x) / magnitude ;
-            m_Position.y += (origPosition.y - walls[i].GetPosition().y) / magnitude ;
+            float magnitude = Distance(*walls[i]);
+            m_Position.x += (origPosition.x - walls[i]->GetPosition().x) / magnitude ;
+            m_Position.y += (origPosition.y - walls[i]->GetPosition().y) / magnitude ;
             break;
         }
 

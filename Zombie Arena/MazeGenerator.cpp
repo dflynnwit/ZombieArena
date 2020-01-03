@@ -54,19 +54,19 @@ std::vector<std::vector<int>> MazeGenerator::GetData() {
     return m_mazeData;
 }
 
-std::vector<Tile> *MazeGenerator::CreateMaze() {
-    m_walls = new std::vector<Tile>();
-    m_floor = new std::vector<Tile>();
+std::vector<Tile*> *MazeGenerator::CreateMaze() {
+    m_walls = new std::vector<Tile*>();
+    m_floor = new std::vector<Tile*>();
 
     for(int row = 0; row < m_mazeData.size(); row++){
         for(int col = 0; col < m_mazeData[0].size(); col++){
             if(m_mazeData[row][col] == 1) {
-                m_walls->push_back(Tile(col, row, Tile::WALL));
+                m_walls->push_back(new Tile(col, row, Tile::WALL));
             }
             else if(m_mazeData[row][col] == 10) {
-                m_walls->push_back(Tile(col, row, Tile::WALL, true));
+                m_walls->push_back(new Tile(col, row, Tile::WALL, true));
             } else{
-                m_floor->push_back(Tile(col, row, Tile::FLOOR));
+                m_floor->push_back(new Tile(col, row, Tile::FLOOR));
             }
         }
     }
@@ -74,7 +74,7 @@ std::vector<Tile> *MazeGenerator::CreateMaze() {
     return m_walls;
 }
 
-std::vector<Tile> *MazeGenerator::GetFloor() {
+std::vector<Tile*> *MazeGenerator::GetFloor() {
     return m_floor;
 }
 
@@ -115,7 +115,7 @@ void MazeGenerator::addExit() {
 void MazeGenerator::addEnemy() {
     for(int i = rand() % m_mazeData.size(); i < m_mazeData.size(); i++){
         for(int j = rand() % m_mazeData[0].size(); j < m_mazeData[0].size(); j++)
-            if(m_mazeData[i][j] != 1 && m_mazeData[i][j] != 10) {
+            if(m_mazeData[i][j] != 1 && m_mazeData[i][j] != 10 && m_mazeData[i][j] != 5) {
                 m_mazeData[i][j] = 4;
                 return;
             }

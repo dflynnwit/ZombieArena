@@ -86,7 +86,7 @@ public:
     void draw(RenderWindow &window);
 
     // We will call this function once every frame
-    void update(float elapsedTime, Vector2i mousePosition, std::vector<Tile>& walls);
+    void update(float elapsedTime, Vector2i mousePosition, std::vector<Tile *> &walls);
 
     // Give player a speed boost
     void upgradeSpeed();

@@ -108,6 +108,12 @@
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.h">
 			<Option target="ZombieArena"/>
 		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Grenade.cpp">
+			<Option target="ZombieArena"/>
+		</Unit>
+		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Grenade.h">
+			<Option target="ZombieArena"/>
+		</Unit>
 		<Unit filename="C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Key.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>

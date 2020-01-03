@@ -257,6 +257,33 @@ Zombie_Arena/Flashlight.cpp.s:
 	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.s
 .PHONY : Zombie_Arena/Flashlight.cpp.s
 
+Zombie_Arena/Grenade.obj: Zombie_Arena/Grenade.cpp.obj
+
+.PHONY : Zombie_Arena/Grenade.obj
+
+# target to build an object file
+Zombie_Arena/Grenade.cpp.obj:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj
+.PHONY : Zombie_Arena/Grenade.cpp.obj
+
+Zombie_Arena/Grenade.i: Zombie_Arena/Grenade.cpp.i
+
+.PHONY : Zombie_Arena/Grenade.i
+
+# target to preprocess a source file
+Zombie_Arena/Grenade.cpp.i:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.i
+.PHONY : Zombie_Arena/Grenade.cpp.i
+
+Zombie_Arena/Grenade.s: Zombie_Arena/Grenade.cpp.s
+
+.PHONY : Zombie_Arena/Grenade.s
+
+# target to generate assembly for a file
+Zombie_Arena/Grenade.cpp.s:
+	$(MAKE) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.s
+.PHONY : Zombie_Arena/Grenade.cpp.s
+
 Zombie_Arena/Key.obj: Zombie_Arena/Key.cpp.obj
 
 .PHONY : Zombie_Arena/Key.obj
@@ -497,6 +524,9 @@ help:
 	@echo ... Zombie_Arena/Flashlight.obj
 	@echo ... Zombie_Arena/Flashlight.i
 	@echo ... Zombie_Arena/Flashlight.s
+	@echo ... Zombie_Arena/Grenade.obj
+	@echo ... Zombie_Arena/Grenade.i
+	@echo ... Zombie_Arena/Grenade.s
 	@echo ... Zombie_Arena/Key.obj
 	@echo ... Zombie_Arena/Key.i
 	@echo ... Zombie_Arena/Key.s

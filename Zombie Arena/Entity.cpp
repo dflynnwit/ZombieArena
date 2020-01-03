@@ -8,6 +8,8 @@
 Entity::Entity(const std::string filename) {
     m_active = 1;
     SetSprite(filename);
+
+    std::cout<< "Filename constructor" <<std::endl;
 }
 
 Entity::Entity(const std::string filename, int x, int y) {
@@ -17,15 +19,19 @@ Entity::Entity(const std::string filename, int x, int y) {
     m_Rotation = 0;
 
     SetSprite(filename);
+    std::cout<< "Filename + position constructor" <<std::endl;
 }
 
 void Entity::Draw(RenderWindow &window){
-    window.draw(m_Sprite);
+    if(m_active)
+        window.draw(m_Sprite);
+    else
+        std::cout<<"Object is inactive" <<std::endl;
 }
 
 bool Entity::Collision(Entity& entity)
 {
-    return m_Sprite.getGlobalBounds().intersects(entity.m_Sprite.getGlobalBounds());
+    return m_active && m_Sprite.getGlobalBounds().intersects(entity.m_Sprite.getGlobalBounds());
 }
 
 void Entity::SetActive(int active)
@@ -46,12 +52,13 @@ Sprite Entity::GetSprite() {
 }
 
 Entity::Entity() {
-    m_active = 1;
+    m_active = true;
 }
 
 void Entity::SetSprite(const std::string filename) {
     m_Sprite = Sprite(TextureHolder::GetTexture(filename));
     m_Sprite.setOrigin(m_Sprite.getLocalBounds().width/2, m_Sprite.getLocalBounds().height/2);
+
     Update();
 }
 
@@ -63,6 +70,9 @@ void Entity::SetPosition(Vector2f position, float angle) {
 void Entity::Update() {
     m_Sprite.setPosition(m_Position.x, m_Position.y);
     m_Sprite.setRotation(m_Rotation);
+
+    if(!m_active)
+        std::cout << "Some object is inactive" << std::endl;
 }
 
 float Entity::Distance(Entity &entity) {
@@ -71,4 +81,8 @@ float Entity::Distance(Entity &entity) {
 
 Vector2f Entity::GetPosition() {
     return m_Position;
+}
+
+bool Entity::isActive() {
+    return m_active;
 }
