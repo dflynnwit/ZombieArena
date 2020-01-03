@@ -161,6 +161,13 @@ int main(int argc, const char * argv[]) {
     ammoIconSprite.setTexture(ammoIconTexture);
     ammoIconSprite.setPosition(20, resolution.y - 200);
 
+    //Grenade
+    Sprite grenadeIconSprite;
+    Texture grenadeIconTexture = TextureHolder::GetTexture("../Resources/graphics/grenade.png");
+    grenadeIconSprite.setTexture(grenadeIconTexture);
+    grenadeIconSprite.setPosition(420, resolution.y - 200);
+    grenadeIconSprite.setScale(3, 3);
+
     //Prep game font
     Font zombieFont, labFont;
     zombieFont.loadFromFile("../Resources/fonts/zombiecontrol.ttf");
@@ -212,7 +219,7 @@ int main(int argc, const char * argv[]) {
     std::stringstream levelUpStream;
     levelUpStream << "Prepare for the next lab: \n\n"
                   "1- Increased rate of fire" <<
-                  "\n2- Increased clip size(next reload)" <<
+                  "\n2- Buy a grenade" <<
                   "\n3- Increased max health" <<
                   "\n4- Increased run speed" <<
                   "\n5- More pickups" <<
@@ -229,7 +236,14 @@ int main(int argc, const char * argv[]) {
     ammoText.setFont(zombieFont);
     ammoText.setCharacterSize(55);
     ammoText.setFillColor(Color::White);
-    ammoText.setPosition(200, resolution.y-200);
+    ammoText.setPosition(150, resolution.y-200);
+
+    //Grenades
+    Text grenadesText;
+    grenadesText.setFont(zombieFont);
+    grenadesText.setCharacterSize(55);
+    grenadesText.setFillColor(Color::White);
+    grenadesText.setPosition(570, resolution.y-200);
 
     // Score
     Text scoreText;
@@ -462,7 +476,7 @@ int main(int argc, const char * argv[]) {
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num2:
-                    clipSize+=clipSize;
+                    grenadesSpare++;
                     state = State::PLAYING;
                     break;
                 case Keyboard::Num3:
@@ -722,6 +736,7 @@ int main(int argc, const char * argv[]) {
             for(auto ammo : ammoPickups){
                 if(ammo->isSpawned() && player.Collision(*ammo)){
                     bulletsSpare += ammo->gotIt();
+                    grenadesSpare++;
                     reload.play();
                 }
             }
@@ -742,10 +757,13 @@ int main(int argc, const char * argv[]) {
 
             //Calculate FPS every 1k frames
             if(framesSinceLastHUDUpdate > fpsMeasurementFrameInterval){
-                std::stringstream ssAmmo, ssScore, ssHiScore, ssTime, ssKeysCollected;
+                std::stringstream ssAmmo, ssGrenades, ssScore, ssHiScore, ssTime, ssKeysCollected;
 
                 ssAmmo << bulletsInClip << "/" << bulletsSpare;
                 ammoText.setString(ssAmmo.str());
+
+                ssGrenades << grenadesSpare;
+                grenadesText.setString(ssGrenades.str());
 
                 ssScore << "Score: " << score;
                 scoreText.setString(ssScore.str());
@@ -830,7 +848,9 @@ int main(int argc, const char * argv[]) {
             window.setView(hudView);
 
             window.draw(ammoIconSprite);
+            window.draw(grenadeIconSprite);
             window.draw(ammoText);
+            window.draw(grenadesText);
             window.draw(scoreText);
             window.draw(hiScoreText);
             window.draw(healthBar);

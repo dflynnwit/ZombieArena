@@ -5,7 +5,6 @@
 #include "Grenade.h"
 
 void Grenade::Throw(int startX, int startY, int targetX, int targetY) {
-    std::cout<<"Grenade thrown" << std::endl;
     //Keep track of bullet
     m_armedTime = FUSE_TIME;
     m_active = true;
@@ -40,7 +39,6 @@ void Grenade::Throw(int startX, int startY, int targetX, int targetY) {
 
 bool Grenade::Update(float timePassed) {
     if(m_active) {
-        std::cout <<"Armed time: " << m_armedTime << std::endl;
         m_armedTime -= timePassed;
         if (m_armedTime < 0) {
             m_active = false;
@@ -51,8 +49,6 @@ bool Grenade::Update(float timePassed) {
             m_Position.y += m_grenadeDistanceY * timePassed;
 
             m_Rotation++;
-
-            std::cout << m_Position.x << ":" << m_Position.y << std::endl;
 
             Entity::Update();
 
