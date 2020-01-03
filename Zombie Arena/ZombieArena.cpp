@@ -66,6 +66,10 @@ int main(int argc, const char * argv[]) {
     //How long are we playing
     Time gameTimeTotal;
 
+    //Set up escape timer
+    float escapeTimeLimit = 30;
+    float escapeTimer;
+
     //Mouse position relative to world coords
     Vector2f mouseWorldPosition;
 
@@ -206,7 +210,8 @@ int main(int argc, const char * argv[]) {
                   "\n2- Increased clip size(next reload)" <<
                   "\n3- Increased max health" <<
                   "\n4- Increased run speed" <<
-                  "\n5- More pickups";
+                  "\n5- More pickups" <<
+                  "\n6- Extend time for escape";
 
     levelUpText.setString(levelUpStream.str());
 
@@ -255,12 +260,12 @@ int main(int argc, const char * argv[]) {
 
     // Wave number
     int wave = 0;
-    Text waveNumberText;
-    waveNumberText.setFont(zombieFont);
-    waveNumberText.setCharacterSize(55);
-    waveNumberText.setFillColor(Color::White);
-    waveNumberText.setPosition(resolution.x*0.66, resolution.y-200);
-    waveNumberText.setString("Wave: 0");
+    Text timeLeftText;
+    timeLeftText.setFont(zombieFont);
+    timeLeftText.setCharacterSize(55);
+    timeLeftText.setFillColor(Color::White);
+    timeLeftText.setPosition(resolution.x * 0.66, resolution.y - 200);
+    timeLeftText.setString("Time Left: 30");
 
     // Health bar
     RectangleShape healthBar;
@@ -332,6 +337,11 @@ int main(int argc, const char * argv[]) {
     Sound keyboardClack;
     keyboardClack.setBuffer(keyboardClackBuffer);
 
+    //Prep explosion sound
+    SoundBuffer explosionBuffer;
+    explosionBuffer.loadFromFile("../Resources/sound/explosion.ogg");
+    Sound explosion;
+    explosion.setBuffer(explosionBuffer);
 
     //Prepare music
     Music ambient, alarmed;
@@ -444,6 +454,10 @@ int main(int argc, const char * argv[]) {
                     pickupThreshold += .01f;
                     state = State::PLAYING;
                     break;
+                case Keyboard::Num6:
+                    escapeTimeLimit += 10;
+                    state = State::PLAYING;
+                    break;
             }
 
             if(state == State::PLAYING){
@@ -462,6 +476,7 @@ int main(int argc, const char * argv[]) {
 
                 keysCollected = 0;
                 exitUnlocked = false;
+                escapeTimer = escapeTimeLimit;
 
                 wave++;
 
@@ -519,6 +534,18 @@ int main(int argc, const char * argv[]) {
 
             //Update total time
             gameTimeTotal += dt;
+
+            //Update escape timer
+            if(exitUnlocked){
+                escapeTimer -= dt.asSeconds();
+                if(escapeTimer <= 0)
+                {
+                    //Play explosion and move to game over
+                    alarmed.stop();
+                    explosion.play();
+                    state = State::GAME_OVER;
+                }
+            }
 
             //Make a decimal fraction of 1 from the delta time -- What the hell does this mean ?
             float dtAsSeconds = dt.asSeconds();
@@ -614,6 +641,10 @@ int main(int argc, const char * argv[]) {
                         hit.play();
 
                         if(player.getHealth() <= 0) {
+                            //Stop all music
+                            alarmed.stop();
+                            ambient.stop();
+
                             state = State::GAME_OVER;
 
                             std::ofstream outputFile("../Resources/gamedata/scores.txt");
@@ -663,7 +694,7 @@ int main(int argc, const char * argv[]) {
 
             //Calculate FPS every 1k frames
             if(framesSinceLastHUDUpdate > fpsMeasurementFrameInterval){
-                std::stringstream ssAmmo, ssScore, ssHiScore, ssWave, ssKeysCollected;
+                std::stringstream ssAmmo, ssScore, ssHiScore, ssTime, ssKeysCollected;
 
                 ssAmmo << bulletsInClip << "/" << bulletsSpare;
                 ammoText.setString(ssAmmo.str());
@@ -674,8 +705,8 @@ int main(int argc, const char * argv[]) {
                 ssHiScore << "Hi Score: " <<  hiScore;
                 hiScoreText.setString(ssHiScore.str());
 
-                ssWave << "Wave: " << wave;
-                waveNumberText.setString(ssWave.str());
+                ssTime << "Time left: " << (int)escapeTimer;
+                timeLeftText.setString(ssTime.str());
 
                 ssKeysCollected << "Keys: " << keysCollected << "/" << keysNeeded;
                 keysCollectedText.setString(ssKeysCollected.str());
@@ -752,7 +783,7 @@ int main(int argc, const char * argv[]) {
             window.draw(scoreText);
             window.draw(hiScoreText);
             window.draw(healthBar);
-            window.draw(waveNumberText);
+            window.draw(timeLeftText);
             window.draw(keysCollectedText);
         }
         else if(state == State::LEVELING_UP){
