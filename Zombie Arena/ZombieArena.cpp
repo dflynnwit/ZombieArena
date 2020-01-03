@@ -371,6 +371,7 @@ int main(int argc, const char * argv[]) {
     //Prepare music
     Music ambient, alarmed;
     ambient.openFromFile("../Resources/sound/ambient.ogg");
+    ambient.setLoop(true);
     alarmed.openFromFile("../Resources/sound/alarmed.ogg");
 
     //Main game loop
@@ -854,7 +855,8 @@ int main(int argc, const char * argv[]) {
             window.draw(scoreText);
             window.draw(hiScoreText);
             window.draw(healthBar);
-            window.draw(timeLeftText);
+            if(exitUnlocked)
+                window.draw(timeLeftText);
             window.draw(keysCollectedText);
         }
         else if(state == State::LEVELING_UP){
