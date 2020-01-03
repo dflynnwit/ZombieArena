@@ -20,6 +20,7 @@
 #include "Flashlight.h"
 #include "Key.h"
 #include "ExitTerminal.h"
+#include "Grenade.h"
 
 void updatePlayerDirectionalControls(Player &p);
 
@@ -119,6 +120,10 @@ int main(int argc, const char * argv[]) {
     int bulletsInClip = 6;
     int clipSize = 6;
     float fireRate = 1;
+
+    //Prepare grenade
+    Grenade grenade;
+    int grenadesSpare = 1;
 
     //Tracks time of last shot
     Time lastShot;
@@ -381,6 +386,8 @@ int main(int argc, const char * argv[]) {
                         clipSize = 6;
                         fireRate = 1;
 
+                        grenadesSpare = 1;
+
                         player.resetPlayerStats();
 
                         state = State::LEVELING_UP;
@@ -430,6 +437,16 @@ int main(int argc, const char * argv[]) {
                     lastShot = gameTimeTotal;
                     bulletsInClip--;
                     shoot.play();
+                }
+            }
+
+            //Throw grenade
+            if(Mouse::isButtonPressed(Mouse::Right)){
+                if(!grenade.isActive() && grenadesSpare > 0){
+                    //Pass the player pos and crosshair pos to shoot function
+                    grenade.Throw(player.getCenter().x, player.getCenter().y, mouseWorldPosition.x, mouseWorldPosition.y);
+
+                    grenadesSpare--;
                 }
             }
         }
@@ -642,6 +659,21 @@ int main(int argc, const char * argv[]) {
                 }
             }
 
+            //Update grenade
+            grenade.Update(dtAsSeconds);
+            for(auto zombie : zombies){
+                if(grenade.Collision(*zombie)) {
+                    score += grenade.Explode(walls, zombies);
+                    pop.play();
+                }
+            }
+            for(auto wall : walls){
+                if(grenade.Collision(*wall)){
+                    score += grenade.Explode(walls, zombies);
+                    pop.play();
+                }
+            }
+
             //Update crosshair
             crosshairSprite.setPosition(mouseWorldPosition.x, mouseWorldPosition.y);
 
@@ -672,10 +704,10 @@ int main(int argc, const char * argv[]) {
                 }
             }// End player touched
 
-            //update walls ????
-            for(auto w : walls){
-                w->Update();
-            }
+//            //update walls ????
+//            for(auto w : walls){
+//                w->Update();
+//            }
 
             //Pickup collisions
             //Health
@@ -779,6 +811,9 @@ int main(int argc, const char * argv[]) {
             for(int i = 0; i < 100; i++){
                 bullets[i].draw(window);
             }
+
+            //Draw grenade
+            grenade.Draw(window);
 
             //Draw walls
             for(auto wall : walls) {

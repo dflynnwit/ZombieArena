@@ -8,12 +8,12 @@
 
 #include "Entity.h"
 #include "Zombie.h"
+#include "Tile.h"
 
 class Grenade : public Entity{
 private:
     const float FUSE_TIME = 2;
-    bool m_InFlight = true;
-    int m_grenadeSpeed = 100;
+    float m_grenadeSpeed = 200;
     float m_grenadeDistanceX;
     float m_grenadeDistanceY;
 
@@ -25,11 +25,13 @@ private:
     float m_armedTime;
 
 public:
+    Grenade();
+
     void Throw(int startX, int startY, int targetX, int targetY);
 
     bool Update(float timePassed);
 
-    int Explode(std::vector<Entity*>& walls, std::vector<Zombie*>& zombies, int explosionRadius = 100, int explosionDamage = 5);
+    int Explode(std::vector<Tile*>& walls, std::vector<Zombie*>& zombies, int explosionRadius = 100, int explosionDamage = 5);
 };
 
 
