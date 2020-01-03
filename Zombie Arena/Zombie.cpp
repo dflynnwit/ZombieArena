@@ -8,8 +8,9 @@
 #include <ctime>
 #include <cmath>
 
-bool Zombie::hit() {
-    if(--m_Health <= 0){
+bool Zombie::hit(int damage) {
+    m_Health -= damage;
+    if(m_Health <= 0){
         m_Alive = false;
         m_Sprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/blood.png"));
     }
@@ -127,10 +128,37 @@ void Zombie::draw(RenderWindow &window) {
     Draw(window);
 }
 
-int Zombie::OnDeath(Entity &player, std::vector<Tile *> &walls, std::vector<Zombie*>& zombies) {
-    return 0;
+std::pair<int, int> Zombie::OnDeath(Entity &player, std::vector<Tile *> &walls, std::vector<Zombie*>& zombies, int effectDistance) {
+    std::pair<int, int> damageAndPoints;
+    damageAndPoints.first = 0;
+    damageAndPoints.second = 0;
+
+    if(m_Type == 0){
+        if(Distance(player) < effectDistance)
+            damageAndPoints.first = 30;
+
+        //Destroy nearby walls
+        for(auto wall : walls){
+            if(Distance(*wall) < effectDistance)
+                wall->SetActive(false);
+        }
+
+        //Kill nearby zombies and award points
+        for(auto zombie : zombies){
+            if(Distance(*zombie) < effectDistance){
+                if(zombie->hit(5))
+                    damageAndPoints.second += 10;
+            }
+        }
+    }
+
+    return damageAndPoints;
 }
 
 int Zombie::GetDamage() {
     return m_Damage;
+}
+
+int Zombie::GetZombieType() {
+    return m_Type;
 }

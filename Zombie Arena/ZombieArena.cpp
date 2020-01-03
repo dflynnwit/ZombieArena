@@ -290,6 +290,12 @@ int main(int argc, const char * argv[]) {
     sf::Sound splat;
     splat.setBuffer(splatBuffer);
 
+    //Prep pop sound
+    SoundBuffer popBuffer;
+    popBuffer.loadFromFile("../Resources/sound/pop.ogg");
+    Sound pop;
+    pop.setBuffer(popBuffer);
+
     // Prepare the shoot sound
     SoundBuffer shootBuffer;
     shootBuffer.loadFromFile("../Resources/sound/shoot.wav");
@@ -605,7 +611,16 @@ int main(int argc, const char * argv[]) {
                                 // Register the hit and see if it was a kill
                                 if (zombie->hit()) {
                                     // Not just a hit but a kill too
-                                    splat.play();
+                                    //Play sound and fx depending on zombie
+                                    if(zombie->GetZombieType() == 0){
+                                        pop.play();
+                                        std::pair<int, int> damageAndPoints = zombie->OnDeath(player, walls, zombies);
+                                        player.hit(gameTimeTotal, damageAndPoints.first);
+                                        score += damageAndPoints.second;
+                                    }
+                                    else
+                                        splat.play();
+
                                     score += 10;
                                     if (score >= hiScore) {
                                         hiScore = score;
@@ -619,8 +634,9 @@ int main(int argc, const char * argv[]) {
                     for(auto wall : walls)
                         if(bullet.Collision(*wall) && wall->isActive()) {
                             bullet.stop();
-                            if(!(wall->isEdge()))
-                                wall->SetActive(false);
+                            //TODO: Move this to grenade
+//                            if(!(wall->isEdge()))
+//                                wall->SetActive(false);
                         }
 
                 }

@@ -60,7 +60,7 @@ public:
     Zombie(int x, int y);
 
     // Handle when a bullet hits a zombie
-    bool hit();
+    bool hit(int damage = 1);
 
     // Find out if the zombie is alive
     bool isAlive();
@@ -81,7 +81,9 @@ public:
 
     void draw(RenderWindow& window);
 
-    int OnDeath(Entity& player, std::vector<Tile*>& walls, std::vector<Zombie*>& zombies);
+    std::pair<int, int> OnDeath(Entity& player, std::vector<Tile*>& walls, std::vector<Zombie*>& zombies, int effectDistance = 100);
+
+    int GetZombieType();
 };
 
 
