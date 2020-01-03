@@ -39,6 +39,9 @@ private:
     // Is it still alive?
     bool m_Alive=true;
 
+    //Is the zombie aware of player
+    bool m_Alerted = false;
+
     // Public prototypes go here
 public:
     Zombie();
@@ -61,7 +64,7 @@ public:
     Sprite getSprite();
 
     // Update the zombie each frame
-    void update(float elapsedTime, Vector2f playerLocation, std::vector<Tile*>& walls);
+    void update(float elapsedTime, Entity &player, std::vector<Tile*>& walls);
 
     void draw(RenderWindow& window);
 };

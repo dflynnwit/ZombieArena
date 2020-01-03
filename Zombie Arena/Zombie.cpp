@@ -62,46 +62,50 @@ Sprite Zombie::getSprite() {
     return m_Sprite;
 }
 
-void Zombie::update(float elapsedTime, Vector2f playerLocation, std::vector<Tile*>& walls) {
-    float playerX = playerLocation.x;
-    float playerY = playerLocation.y;
+void Zombie::update(float elapsedTime, Entity &player, std::vector<Tile*>& walls) {
+    float playerX = player.GetPosition().x;
+    float playerY = player.GetPosition().y;
 
-    Vector2f origPosition = m_Position;
+    float distanceToPlayer = Distance(player);
+    if(distanceToPlayer < 200)
+        m_Alerted = true;
+    if(distanceToPlayer > 400)
+        m_Alerted = false;
 
-    // Update the zombie position variables
-    if (playerX > m_Position.x)
-    {
-        m_Position.x = m_Position.x + m_Speed * elapsedTime;
-    }
+    if(m_Alerted) {
+        Vector2f origPosition = m_Position;
 
-    if (playerY > m_Position.y)
-    {
-        m_Position.y = m_Position.y + m_Speed * elapsedTime;
-    }
-
-    if (playerX < m_Position.x)
-    {
-        m_Position.x = m_Position.x - m_Speed * elapsedTime;
-    }
-
-    if (playerY < m_Position.y)
-    {
-        m_Position.y = m_Position.y - m_Speed * elapsedTime;
-    }
-
-    // Face the sprite in the correct direction
-    m_Rotation = (atan2(playerY - m_Position.y,
-                         playerX - m_Position.x)
-                   * 180) / 3.141;
-
-    for(int i = 0; i < walls.size(); i++)
-        if(Collision(*walls[i])){
-            //If destination would collide with wall, push player back by 1 pixel in a direction from that wall to the player
-            float magnitude = Distance(*walls[i]);
-            m_Position.x += (origPosition.x - walls[i]->GetPosition().x) / magnitude ;
-            m_Position.y += (origPosition.y - walls[i]->GetPosition().y) / magnitude ;
-            break;
+        // Update the zombie position variables
+        if (playerX > m_Position.x) {
+            m_Position.x = m_Position.x + m_Speed * elapsedTime;
         }
+
+        if (playerY > m_Position.y) {
+            m_Position.y = m_Position.y + m_Speed * elapsedTime;
+        }
+
+        if (playerX < m_Position.x) {
+            m_Position.x = m_Position.x - m_Speed * elapsedTime;
+        }
+
+        if (playerY < m_Position.y) {
+            m_Position.y = m_Position.y - m_Speed * elapsedTime;
+        }
+
+        // Face the sprite in the correct direction
+        m_Rotation = (atan2(playerY - m_Position.y,
+                            playerX - m_Position.x)
+                      * 180) / 3.141;
+
+        for (int i = 0; i < walls.size(); i++)
+            if (Collision(*walls[i])) {
+                //If destination would collide with wall, push player back by 1 pixel in a direction from that wall to the player
+                float magnitude = Distance(*walls[i]);
+                m_Position.x += (origPosition.x - walls[i]->GetPosition().x) / magnitude;
+                m_Position.y += (origPosition.y - walls[i]->GetPosition().y) / magnitude;
+                break;
+            }
+    }
 
     Update();
 }

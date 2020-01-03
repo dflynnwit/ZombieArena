@@ -569,7 +569,7 @@ int main(int argc, const char * argv[]) {
             //Update zombies in the horde
             for(auto zombie : zombies){
                 if(zombie->isAlive())
-                    zombie->update(dt.asSeconds(), playerPosition, walls);
+                    zombie->update(dt.asSeconds(), player, walls);
             }
 
             //Update exit terminal
