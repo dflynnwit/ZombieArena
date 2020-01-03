@@ -413,6 +413,10 @@ int main(int argc, const char * argv[]) {
                 if(event.key.code == Keyboard::Escape)
                     window.close();
 
+                //Game restart (for testing)
+                if(event.key.code == Keyboard::Backspace)
+                    state = State::GAME_OVER;
+
                 if(state == State::PLAYING){
                     //Reloading
                     if(event.key.code == Keyboard::R){
@@ -504,6 +508,8 @@ int main(int argc, const char * argv[]) {
                 ///********************
                 delete(entrance);
                 delete(exit);
+                entrance = nullptr;
+                exit = nullptr;
 
                 walls.clear();
                 floor.clear();
@@ -526,6 +532,8 @@ int main(int argc, const char * argv[]) {
 
                 std::vector<std::vector<int>> mazeData = mazeGenerator.GetData();
 
+                int keysInData = 0;
+
                 for(int i = 0; i < mazeData.size(); i++){
                     for(int j = 0; j < mazeData[0].size(); j++){
                         switch(mazeData[i][j]) {
@@ -541,16 +549,22 @@ int main(int argc, const char * argv[]) {
                             case 5: //Player spawn
                                 entrance = new Entity("../Resources/graphics/entrance.png", j * 64, i * 64);
                                 player.spawn(j * 64, i * 64, resolution);
+                                std::cout << "Placed player" << std::endl;
                                 break;
                             case 6: //Exit
                                 exit = new ExitTerminal(j * 64, i * 64);
+                                std::cout << "Placed exit" << std::endl;
                                 break;
                             case 7: //Key
                                 keys.push_back(new Key(j * 64, i * 64));
+                                keysInData++;
+                                std::cout << "Placed key" << std::endl;
                                 break;
                         }
                     }
                 }
+
+                std::cout <<"---------------"<<std::endl;
 
                 //play upgrade sound
                 powerup.play();

@@ -103,38 +103,40 @@ void MazeGenerator::addPickups(float pickupChance) {
 }
 
 void MazeGenerator::addExit() {
-    for(int i = m_mazeData.size() / 3 * 2; i < m_mazeData.size(); i++){
-        for(int j = m_mazeData[0].size() / 3 * 2 ; j < m_mazeData[0].size() ; j++){
-            if(m_mazeData[i][j] == 0) {
+    for (int i = m_mazeData.size() / 3 * 2; i < m_mazeData.size(); i++) {
+        for (int j = m_mazeData[0].size() / 3 * 2; j < m_mazeData[0].size(); j++) {
+            if (m_mazeData[i][j] == 0) {
                 m_mazeData[i][j] = 6;
+
                 return;
             }
         }
     }
+    std::cout<<"Couldn't find spot for exit" << std::endl;
+    addExit();
 }
 
 void MazeGenerator::addEnemy() {
     for(int i = rand() % m_mazeData.size(); i < m_mazeData.size(); i++){
         for(int j = rand() % m_mazeData[0].size(); j < m_mazeData[0].size(); j++)
-            if(m_mazeData[i][j] != 1 && m_mazeData[i][j] != 10 && m_mazeData[i][j] != 5) {
+            if(m_mazeData[i][j] == 0) {
                 m_mazeData[i][j] = 4;
                 return;
             }
     }
+
+    addEnemy();
 }
 
 void MazeGenerator::addKeys() {
-    bool keyPlaced = false;
-
-    while(!keyPlaced) {
-        for (int i = rand() % m_mazeData.size(); i < m_mazeData.size(); i++) {
-            for (int j = rand() % m_mazeData[0].size(); j < m_mazeData[0].size(); j++) {
-                if (m_mazeData[i][j] == 0) {
-                    m_mazeData[i][j] = 7;
-                    keyPlaced = true;
-                    return;
-                }
+    for (int i = rand() % m_mazeData.size(); i < m_mazeData.size(); i++) {
+        for (int j = rand() % m_mazeData[0].size(); j < m_mazeData[0].size(); j++) {
+            if (m_mazeData[i][j] == 0) {
+                m_mazeData[i][j] = 7;
+                return;
             }
         }
     }
+
+    addKeys();
 }

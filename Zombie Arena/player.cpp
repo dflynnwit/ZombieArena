@@ -105,7 +105,6 @@ void Player::setMoveUp(bool up) {
 void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Tile *> &walls)
 {
     Vector2f origPosition = m_Position;
-    float origAngle = m_Sprite.getRotation();
 
     //Since true is 1 and false is 0 we can calculate displacement by subtracting opposite values multiplied by the booleans
     m_Position.x += (m_Speed * m_RightPressed - m_Speed * m_LeftPressed) * elapsedTime;

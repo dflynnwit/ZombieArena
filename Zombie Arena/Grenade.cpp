@@ -62,7 +62,7 @@ int Grenade::Explode(std::vector<Tile *> &walls, std::vector<Zombie *> &zombies,
 
     if(m_active) {
         for (auto wall : walls) {
-            if (Distance(*wall) < explosionRadius)
+            if (Distance(*wall) < explosionRadius && !(wall->isEdge()))
                 wall->SetActive(false);
         }
         for (auto zombie : zombies) {
