@@ -30,17 +30,23 @@ Zombie::Zombie(int x, int y) {
             m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/bloater.png"));
             m_Speed = BLOATER_SPEED;
             m_Health = BLOATER_HEALTH;
+            m_Damage = BLOATER_DAMAGE;
+            m_Type = 0;
             break;
         case 1:
             //Chaser
             m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/chaser.png"));
             m_Speed = CHASER_SPEED;
             m_Health = CHASER_HEALTH;
+            m_Damage = CHASER_DAMAGE;
+            m_Type = 1;
             break;
         case 2:
             m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/crawler.png"));
             m_Speed = CRAWLER_SPEED;
             m_Health = CRAWLER_HEALTH;
+            m_Damage = CRAWLER_DAMAGE;
+            m_Type = 2;
             break;
     }
 
@@ -119,4 +125,12 @@ void Zombie::draw(RenderWindow &window) {
 //    window.draw(border);
 
     Draw(window);
+}
+
+int Zombie::OnDeath(Entity &player, std::vector<Tile *> &walls, std::vector<Zombie*>& zombies) {
+    return 0;
+}
+
+int Zombie::GetDamage() {
+    return m_Damage;
 }

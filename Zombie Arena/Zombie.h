@@ -26,6 +26,11 @@ private:
     const float CHASER_HEALTH = 1;
     const float CRAWLER_HEALTH = 3;
 
+    // How strong is each zombie type
+    const float BLOATER_DAMAGE = 20;
+    const float CHASER_DAMAGE = 15;
+    const float CRAWLER_DAMAGE = 10;
+
     // Make each zombie vary its speed slightly
     const int MAX_VARIANCE = 30;
     const int OFFSET = 101 - MAX_VARIANCE;
@@ -41,6 +46,12 @@ private:
 
     //Is the zombie aware of player
     bool m_Alerted = false;
+
+    //Store type (how to store enum?)
+    int m_Type;
+
+    //Store how much damage it deals
+    int m_Damage;
 
     // Public prototypes go here
 public:
@@ -63,10 +74,14 @@ public:
     // Get a copy of the sprite to draw
     Sprite getSprite();
 
+    int GetDamage();
+
     // Update the zombie each frame
     void update(float elapsedTime, Entity &player, std::vector<Tile*>& walls);
 
     void draw(RenderWindow& window);
+
+    int OnDeath(Entity& player, std::vector<Tile*>& walls, std::vector<Zombie*>& zombies);
 };
 
 

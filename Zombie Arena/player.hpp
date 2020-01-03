@@ -58,7 +58,7 @@ public:
     void resetPlayerStats();
 
     // Handle the player getting hit by a zombie
-    bool hit(Time timeHit);
+    bool hit(Time timeHit, int damage);
 
     // How long ago was the player last hit
     Time getLastHitTime();

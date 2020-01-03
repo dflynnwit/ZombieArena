@@ -46,12 +46,12 @@ Time Player::getLastHitTime()
     return m_LastHit;
 }
 
-bool Player::hit(Time timeHit)
+bool Player::hit(Time timeHit, int damage)
 {
     if (timeHit.asMilliseconds() - m_LastHit.asMilliseconds() > 200)// 2 tenths of second
     {
         m_LastHit = timeHit;
-        m_Health -= 10;
+        m_Health -= damage;
         return true;
     }
     else

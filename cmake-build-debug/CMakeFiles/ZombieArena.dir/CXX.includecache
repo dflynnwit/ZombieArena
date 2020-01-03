@@ -6,6 +6,180 @@
 
 #IncludeRegexTransform: 
 
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio.hpp
+SFML/System.hpp
+-
+SFML/Audio/InputSoundFile.hpp
+-
+SFML/Audio/Listener.hpp
+-
+SFML/Audio/Music.hpp
+-
+SFML/Audio/OutputSoundFile.hpp
+-
+SFML/Audio/Sound.hpp
+-
+SFML/Audio/SoundBuffer.hpp
+-
+SFML/Audio/SoundBufferRecorder.hpp
+-
+SFML/Audio/SoundFileFactory.hpp
+-
+SFML/Audio/SoundFileReader.hpp
+-
+SFML/Audio/SoundFileWriter.hpp
+-
+SFML/Audio/SoundRecorder.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/Audio/SoundStream.hpp
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/AlResource.hpp
+SFML/Audio/Export.hpp
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Export.hpp
+SFML/Config.hpp
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/InputSoundFile.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+algorithm
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Listener.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/Vector3.hpp
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Music.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundStream.hpp
+-
+SFML/Audio/InputSoundFile.hpp
+-
+SFML/System/Mutex.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+vector
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/OutputSoundFile.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+string
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Sound.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/System/Time.hpp
+-
+cstdlib
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundBuffer.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+vector
+-
+set
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundBufferRecorder.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundBuffer.hpp
+-
+SFML/Audio/SoundRecorder.hpp
+-
+vector
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileFactory.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+vector
+-
+SFML/Audio/SoundFileFactory.inl
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileFactory.inl
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileReader.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileWriter.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundRecorder.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Thread.hpp
+-
+SFML/System/Time.hpp
+-
+vector
+-
+string
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundSource.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Vector3.hpp
+-
+
+C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundStream.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/System/Thread.hpp
+-
+SFML/System/Time.hpp
+-
+SFML/System/Mutex.hpp
+-
+cstdlib
+-
+
 C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
 TargetConditionals.h
 C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/TargetConditionals.h
@@ -676,6 +850,12 @@ SFML/Config.hpp
 
 C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
 
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
+SFML/Graphics.hpp
+-
+Entity.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
+
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
 SFML/Graphics.hpp
 -
@@ -683,6 +863,34 @@ iostream
 -
 TextureHolder.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h
+Tile.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.h
+SFML/Graphics.hpp
+-
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Key.h
+Entity.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h
+vector
+-
+ctime
+-
+cstdlib
+-
+Tile.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
+SFML/Graphics.hpp
+-
+Entity.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
 
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
 SFML/Graphics.hpp
@@ -708,6 +916,54 @@ cmath
 
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
 SFML/Graphics.hpp
+-
+Entity.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
+Tile.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp
+iostream
+-
+sstream
+-
+fstream
+-
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+player.hpp
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
+TextureHolder.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
+Zombie.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
+Bullet.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
+Pickup.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
+MazeGenerator.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h
+Flashlight.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.h
+Key.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Key.h
+ExitTerminal.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp
+player.hpp
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
+TextureHolder.h
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
+iostream
+-
+
+C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
+SFML/Graphics.hpp
+-
+cmath
 -
 Entity.h
 C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h

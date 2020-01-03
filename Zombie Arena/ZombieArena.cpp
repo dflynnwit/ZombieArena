@@ -636,7 +636,7 @@ int main(int argc, const char * argv[]) {
             for (auto zombie : zombies)
             {
                 if(zombie->isAlive() && zombie->Collision(player)) {
-                    if (player.hit(gameTimeTotal)) {
+                    if (player.hit(gameTimeTotal, zombie->GetDamage())) {
                         //Get hit effect
                         hit.play();
 
