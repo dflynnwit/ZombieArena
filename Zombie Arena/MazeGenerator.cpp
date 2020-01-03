@@ -61,13 +61,13 @@ std::vector<Tile*> *MazeGenerator::CreateMaze() {
     for(int row = 0; row < m_mazeData.size(); row++){
         for(int col = 0; col < m_mazeData[0].size(); col++){
             if(m_mazeData[row][col] == 1) {
-                m_walls->push_back(new Tile(col, row, Tile::TYPE::WALL));
-                m_floor->push_back(new Tile(col, row, Tile::TYPE::FLOOR));
+                m_walls->push_back(new Tile(col, row, Tile::TileType::WALL));
+                m_floor->push_back(new Tile(col, row, Tile::TileType::FLOOR));
             }
             else if(m_mazeData[row][col] == 10) {
-                m_walls->push_back(new Tile(col, row, Tile::TYPE::WALL, true));
+                m_walls->push_back(new Tile(col, row, Tile::TileType::WALL, true));
             } else{
-                m_floor->push_back(new Tile(col, row, Tile::TYPE::FLOOR));
+                m_floor->push_back(new Tile(col, row, Tile::TileType::FLOOR));
             }
         }
     }

@@ -10,13 +10,12 @@
 
 class Tile : public Entity{
 private:
-//    Tile::TYPE type;
+    bool m_edge;
 public:
-    enum class TYPE{FLOOR, WALL};
-    Tile(float x, float y, TYPE = Tile::TYPE::FLOOR, bool isEdge = false);
+    enum class TileType{FLOOR, WALL};
+    Tile(float x, float y, TileType = Tile::TileType::FLOOR, bool isEdge = false);
     void Spawn(float x, float y, bool isEdge, int r);
-
+    bool isEdge();
 };
-
 
 #endif //ZOMBIEARENA_TILE_H
