@@ -8,8 +8,6 @@
 Entity::Entity(const std::string filename) {
     m_active = 1;
     SetSprite(filename);
-
-    std::cout<< "Filename constructor" <<std::endl;
 }
 
 Entity::Entity(const std::string filename, int x, int y) {
@@ -19,22 +17,19 @@ Entity::Entity(const std::string filename, int x, int y) {
     m_Rotation = 0;
 
     SetSprite(filename);
-    std::cout<< "Filename + position constructor" <<std::endl;
 }
 
 void Entity::Draw(RenderWindow &window){
     if(m_active)
         window.draw(m_Sprite);
-    else
-        std::cout<<"Object is inactive" <<std::endl;
 }
 
 bool Entity::Collision(Entity& entity)
 {
-    return m_active && m_Sprite.getGlobalBounds().intersects(entity.m_Sprite.getGlobalBounds());
+    return m_active && entity.isActive() && m_Sprite.getGlobalBounds().intersects(entity.m_Sprite.getGlobalBounds());
 }
 
-void Entity::SetActive(int active)
+void Entity::SetActive(bool active)
 {
     m_active = active;
 }
@@ -70,9 +65,6 @@ void Entity::SetPosition(Vector2f position, float angle) {
 void Entity::Update() {
     m_Sprite.setPosition(m_Position.x, m_Position.y);
     m_Sprite.setRotation(m_Rotation);
-
-    if(!m_active)
-        std::cout << "Some object is inactive" << std::endl;
 }
 
 float Entity::Distance(Entity &entity) {

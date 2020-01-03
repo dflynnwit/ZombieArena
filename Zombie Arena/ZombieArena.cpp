@@ -592,7 +592,7 @@ int main(int argc, const char * argv[]) {
                     for(auto wall : walls)
                         if(bullet.Collision(*wall) && wall->isActive()) {
                             bullet.stop();
-                            wall->Destroy();
+                            wall->SetActive(false);
                         }
 
                 }

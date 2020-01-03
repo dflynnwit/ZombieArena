@@ -15,8 +15,6 @@ public:
     enum TYPE{FLOOR, WALL};
     Tile(float x, float y, TYPE = Tile::FLOOR, bool isEdge = false);
     void Spawn(float x, float y, bool isEdge, int r);
-
-    void Destroy();
 };
 
 

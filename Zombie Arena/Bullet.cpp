@@ -93,5 +93,5 @@ void Bullet::draw(RenderWindow &window) {
 }
 
 bool Bullet::Collision(Entity &entity) {
-    return m_BulletShape.getGlobalBounds().intersects(entity.GetSprite().getGlobalBounds());
+    return m_active && entity.isActive() && m_BulletShape.getGlobalBounds().intersects(entity.GetSprite().getGlobalBounds());
 }

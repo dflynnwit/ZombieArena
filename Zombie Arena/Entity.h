@@ -29,7 +29,7 @@ public:
 
     void Update();
 
-    void SetActive(int active);
+    void SetActive(bool active);
 
     int GetActive();
 
@@ -45,7 +45,8 @@ public:
 
     bool isActive();
 protected:
-    int m_active, m_group_id;
+    int m_group_id;
+    bool m_active;
     Sprite m_Sprite;
     Vector2f m_Position;
     float m_Rotation;

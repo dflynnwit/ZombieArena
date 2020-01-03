@@ -44,9 +44,3 @@ Tile::Tile(float x, float y, TYPE type, bool isEdge){
         Spawn(x, y, false, r % 4);
     }
 }
-
-void Tile::Destroy() {
-    std::cout << m_active << " - Tile destroyed at: " << m_Position.x << ":" << m_Position.y << std::endl;
-    m_active = false;
-    std::cout << m_active << std::endl;
-}
