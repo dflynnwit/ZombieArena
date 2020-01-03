@@ -44,19 +44,19 @@ int main(int argc, const char * argv[]) {
      * Windowed
      */
     //Create SFML window
-    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Default);
-
-    //Create main view
-    View mainView(sf::FloatRect(0, 0, 1280, 720));
+//    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Default);
+//
+//    //Create main view
+//    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     /*
      * Fullscreen
      */
     //Create SFML window
-//    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
-//
-//    //Create main view
-//    View mainView(sf::FloatRect(0, 0, 1280, 720));
+    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
+
+    //Create main view
+    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     //Create texture holder singleton
     TextureHolder textureHolder;
@@ -401,6 +401,8 @@ int main(int argc, const char * argv[]) {
                         clipSize = 6;
                         fireRate = 1;
 
+                        keysNeeded = 2;
+
                         grenadesSpare = 1;
 
                         player.resetPlayerStats();
@@ -414,8 +416,11 @@ int main(int argc, const char * argv[]) {
                     window.close();
 
                 //Game restart (for testing)
-                if(event.key.code == Keyboard::Backspace)
+                if(event.key.code == Keyboard::Backspace) {
                     state = State::GAME_OVER;
+                    alarmed.stop();
+                    ambient.stop();
+                }
 
                 if(state == State::PLAYING){
                     //Reloading
@@ -525,6 +530,7 @@ int main(int argc, const char * argv[]) {
                 wave++;
 
                 int difficulty = wave * 5;
+                keysNeeded += (int)(wave/3);
 
                 mazeGenerator.GenerateMazeData(10 + difficulty, 10 + difficulty, difficulty, keysNeeded, pickupThreshold);
                 walls = *mazeGenerator.CreateMaze();
