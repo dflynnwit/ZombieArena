@@ -10,11 +10,12 @@
 
 class Tile : public Entity{
 private:
-
+//    Tile::TYPE type;
 public:
-    enum TYPE{FLOOR, WALL};
-    Tile(float x, float y, TYPE = Tile::FLOOR, bool isEdge = false);
+    enum class TYPE{FLOOR, WALL};
+    Tile(float x, float y, TYPE = Tile::TYPE::FLOOR, bool isEdge = false);
     void Spawn(float x, float y, bool isEdge, int r);
+
 };
 
 

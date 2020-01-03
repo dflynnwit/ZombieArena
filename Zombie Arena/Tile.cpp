@@ -20,7 +20,7 @@ void Tile::Spawn(float x, float y, bool isEdge, int r) {
 Tile::Tile(float x, float y, TYPE type, bool isEdge){
     int r = rand();
 
-    if(type == Tile::WALL) {
+    if(type == Tile::TYPE::WALL) {
         if (r % 10 == 0)
             SetSprite("../Resources/graphics/wall/5.png");
         else
@@ -28,7 +28,7 @@ Tile::Tile(float x, float y, TYPE type, bool isEdge){
 
         Spawn(x, y, isEdge, 0);
     }
-    else if(type == Tile::FLOOR){
+    else if(type == Tile::TYPE::FLOOR){
         switch(r % 5){
             case 0:
                 SetSprite("../Resources/graphics/floor/ft_broken02_c.png");
