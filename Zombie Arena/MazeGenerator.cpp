@@ -112,7 +112,6 @@ void MazeGenerator::addExit() {
             }
         }
     }
-    std::cout<<"Couldn't find spot for exit" << std::endl;
     addExit();
 }
 
