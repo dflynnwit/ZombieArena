@@ -23,9 +23,7 @@ bool ExitTerminal::ActivateExit(bool hasEnoughKeys) {
 }
 
 ExitTerminal::ExitTerminal(int x, int y) {
-    m_Position.x = x;
-    m_Position.y = y;
-    m_Rotation = 0;
+    SetPosition(Vector2f(x, y), 0);
     m_counting = false;
     m_TimeSinceActivation = 0;
     SetSprite("../Resources/graphics/terminal.png");
