@@ -8,8 +8,8 @@ void Grenade::Throw(int startX, int startY, int targetX, int targetY) {
     //Keep track of bullet
     m_armedTime = FUSE_TIME;
     m_active = true;
-    m_Position.x = startX;
-    m_Position.y = startY;
+
+    SetPosition(Vector2f(startX, startY), 0);
 
     //Calculate gradient
     float gradient = (startX - targetX)/(startY-targetY);
@@ -45,10 +45,13 @@ bool Grenade::Update(float timePassed) {
             return true;
         } else {
             //Update position
-            m_Position.x += m_grenadeDistanceX * timePassed;
-            m_Position.y += m_grenadeDistanceY * timePassed;
+            Vector2f origPos = m_Transform->GetPosition();
 
-            m_Rotation++;
+            SetPosition(Vector2f(
+                    origPos.x + m_grenadeDistanceX * timePassed,
+                    origPos.y += m_grenadeDistanceY * timePassed
+                    ),
+                        m_Transform->GetRotation() + 1 );
 
             Entity::Update();
 
