@@ -4,7 +4,7 @@
 
 #include "Key.h"
 
-Key::Key(int x, int y){
+Key::Key(int x, int y) : Entity(){
     SetSprite("../Resources/graphics/keycard.png");
 
     SetPosition(Vector2f(x, y), 0);

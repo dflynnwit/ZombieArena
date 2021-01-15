@@ -58,6 +58,8 @@ bool Grenade::Update(float timePassed) {
             return false;
         }
     }
+
+    return false;
 }
 
 int Grenade::Explode(std::vector<Tile *> &walls, std::vector<Zombie *> &zombies, int explosionRadius, int explosionDamage) {
@@ -80,7 +82,6 @@ int Grenade::Explode(std::vector<Tile *> &walls, std::vector<Zombie *> &zombies,
     return points;
 }
 
-Grenade::Grenade() {
-    SetSprite("../Resources/graphics/grenade.png");
+Grenade::Grenade() : Entity("../Resources/graphics/grenade.png"){
     m_active = false;
 }

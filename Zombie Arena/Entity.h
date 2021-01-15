@@ -16,9 +16,9 @@ class Entity : public Object
 public:
     Entity();
 
-    Entity(const std::string filename);
+    Entity(const std::string &filename);
 
-    Entity(const std::string filename, int x, int y);
+    Entity(const std::string &filename, int x, int y);
 
     bool Collision(Entity& entity);
 

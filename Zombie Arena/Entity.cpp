@@ -5,23 +5,23 @@
 #include <cmath>
 #include "Entity.h"
 
-Entity::Entity(const std::string filename) {
+Entity::Entity(const std::string &filename) : Object() {
     m_Sprite = AttachComponent<SpriteComponent>();
     m_Transform = AttachComponent<TransformComponent>();
-    m_active = 1;
+    m_active = true;
     SetSprite(filename);
 }
 
-Entity::Entity(const std::string filename, int x, int y) {
+Entity::Entity(const std::string &filename, int x, int y) : Object() {
     m_Sprite = AttachComponent<SpriteComponent>();
     m_Transform = AttachComponent<TransformComponent>();
-    m_active = 1;
+    m_active = true;
     m_Transform->SetPosition(sf::Vector2f(x, y), 0);
 
     SetSprite(filename);
 }
 
-Entity::Entity() {
+Entity::Entity() : Object() {
     m_Sprite = AttachComponent<SpriteComponent>();
     m_Transform = AttachComponent<TransformComponent>();
     m_active = true;

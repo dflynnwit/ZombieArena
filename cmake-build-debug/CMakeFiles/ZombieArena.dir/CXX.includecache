@@ -8,12 +8,6 @@
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Component.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.cpp
-cmath
--
-Entity.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
-
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 SFML/Graphics.hpp
 -
@@ -23,6 +17,18 @@ TextureHolder.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
 Object.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Object.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.cpp
+Grenade.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+Zombie.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Object.h
 Component.h
@@ -48,11 +54,23 @@ SFML/Graphics.hpp
 map
 -
 
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TransformComponent.h
 SFML/Graphics.hpp
 -
 Component.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Component.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+SFML/Graphics.hpp
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
 
 G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h

@@ -16,7 +16,7 @@ void Tile::Spawn(float x, float y, bool isEdge, int r) {
     Update();
 }
 
-Tile::Tile(float x, float y, TileType type, bool isEdge){
+Tile::Tile(float x, float y, TileType type, bool isEdge) : Entity() {
     int r = rand();
 
     if(type == Tile::TileType::WALL) {

@@ -24,7 +24,9 @@ bool Zombie::isAlive() {
     return m_Alive;
 }
 
-Zombie::Zombie(int x, int y) {
+//TODO: Need default constructor with entity constructor as well?
+
+Zombie::Zombie(int x, int y) : Entity(){
     int r = rand();
     switch (r % 3){
         case 0:

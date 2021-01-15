@@ -124,6 +124,7 @@ int main(int argc, const char * argv[]) {
     //Prepare grenade
     Grenade grenade;
     int grenadesSpare = 1;
+/// GRENADE ONLY TEST
 
     //Tracks time of last shot
     Time lastShot;
@@ -892,6 +893,7 @@ int main(int argc, const char * argv[]) {
 
         window.display();
     }
+
 
     delete(entrance);
     delete(exit);

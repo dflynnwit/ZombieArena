@@ -9,7 +9,7 @@
 #include "Bullet.h"
 
 // The constructor
-Bullet::Bullet()
+Bullet::Bullet() : Entity()
 {
     m_BulletShape.setSize(Vector2f(2, 2));
 }
