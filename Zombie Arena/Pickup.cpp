@@ -23,8 +23,7 @@ Pickup::Pickup(TYPE type, Vector2f position) : Entity()
         m_Value = AMMO_START_VALUE;
     }
 
-    m_Position = position;
-    m_Rotation = 0;
+    SetPosition(position, 0);
 
     m_SecondsToLive = START_SECONDS_TO_LIVE;
     m_SecondsToWait = START_WAIT_TIME;
@@ -49,11 +48,11 @@ void Pickup::setArena(IntRect arena)
 void Pickup::spawn()
 {
     srand((int)time(0) / m_Type);
-    m_Position.x = (rand() % m_Arena.width);
+    float x = (rand() % m_Arena.width);
     srand((int)time(0) * m_Type);
-    m_Position.y = (rand() % m_Arena.height);
+    float y = (rand() % m_Arena.height);
 
-    m_Rotation = 0;
+    SetPosition(Vector2f(x, y), 0);
 
     m_SecondsSinceSpawn = 0;
     m_Spawned = true;
@@ -61,12 +60,12 @@ void Pickup::spawn()
 
 FloatRect Pickup::getPosition()
 {
-    return m_Sprite.getGlobalBounds();
+    return m_Sprite->GetSprite().getGlobalBounds();
 }
 
 Sprite Pickup::getSprite()
 {
-    return m_Sprite;
+    return m_Sprite->GetSprite();
 }
 
 bool Pickup::isSpawned()
