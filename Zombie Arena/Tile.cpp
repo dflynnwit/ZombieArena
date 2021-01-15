@@ -6,13 +6,12 @@
 #include "Tile.h"
 
 void Tile::Spawn(float x, float y, bool isEdge, int r) {
-    m_Position.x = x * m_Sprite.getLocalBounds().width;
-    m_Position.y = y * m_Sprite.getLocalBounds().height;
+    FloatRect localBounds = m_Sprite->GetSprite().getLocalBounds();
 
-    m_Rotation = r * 90;
+    SetPosition(Vector2f(x * localBounds.width, y * localBounds.height), r * 90);
 
     if(isEdge)
-        m_Sprite.setColor(sf::Color::Red);
+        m_Sprite->SetColor(sf::Color::Red);
 
     Update();
 }

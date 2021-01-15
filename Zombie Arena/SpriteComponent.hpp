@@ -24,6 +24,7 @@ public:
     void setPosition(sf::Vector2f position, float rotation);
     void setOrigin(sf::Vector2f position);
     void setTexture(const sf::Texture &texture);
+    void SetColor(sf::Color color);
     sf::Vector2u getTextureSize() const;
 private:
     void NextFrame();

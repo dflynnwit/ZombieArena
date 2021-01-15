@@ -132,3 +132,7 @@ void SpriteComponent::setPosition(sf::Vector2f position, float rotation) {
     m_sprite.setPosition(position.x,position.y);
     m_sprite.setRotation(rotation);
 }
+
+void SpriteComponent::SetColor(sf::Color color) {
+    m_sprite.setColor(color);
+}
