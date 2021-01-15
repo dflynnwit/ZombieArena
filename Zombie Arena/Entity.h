@@ -8,9 +8,10 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "TextureHolder.h"
+#include "Object.h"
 
 
-class Entity
+class Entity : public Object
 {
 public:
     Entity();
@@ -39,6 +40,8 @@ public:
 
     Vector2f GetPosition();
 
+    float GetRotation();
+
     void Draw(RenderWindow &window);
 
     sf::Vector2f velocity;
@@ -47,9 +50,8 @@ public:
 protected:
     int m_group_id;
     bool m_active;
-    Sprite m_Sprite;
-    Vector2f m_Position;
-    float m_Rotation;
+    std::shared_ptr<SpriteComponent> m_Sprite;
+    std::shared_ptr<TransformComponent> m_Transform;
 };
 
 #endif //ZOMBIEARENA_ENTITY_H

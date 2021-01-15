@@ -113,3 +113,22 @@ void SpriteComponent::NextFrame() {
     // update the texture rect
     m_sprite.setTextureRect(sf::IntRect(m_frameWidth * m_currentFrame, 0, m_frameWidth, m_frameHeight));
 }
+
+void SpriteComponent::Draw(sf::RenderWindow &window) {
+    window.draw(m_sprite);
+}
+
+bool SpriteComponent::SetSprite(sf::Texture &texture) {
+    // Create a sprite from the loaded texture.
+    m_sprite.setTexture(texture);
+
+    // Set the origin of the sprite.
+    m_sprite.setOrigin(m_sprite.getLocalBounds().width/2, m_sprite.getLocalBounds().height/2);
+
+    return true;
+}
+
+void SpriteComponent::setPosition(sf::Vector2f position, float rotation) {
+    m_sprite.setPosition(position.x,position.y);
+    m_sprite.setRotation(rotation);
+}

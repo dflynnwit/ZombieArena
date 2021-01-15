@@ -17,3 +17,16 @@ sf::Vector2f& TransformComponent::GetPosition()
 {
     return m_position;
 }
+
+void TransformComponent::SetPosition(sf::Vector2f position, float rotation) {
+    m_position = position;
+    m_Rotation = rotation;
+}
+
+void TransformComponent::SetRotation(float rotation) {
+    m_Rotation = rotation;
+}
+
+float TransformComponent::GetRotation() {
+    return m_Rotation;
+}

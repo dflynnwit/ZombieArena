@@ -6,27 +6,31 @@
 #include "Entity.h"
 
 Entity::Entity(const std::string filename) {
+    m_Sprite = GetComponent<SpriteComponent>();
+    m_Transform = GetComponent<TransformComponent>();
     m_active = 1;
     SetSprite(filename);
 }
 
 Entity::Entity(const std::string filename, int x, int y) {
+    m_Sprite = GetComponent<SpriteComponent>();
+    m_Transform = GetComponent<TransformComponent>();
     m_active = 1;
-    m_Position.x = x;
-    m_Position.y = y;
-    m_Rotation = 0;
+    m_Transform->SetPosition(sf::Vector2f(x, y), 0);
 
     SetSprite(filename);
 }
 
 void Entity::Draw(RenderWindow &window){
     if(m_active)
-        window.draw(m_Sprite);
+        m_Sprite->Draw(window);
 }
 
 bool Entity::Collision(Entity& entity)
 {
-    return m_active && entity.isActive() && m_Sprite.getGlobalBounds().intersects(entity.m_Sprite.getGlobalBounds());
+    sf::FloatRect ownBounds = m_Sprite->GetSprite().getGlobalBounds();
+    sf::FloatRect colliderBounds = entity.GetSprite().getGlobalBounds();
+    return m_active && entity.isActive() && ownBounds.intersects(colliderBounds);
 }
 
 void Entity::SetActive(bool active)
@@ -43,7 +47,7 @@ int Entity::GetGroup() {
 }
 
 Sprite Entity::GetSprite() {
-    return m_Sprite;
+    return m_Sprite->GetSprite();
 }
 
 Entity::Entity() {
@@ -51,28 +55,31 @@ Entity::Entity() {
 }
 
 void Entity::SetSprite(const std::string filename) {
-    m_Sprite = Sprite(TextureHolder::GetTexture(filename));
-    m_Sprite.setOrigin(m_Sprite.getLocalBounds().width/2, m_Sprite.getLocalBounds().height/2);
+    m_Sprite->SetSprite(TextureHolder::GetTexture(filename));
 
     Update();
 }
 
 void Entity::SetPosition(Vector2f position, float angle) {
-    m_Sprite.setPosition(position.x, position.y);
-    m_Sprite.setRotation(angle);
+    m_Transform->SetPosition(position, angle);
 }
 
 void Entity::Update() {
-    m_Sprite.setPosition(m_Position.x, m_Position.y);
-    m_Sprite.setRotation(m_Rotation);
+    m_Sprite->setPosition(GetPosition(), m_Transform->GetRotation());
 }
 
 float Entity::Distance(Entity &entity) {
-    return sqrt(pow((m_Position.y - entity.m_Position.y), 2) + pow((m_Position.x - entity.m_Position.x), 2));
+    Vector2f ownPos = GetPosition();
+    Vector2f entityPos = entity.GetPosition();
+    return sqrt(pow((ownPos.y - entityPos.y), 2) + pow((ownPos.x - entityPos.x), 2));
 }
 
 Vector2f Entity::GetPosition() {
-    return m_Position;
+    return m_Transform->GetPosition();
+}
+
+float Entity::GetRotation() {
+    return m_Transform->GetRotation();
 }
 
 bool Entity::isActive() {
