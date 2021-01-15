@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/pokor/CLionProjects/ZombieArena
+# Install script for directory: G:/Dokumenty/WIT/C++/ZombieArena
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

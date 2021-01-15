@@ -1,5 +1,5 @@
-C:\Users\pokor\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5662.56\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\pokor\CLionProjects\ZombieArena
--- Found SFML 2.5.1 in C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/lib/cmake/SFML
+C:\Users\pokor\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" G:\Dokumenty\WIT\C++\ZombieArena
+-- Found SFML 2.5.1 in G:/Dokumenty/WIT/Cpp/SFML-2.5.1/lib/cmake/SFML
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug
+-- Build files have been written to: G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug

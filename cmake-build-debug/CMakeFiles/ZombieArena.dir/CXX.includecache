@@ -6,7 +6,197 @@
 
 #IncludeRegexTransform: 
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio.hpp
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.cpp
+Arena.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.h
+SFML/Graphics.hpp
+-
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.cpp
+iostream
+-
+Bullet.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h
+SFML/Graphics.hpp
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.cpp
+cmath
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+SFML/Graphics.hpp
+-
+iostream
+-
+TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.cpp
+ExitTerminal.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.cpp
+Flashlight.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h
+SFML/Graphics.hpp
+-
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.cpp
+Grenade.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+Zombie.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.cpp
+Key.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.cpp
+iostream
+-
+MazeGenerator.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h
+vector
+-
+ctime
+-
+cstdlib
+-
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.cpp
+Pickup.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h
+TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h
+SFML/Graphics.hpp
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.cpp
+TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+assert.h
+-
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+SFML/Graphics.hpp
+-
+map
+-
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.cpp
+random
+-
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.cpp
+Zombie.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+cstdlib
+-
+ctime
+-
+cmath
+-
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+SFML/Graphics.hpp
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ZombieArena.cpp
+iostream
+-
+sstream
+-
+fstream
+-
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+player.hpp
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.hpp
+TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+Zombie.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+Bullet.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h
+Pickup.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h
+MazeGenerator.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h
+Flashlight.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h
+Key.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h
+ExitTerminal.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
+Grenade.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.cpp
+player.hpp
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.hpp
+TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+iostream
+-
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.hpp
+SFML/Graphics.hpp
+-
+cmath
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio.hpp
 SFML/System.hpp
 -
 SFML/Audio/InputSoundFile.hpp
@@ -36,15 +226,15 @@ SFML/Audio/SoundSource.hpp
 SFML/Audio/SoundStream.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/AlResource.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
 SFML/Audio/Export.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Export.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Export.hpp
 SFML/Config.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/InputSoundFile.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/InputSoundFile.hpp
 SFML/Audio/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -56,13 +246,13 @@ string
 algorithm
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Listener.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Listener.hpp
 SFML/Audio/Export.hpp
 -
 SFML/System/Vector3.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Music.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Music.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundStream.hpp
@@ -78,7 +268,7 @@ string
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/OutputSoundFile.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/OutputSoundFile.hpp
 SFML/Audio/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -86,7 +276,7 @@ SFML/System/NonCopyable.hpp
 string
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/Sound.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Sound.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundSource.hpp
@@ -96,7 +286,7 @@ SFML/System/Time.hpp
 cstdlib
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundBuffer.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/AlResource.hpp
@@ -110,7 +300,7 @@ vector
 set
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundBufferRecorder.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundBufferRecorder.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundBuffer.hpp
@@ -120,7 +310,7 @@ SFML/Audio/SoundRecorder.hpp
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileFactory.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.hpp
 SFML/Audio/Export.hpp
 -
 string
@@ -130,21 +320,21 @@ vector
 SFML/Audio/SoundFileFactory.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileFactory.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileReader.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileReader.hpp
 SFML/Audio/Export.hpp
 -
 string
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundFileWriter.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileWriter.hpp
 SFML/Audio/Export.hpp
 -
 string
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundRecorder.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundRecorder.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/AlResource.hpp
@@ -158,7 +348,7 @@ vector
 string
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundSource.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/AlResource.hpp
@@ -166,7 +356,7 @@ SFML/Audio/AlResource.hpp
 SFML/System/Vector3.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Audio/SoundStream.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundStream.hpp
 SFML/Audio/Export.hpp
 -
 SFML/Audio/SoundSource.hpp
@@ -180,11 +370,11 @@ SFML/System/Mutex.hpp
 cstdlib
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Config.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/TargetConditionals.h
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/TargetConditionals.h
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 SFML/Window.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -240,21 +430,21 @@ SFML/Graphics/VertexBuffer.hpp
 SFML/Graphics/View.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/BlendMode.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
 SFML/Graphics/Export.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/CircleShape.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Color.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Color.hpp
 SFML/Graphics/Export.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/ConvexShape.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
@@ -262,17 +452,17 @@ SFML/Graphics/Shape.hpp
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Drawable.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/RenderStates.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Export.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Export.hpp
 SFML/Config.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Font.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Font.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Glyph.hpp
@@ -292,7 +482,7 @@ string
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Glsl.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp
 SFML/Graphics/Transform.hpp
 -
 SFML/Graphics/Color.hpp
@@ -304,15 +494,15 @@ SFML/System/Vector3.hpp
 SFML/Graphics/Glsl.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Glsl.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Glsl.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Glyph.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Image.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Image.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -324,9 +514,9 @@ string
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/PrimitiveType.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Rect.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Rect.hpp
 SFML/System/Vector2.hpp
 -
 algorithm
@@ -334,15 +524,15 @@ algorithm
 SFML/Graphics/Rect.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Rect.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Rect.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RectangleShape.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderStates.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -350,7 +540,7 @@ SFML/Graphics/BlendMode.hpp
 SFML/Graphics/Transform.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderTarget.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -372,7 +562,7 @@ SFML/Graphics/Vertex.hpp
 SFML/System/NonCopyable.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderTexture.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Texture.hpp
@@ -382,7 +572,7 @@ SFML/Graphics/RenderTarget.hpp
 SFML/Window/ContextSettings.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/RenderWindow.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/RenderTarget.hpp
@@ -394,7 +584,7 @@ SFML/Window/Window.hpp
 string
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Shader.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Shader.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Glsl.hpp
@@ -412,7 +602,7 @@ map
 string
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Shape.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Shape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -424,7 +614,7 @@ SFML/Graphics/VertexArray.hpp
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Sprite.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -436,7 +626,7 @@ SFML/Graphics/Vertex.hpp
 SFML/Graphics/Rect.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Text.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Text.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -456,7 +646,7 @@ string
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Texture.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Texture.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Image.hpp
@@ -464,7 +654,7 @@ SFML/Graphics/Image.hpp
 SFML/Window/GlResource.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Transform.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Transform.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
@@ -472,13 +662,13 @@ SFML/Graphics/Rect.hpp
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Transformable.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Transform.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/Vertex.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -486,7 +676,7 @@ SFML/Graphics/Color.hpp
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/VertexArray.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Vertex.hpp
@@ -500,7 +690,7 @@ SFML/Graphics/Drawable.hpp
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/VertexBuffer.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/PrimitiveType.hpp
@@ -510,7 +700,7 @@ SFML/Graphics/Drawable.hpp
 SFML/Window/GlResource.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Graphics/View.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/View.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
@@ -520,7 +710,7 @@ SFML/Graphics/Transform.hpp
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System.hpp
 SFML/Config.hpp
 -
 SFML/System/Clock.hpp
@@ -558,23 +748,23 @@ SFML/System/Vector2.hpp
 SFML/System/Vector3.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Clock.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Clock.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Time.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Err.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Err.hpp
 SFML/System/Export.hpp
 -
 ostream
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Export.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Export.hpp
 SFML/Config.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/FileInputStream.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/FileInputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/Export.hpp
@@ -588,19 +778,19 @@ cstdio
 string
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/InputStream.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/InputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/Export.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Lock.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Lock.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/MemoryInputStream.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/InputStream.hpp
@@ -610,23 +800,23 @@ SFML/System/Export.hpp
 cstdlib
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Mutex.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Mutex.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/NonCopyable.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/NonCopyable.hpp
 SFML/System/Export.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Sleep.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Sleep.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Time.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/String.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/String.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Utf.hpp
@@ -640,9 +830,9 @@ string
 SFML/System/String.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/String.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/String.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Thread.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Thread.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -652,9 +842,9 @@ cstdlib
 SFML/System/Thread.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Thread.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Thread.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/ThreadLocal.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -662,19 +852,19 @@ SFML/System/NonCopyable.hpp
 cstdlib
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/ThreadLocalPtr.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp
 SFML/System/ThreadLocal.hpp
 -
 SFML/System/ThreadLocalPtr.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/ThreadLocalPtr.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Time.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Time.hpp
 SFML/System/Export.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Utf.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Utf.hpp
 SFML/Config.hpp
 -
 algorithm
@@ -688,21 +878,21 @@ cstdlib
 SFML/System/Utf.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Utf.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Utf.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector2.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Vector2.hpp
 SFML/System/Vector2.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector2.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Vector2.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector3.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Vector3.hpp
 SFML/System/Vector3.inl
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/System/Vector3.inl
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/System/Vector3.inl
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window.hpp
 SFML/System.hpp
 -
 SFML/Window/Clipboard.hpp
@@ -734,13 +924,13 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Clipboard.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Clipboard.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/String.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Context.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Context.hpp
 SFML/Window/Export.hpp
 -
 SFML/Window/GlResource.hpp
@@ -750,11 +940,11 @@ SFML/Window/ContextSettings.hpp
 SFML/System/NonCopyable.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/ContextSettings.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp
 SFML/Config.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Cursor.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Cursor.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -762,7 +952,7 @@ SFML/System/NonCopyable.hpp
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Event.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Event.hpp
 SFML/Config.hpp
 -
 SFML/Window/Joystick.hpp
@@ -774,33 +964,33 @@ SFML/Window/Mouse.hpp
 SFML/Window/Sensor.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Export.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Export.hpp
 SFML/Config.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/GlResource.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/GlResource.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Joystick.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Joystick.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/String.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Keyboard.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Keyboard.hpp
 SFML/Window/Export.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Mouse.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Mouse.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Sensor.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Sensor.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector3.hpp
@@ -808,19 +998,19 @@ SFML/System/Vector3.hpp
 SFML/System/Time.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Touch.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Touch.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/VideoMode.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/VideoMode.hpp
 SFML/Window/Export.hpp
 -
 vector
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/Window.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/Window.hpp
 SFML/Window/ContextSettings.hpp
 -
 SFML/Window/Cursor.hpp
@@ -844,119 +1034,9 @@ SFML/System/String.hpp
 SFML/System/Vector2.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowHandle.hpp
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 SFML/Config.hpp
 -
 
-C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include/SFML/Window/WindowStyle.hpp
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
-SFML/Graphics.hpp
--
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-SFML/Graphics.hpp
--
-iostream
--
-TextureHolder.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h
-Tile.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.h
-SFML/Graphics.hpp
--
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Grenade.h
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-Zombie.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
-Tile.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Key.h
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h
-vector
--
-ctime
--
-cstdlib
--
-Tile.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
-SFML/Graphics.hpp
--
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
-SFML/Graphics.hpp
--
-map
--
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
-SFML/Graphics.hpp
--
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-Tile.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp
-iostream
--
-sstream
--
-fstream
--
-SFML/Graphics.hpp
--
-SFML/Audio.hpp
--
-player.hpp
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
-TextureHolder.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.h
-Zombie.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.h
-Bullet.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.h
-Pickup.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.h
-MazeGenerator.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.h
-Flashlight.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.h
-Key.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Key.h
-ExitTerminal.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.h
-Grenade.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Grenade.h
-
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.hpp
-SFML/Graphics.hpp
--
-cmath
--
-Entity.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.h
-Tile.h
-C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.h
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 

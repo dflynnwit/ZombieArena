@@ -4,22 +4,27 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Arena.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Bullet.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Entity.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ExitTerminal.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Flashlight.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Grenade.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Key.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/MazeGenerator.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Pickup.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/TextureHolder.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Tile.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/Zombie.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/ZombieArena.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj"
-  "C:/Users/pokor/CLionProjects/ZombieArena/Zombie Arena/player.cpp" "C:/Users/pokor/CLionProjects/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ZombieArena.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "SFML_STATIC"
+  )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
@@ -27,7 +32,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Resources/code"
   "../Resources/graphics"
   "../Resources/sound"
-  "C:/Dev/SFML-2.5.1_for_MinGW-7.3.0/include"
+  "G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include"
   )
 
 # Targets to which this target links.
