@@ -7,10 +7,7 @@
 Key::Key(int x, int y){
     SetSprite("../Resources/graphics/keycard.png");
 
-    m_Position.x = x;
-    m_Position.y = y;
-
-    m_Rotation = 0;
+    SetPosition(Vector2f(x, y), 0);
 
     m_collected = false;
 
