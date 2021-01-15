@@ -6,15 +6,15 @@
 #include "Entity.h"
 
 Entity::Entity(const std::string filename) {
-    m_Sprite = GetComponent<SpriteComponent>();
-    m_Transform = GetComponent<TransformComponent>();
+    m_Sprite = AttachComponent<SpriteComponent>();
+    m_Transform = AttachComponent<TransformComponent>();
     m_active = 1;
     SetSprite(filename);
 }
 
 Entity::Entity(const std::string filename, int x, int y) {
-    m_Sprite = GetComponent<SpriteComponent>();
-    m_Transform = GetComponent<TransformComponent>();
+    m_Sprite = AttachComponent<SpriteComponent>();
+    m_Transform = AttachComponent<TransformComponent>();
     m_active = 1;
     m_Transform->SetPosition(sf::Vector2f(x, y), 0);
 
