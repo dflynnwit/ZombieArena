@@ -12,7 +12,8 @@ bool Zombie::hit(int damage) {
     m_Health -= damage;
     if(m_Health <= 0){
         m_Alive = false;
-        m_Sprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/blood.png"));
+//        m_Sprite.setTexture(TextureHolder::GetTexture("../Resources/graphics/blood.png"));
+        Entity::SetSprite("../Resources/graphics/blood.png");
     }
 
     //Return false if still alive
@@ -28,7 +29,8 @@ Zombie::Zombie(int x, int y) {
     switch (r % 3){
         case 0:
             //Bloater
-            m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/bloater.png"));
+//            m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/bloater.png"));
+            Entity::SetSprite("../Resources/graphics/bloater.png");
             m_Speed = BLOATER_SPEED;
             m_Health = BLOATER_HEALTH;
             m_Damage = BLOATER_DAMAGE;
@@ -36,14 +38,16 @@ Zombie::Zombie(int x, int y) {
             break;
         case 1:
             //Chaser
-            m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/chaser.png"));
+//            m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/chaser.png"));
+            Entity::SetSprite("../Resources/graphics/chaser.png");
             m_Speed = CHASER_SPEED;
             m_Health = CHASER_HEALTH;
             m_Damage = CHASER_DAMAGE;
             m_Type = 1;
             break;
         case 2:
-            m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/crawler.png"));
+//            m_Sprite = Sprite(TextureHolder::GetTexture("../Resources/graphics/crawler.png"));
+            Entity::SetSprite("../Resources/graphics/crawler.png");
             m_Speed = CRAWLER_SPEED;
             m_Health = CRAWLER_HEALTH;
             m_Damage = CRAWLER_DAMAGE;
@@ -56,17 +60,18 @@ Zombie::Zombie(int x, int y) {
     modifier /= 100;
     m_Speed *= modifier;
 
-    m_Position.x = x;
-    m_Position.y = y;
+    SetPosition(Vector2f(x, y), 0);
+//    m_Position.x = x;
+//    m_Position.y = y;
 }
 
 
 FloatRect Zombie::getPosition() {
-    return m_Sprite.getGlobalBounds();
+    return m_Sprite->GetSprite().getGlobalBounds();
 }
 
 Sprite Zombie::getSprite() {
-    return m_Sprite;
+    return m_Sprite->GetSprite();
 }
 
 void Zombie::update(float elapsedTime, Entity &player, std::vector<Tile*>& walls) {
@@ -80,38 +85,42 @@ void Zombie::update(float elapsedTime, Entity &player, std::vector<Tile*>& walls
         m_Alerted = false;
 
     if(m_Alerted) {
-        Vector2f origPosition = m_Position;
-
+        Vector2f origPosition = m_Transform->GetPosition();
+        float x = 0, y = 0;
         // Update the zombie position variables
-        if (playerX > m_Position.x) {
-            m_Position.x = m_Position.x + m_Speed * elapsedTime;
+        if (playerX > origPosition.x) {
+            x = origPosition.x + m_Speed * elapsedTime;
         }
 
-        if (playerY > m_Position.y) {
-            m_Position.y = m_Position.y + m_Speed * elapsedTime;
+        if (playerY > origPosition.y) {
+            y = origPosition.y + m_Speed * elapsedTime;
         }
 
-        if (playerX < m_Position.x) {
-            m_Position.x = m_Position.x - m_Speed * elapsedTime;
+        if (playerX < origPosition.x) {
+            x = origPosition.x - m_Speed * elapsedTime;
         }
 
-        if (playerY < m_Position.y) {
-            m_Position.y = m_Position.y - m_Speed * elapsedTime;
+        if (playerY < origPosition.y) {
+            y = origPosition.y - m_Speed * elapsedTime;
         }
 
         // Face the sprite in the correct direction
-        m_Rotation = (atan2(playerY - m_Position.y,
-                            playerX - m_Position.x)
-                      * 180) / 3.141;
+        float rotation = (atan2(playerY - origPosition.y,
+                            playerX - origPosition.x)
+                      * 180) / 3.141f;
+
+
 
         for (int i = 0; i < walls.size(); i++)
             if (Collision(*walls[i])) {
                 //If destination would collide with wall, push player back by 1 pixel in a direction from that wall to the player
                 float magnitude = Distance(*walls[i]);
-                m_Position.x += (origPosition.x - walls[i]->GetPosition().x) / magnitude;
-                m_Position.y += (origPosition.y - walls[i]->GetPosition().y) / magnitude;
+                x = origPosition.x + (origPosition.x - walls[i]->GetPosition().x) / magnitude;
+                y = origPosition.y + (origPosition.y - walls[i]->GetPosition().y) / magnitude;
                 break;
             }
+
+        Entity::SetPosition(Vector2f(x, y), rotation);
     }
 
     Update();

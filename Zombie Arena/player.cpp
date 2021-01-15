@@ -95,7 +95,7 @@ void Player::setMoveUp(bool up) {
 
 void Player::update(float elapsedTime, Vector2i mousePosition, std::vector<Tile *> &walls)
 {
-    Vector2f origPosition = getCenter();
+    Vector2f origPosition = m_Transform->GetPosition();
 
     Vector2f newPos = Vector2f(
             origPosition.x + (m_Speed * m_RightPressed - m_Speed * m_LeftPressed) * elapsedTime,

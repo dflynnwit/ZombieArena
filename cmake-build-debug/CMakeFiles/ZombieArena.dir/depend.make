@@ -80,8 +80,12 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Arena.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Bullet.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Bullet.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/TextureHolder.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -157,9 +161,13 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: G:/Dokumenty/WIT/Cpp/SFM
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Bullet.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/Entity.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/TextureHolder.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -235,11 +243,15 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: G:/Dokumenty/WIT/Cpp/SFM
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Entity.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/Entity.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/ExitTerminal.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/ExitTerminal.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/Tile.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -392,11 +404,15 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: G:/Dokumenty/WIT/Cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/Entity.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/Grenade.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/Grenade.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/Tile.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: ../Zombie\ Arena/Zombie.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -554,10 +570,14 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/HudElement.cpp.obj: G:/Dokumenty/WIT/Cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/HudElement.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/HudElement.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/Entity.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/Key.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/Key.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/TextureHolder.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -633,11 +653,15 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/Entity.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/MazeGenerator.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/MazeGenerator.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/Tile.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -713,10 +737,14 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: G:/Dokumenty/WIT/
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/Object.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/Pickup.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/Pickup.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/TextureHolder.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -869,10 +897,14 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj: G:/Dokumenty/WIT/
 CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/TextureHolder.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/Tile.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/Tile.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -948,9 +980,13 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Tile.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Tile.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Zombie.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: ../Zombie\ Arena/Zombie.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
@@ -1029,15 +1065,19 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: G:/Dokumenty/WIT/Cpp/SFM
 CMakeFiles/ZombieArena.dir/Zombie_Arena/Zombie.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Bullet.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Entity.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/ExitTerminal.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Flashlight.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Grenade.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Key.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/MazeGenerator.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Object.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Pickup.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Tile.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/Zombie.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/ZombieArena.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: ../Zombie\ Arena/player.hpp
@@ -1133,9 +1173,13 @@ CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: G:/Dokumenty/WIT/Cp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/ZombieArena.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/Component.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/Entity.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/Object.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/SpriteComponent.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/TextureHolder.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/Tile.h
+CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/TransformComponent.h
 CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/player.cpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: ../Zombie\ Arena/player.hpp
 CMakeFiles/ZombieArena.dir/Zombie_Arena/player.cpp.obj: G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
