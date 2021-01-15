@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h
+SFML/Graphics.hpp
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Component.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
@@ -18,15 +24,33 @@ G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
 Object.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Object.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.cpp
-Grenade.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h
+SFML/Graphics.hpp
+-
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
 Entity.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 Zombie.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h
+vector
+-
+ctime
+-
+cstdlib
+-
 Tile.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
 
@@ -41,6 +65,12 @@ iostream
 -
 memory
 -
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h
+SFML/Graphics.hpp
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/SpriteComponent.hpp
 SFML/Graphics.hpp
@@ -71,6 +101,222 @@ Entity.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 Tile.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ZombieArena.cpp
+iostream
+-
+sstream
+-
+fstream
+-
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+player.hpp
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.hpp
+TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+Zombie.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
+Bullet.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h
+Pickup.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h
+MazeGenerator.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h
+Flashlight.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h
+Key.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h
+ExitTerminal.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
+Grenade.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.hpp
+SFML/Graphics.hpp
+-
+cmath
+-
+Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+Tile.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio.hpp
+SFML/System.hpp
+-
+SFML/Audio/InputSoundFile.hpp
+-
+SFML/Audio/Listener.hpp
+-
+SFML/Audio/Music.hpp
+-
+SFML/Audio/OutputSoundFile.hpp
+-
+SFML/Audio/Sound.hpp
+-
+SFML/Audio/SoundBuffer.hpp
+-
+SFML/Audio/SoundBufferRecorder.hpp
+-
+SFML/Audio/SoundFileFactory.hpp
+-
+SFML/Audio/SoundFileReader.hpp
+-
+SFML/Audio/SoundFileWriter.hpp
+-
+SFML/Audio/SoundRecorder.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/Audio/SoundStream.hpp
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+SFML/Audio/Export.hpp
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Export.hpp
+SFML/Config.hpp
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/InputSoundFile.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+algorithm
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Listener.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/Vector3.hpp
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Music.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundStream.hpp
+-
+SFML/Audio/InputSoundFile.hpp
+-
+SFML/System/Mutex.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+vector
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/OutputSoundFile.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+string
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/System/Time.hpp
+-
+cstdlib
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+vector
+-
+set
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundBufferRecorder.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundBuffer.hpp
+-
+SFML/Audio/SoundRecorder.hpp
+-
+vector
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+vector
+-
+SFML/Audio/SoundFileFactory.inl
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.inl
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileReader.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundFileWriter.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundRecorder.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Thread.hpp
+-
+SFML/System/Time.hpp
+-
+vector
+-
+string
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Vector3.hpp
+-
+
+G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Audio/SoundStream.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/System/Thread.hpp
+-
+SFML/System/Time.hpp
+-
+SFML/System/Mutex.hpp
+-
+cstdlib
+-
 
 G:/Dokumenty/WIT/Cpp/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h

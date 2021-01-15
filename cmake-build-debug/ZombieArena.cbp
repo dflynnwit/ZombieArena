@@ -92,82 +92,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h">
-			<Option target="ZombieArena"/>
-		</Unit>
 		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>
 		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h">
 			<Option target="ZombieArena"/>
 		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/HudElement.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/HudElement.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h">
-			<Option target="ZombieArena"/>
-		</Unit>
 		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.cpp">
 			<Option target="ZombieArena"/>
 		</Unit>
 		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.cpp">
-			<Option target="ZombieArena"/>
-		</Unit>
-		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h">
 			<Option target="ZombieArena"/>
 		</Unit>
 		<Unit filename="G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ZombieArena.cpp">
