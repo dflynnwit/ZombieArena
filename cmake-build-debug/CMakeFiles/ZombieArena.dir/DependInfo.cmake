@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/ExitTerminal.cpp.obj"
   "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Flashlight.cpp.obj"
   "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.obj"
+  "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/HudElement.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/HudElement.cpp.obj"
   "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Key.cpp.obj"
   "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/MazeGenerator.cpp.obj"
   "G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.cpp" "G:/Dokumenty/WIT/C++/ZombieArena/cmake-build-debug/CMakeFiles/ZombieArena.dir/Zombie_Arena/Pickup.cpp.obj"

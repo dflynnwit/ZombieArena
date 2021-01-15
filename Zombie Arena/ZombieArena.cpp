@@ -44,19 +44,19 @@ int main(int argc, const char * argv[]) {
      * Windowed
      */
     //Create SFML window
-//    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Default);
-//
-//    //Create main view
-//    View mainView(sf::FloatRect(0, 0, 1280, 720));
+    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Default);
+
+    //Create main view
+    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     /*
      * Fullscreen
      */
-    //Create SFML window
-    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
-
-    //Create main view
-    View mainView(sf::FloatRect(0, 0, 1280, 720));
+//    //Create SFML window
+//    RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
+//
+//    //Create main view
+//    View mainView(sf::FloatRect(0, 0, 1280, 720));
 
     //Create texture holder singleton
     TextureHolder textureHolder;

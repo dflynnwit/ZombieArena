@@ -6,31 +6,13 @@
 
 #IncludeRegexTransform: 
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.cpp
-Arena.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.h
-
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Arena.h
-SFML/Graphics.hpp
--
-
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.cpp
-iostream
--
-Bullet.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h
-
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Bullet.h
 SFML/Graphics.hpp
 -
 Entity.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.cpp
-cmath
--
-Entity.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Component.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 SFML/Graphics.hpp
@@ -40,25 +22,13 @@ iostream
 TextureHolder.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.cpp
-ExitTerminal.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
-
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
 Tile.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.cpp
-Flashlight.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h
-
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Flashlight.h
 SFML/Graphics.hpp
 -
-
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.cpp
-Grenade.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
 Entity.h
@@ -68,19 +38,17 @@ G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
 Tile.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.cpp
-Key.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/HudElement.cpp
+HudElement.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/HudElement.h
+
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/HudElement.h
+Object.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Object.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Key.h
 Entity.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
-
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.cpp
-iostream
--
-MazeGenerator.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/MazeGenerator.h
 vector
@@ -92,11 +60,17 @@ cstdlib
 Tile.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.cpp
-Pickup.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h
-TextureHolder.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Object.h
+Component.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Component.h
+TransformComponent.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TransformComponent.h
+SpriteComponent.hpp
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/SpriteComponent.hpp
+iostream
+-
+memory
+-
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Pickup.h
 SFML/Graphics.hpp
@@ -104,11 +78,11 @@ SFML/Graphics.hpp
 Entity.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.cpp
-TextureHolder.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
-assert.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/SpriteComponent.hpp
+SFML/Graphics.hpp
 -
+Component.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Component.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
 SFML/Graphics.hpp
@@ -116,27 +90,15 @@ SFML/Graphics.hpp
 map
 -
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.cpp
-random
--
-Tile.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
-
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Tile.h
 Entity.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Entity.h
 
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.cpp
-Zombie.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
-TextureHolder.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
-cstdlib
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TransformComponent.h
+SFML/Graphics.hpp
 -
-ctime
--
-cmath
--
+Component.h
+G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Component.h
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Zombie.h
 SFML/Graphics.hpp
@@ -177,14 +139,6 @@ ExitTerminal.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/ExitTerminal.h
 Grenade.h
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/Grenade.h
-
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.cpp
-player.hpp
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.hpp
-TextureHolder.h
-G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/TextureHolder.h
-iostream
--
 
 G:/Dokumenty/WIT/C++/ZombieArena/Zombie Arena/player.hpp
 SFML/Graphics.hpp

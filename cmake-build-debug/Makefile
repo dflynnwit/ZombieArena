@@ -304,6 +304,33 @@ Zombie_Arena/Grenade.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/Grenade.cpp.s
 .PHONY : Zombie_Arena/Grenade.cpp.s
 
+Zombie_Arena/HudElement.obj: Zombie_Arena/HudElement.cpp.obj
+
+.PHONY : Zombie_Arena/HudElement.obj
+
+# target to build an object file
+Zombie_Arena/HudElement.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/HudElement.cpp.obj
+.PHONY : Zombie_Arena/HudElement.cpp.obj
+
+Zombie_Arena/HudElement.i: Zombie_Arena/HudElement.cpp.i
+
+.PHONY : Zombie_Arena/HudElement.i
+
+# target to preprocess a source file
+Zombie_Arena/HudElement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/HudElement.cpp.i
+.PHONY : Zombie_Arena/HudElement.cpp.i
+
+Zombie_Arena/HudElement.s: Zombie_Arena/HudElement.cpp.s
+
+.PHONY : Zombie_Arena/HudElement.s
+
+# target to generate assembly for a file
+Zombie_Arena/HudElement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieArena.dir\build.make CMakeFiles/ZombieArena.dir/Zombie_Arena/HudElement.cpp.s
+.PHONY : Zombie_Arena/HudElement.cpp.s
+
 Zombie_Arena/Key.obj: Zombie_Arena/Key.cpp.obj
 
 .PHONY : Zombie_Arena/Key.obj
@@ -547,6 +574,9 @@ help:
 	@echo ... Zombie_Arena/Grenade.obj
 	@echo ... Zombie_Arena/Grenade.i
 	@echo ... Zombie_Arena/Grenade.s
+	@echo ... Zombie_Arena/HudElement.obj
+	@echo ... Zombie_Arena/HudElement.i
+	@echo ... Zombie_Arena/HudElement.s
 	@echo ... Zombie_Arena/Key.obj
 	@echo ... Zombie_Arena/Key.i
 	@echo ... Zombie_Arena/Key.s

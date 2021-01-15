@@ -10,75 +10,45 @@
 
 
 // Default constructor.
-Object::Object() :
-m_position{ 0.f, 0.f },
-m_animationSpeed(0),
-m_isAnimated(false),
-m_frameCount(0),
-m_currentFrame(0),
-m_frameWidth(0),
-m_frameHeight(0),
-m_timeDelta(0),
-m_influenceValue(1)
+Object::Object()
 {
-    // Add a transform component.
-    AttachComponent<TransformComponent>();
-    AttachComponent<SpriteComponent>();
+    //TODO: Move to elements that actually use it
+//    // Add a transform component.
+//    AttachComponent<TransformComponent>();
+//    AttachComponent<SpriteComponent>();
 }
 
-// Gives the object the given sprite.
-bool Object::SetSprite(sf::Texture& texture, bool isSmooth, int frames, int frameSpeed)
-{
-    std::shared_ptr<SpriteComponent> spriteCmpt = GetComponent<SpriteComponent>();
-    return spriteCmpt->SetSprite(texture, isSmooth, frames, frameSpeed);
+template<typename T>
+std::shared_ptr<T> Object::AttachComponent() {
+    // First we'll create the component.
+    std::shared_ptr<T> newComponent = std::make_shared<T>();
+    // Check that we don't already have a component of this type.
+    for (std::shared_ptr<Component>& exisitingComponent : m_components)
+    {
+        if (std::dynamic_pointer_cast<T>(exisitingComponent))
+        {
+            // If we do replace it.
+            exisitingComponent = newComponent;
+            return newComponent;
+        } }
+
+    // The component is the first of its type so add it.
+    m_components.push_back(newComponent);
+    // Return the new component.
+    return newComponent;
 }
 
-// Returns the object's sprite.
-sf::Sprite& Object::GetSprite()
-{
-    //TODO: Change to get sprite component sprite
-    std::shared_ptr<SpriteComponent> sprite = GetComponent<SpriteComponent>();
-    return sprite->GetSprite();
-//    return m_sprite;
+template<typename T>
+std::shared_ptr<T> Object::GetComponent() {
+    // Check that we don't already have a component of this type.
+    for (std::shared_ptr<Component> exisitingComponent : m_components)
+    {
+        if (std::dynamic_pointer_cast<T>(exisitingComponent))
+        {
+            return std::dynamic_pointer_cast<T>(exisitingComponent);
+        }
+    }
+
+    return nullptr;
 }
 
-// Sets the position of the object.
-void Object::SetPosition(sf::Vector2f position)
-{
-    std::shared_ptr<TransformComponent> transformCmpt = GetComponent<TransformComponent>();
-//    std::cout << "(Object.cpp)(SetPosition)Transform:" << transformCmpt << std::endl;
-    transformCmpt->SetPosition(position);
-
-    //TODO: Use sprite component after it's in
-//    m_sprite.setPosition(transformCmpt->GetPosition().x, transformCmpt->GetPosition().y);
-    std::shared_ptr<SpriteComponent> sprtCmpt = GetComponent<SpriteComponent>();
-    sprtCmpt->setPosition(position);
-}
-
-// Returns the position of the object.
-sf::Vector2f Object::GetPosition()
-{
-    std::shared_ptr<TransformComponent> transformCmpt = GetComponent<TransformComponent>();
-    return transformCmpt->GetPosition();
-}
-
-// Gets the current animation state of the object.
-bool Object::IsAnimated()
-{
-    std::shared_ptr<SpriteComponent> sprite = GetComponent<SpriteComponent>();
-    return sprite->IsAnimated();
-}
-
-// Sets the animation state of the object.
-void Object::SetAnimated(bool isAnimated)
-{
-    std::shared_ptr<SpriteComponent> sprite = GetComponent<SpriteComponent>();
-    sprite->SetAnimated(isAnimated);
-}
-
-// Draws the object to the given render window.
-void Object::Draw(sf::RenderWindow &window, float timeDelta)
-{
-    std::shared_ptr<SpriteComponent> sprite = GetComponent<SpriteComponent>();
-    sprite->Draw(window, timeDelta);
-}

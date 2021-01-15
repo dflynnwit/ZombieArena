@@ -11,7 +11,7 @@ add_executable(ZombieArena ${SOURCE_FILES}/ZombieArena.cpp
         "Zombie Arena/Entity.cpp" "Zombie Arena/Tile.cpp" "Zombie Arena/Tile.h" "Zombie Arena/MazeGenerator.cpp"
         "Zombie Arena/MazeGenerator.h" "Zombie Arena/Flashlight.cpp" "Zombie Arena/Flashlight.h" "Zombie Arena/Key.cpp"
         "Zombie Arena/Key.h" "Zombie Arena/ExitTerminal.cpp" "Zombie Arena/ExitTerminal.h" "Zombie Arena/Grenade.cpp"
-        "Zombie Arena/Grenade.h")
+        "Zombie Arena/Grenade.h" "Zombie Arena/HudElement.cpp" "Zombie Arena/HudElement.h")
 
 include_directories(Resources)
 include_directories(Resources/code)
