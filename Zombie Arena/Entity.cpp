@@ -21,6 +21,12 @@ Entity::Entity(const std::string filename, int x, int y) {
     SetSprite(filename);
 }
 
+Entity::Entity() {
+    m_Sprite = AttachComponent<SpriteComponent>();
+    m_Transform = AttachComponent<TransformComponent>();
+    m_active = true;
+}
+
 void Entity::Draw(RenderWindow &window){
     if(m_active)
         m_Sprite->Draw(window);
@@ -48,10 +54,6 @@ int Entity::GetGroup() {
 
 Sprite Entity::GetSprite() {
     return m_Sprite->GetSprite();
-}
-
-Entity::Entity() {
-    m_active = true;
 }
 
 void Entity::SetSprite(const std::string filename) {
